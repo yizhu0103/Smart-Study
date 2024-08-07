@@ -65,20 +65,19 @@ a {
 
 /* header區 */
 #topbar {
- position: fixed;
- /* 固定定位 部會跟著卷軸走 */
- z-index: 999;
- width: 100%;
- /* 定位會變成抓內容的尺寸，所以要手動設定回w100% */
-
- display: flex;
- /* 預設主軸為水平 */
- justify-content: space-between;
- /* 主軸均分貼齊頭尾 */
- align-items: center;
- padding: 30px;
- background-color: #1a63ac;
- top: 0;
+  position: fixed;
+  /* 固定定位 部會跟著卷軸走 */
+  z-index: 999;
+  width: 100%;
+  /* 定位會變成抓內容的尺寸，所以要手動設定回w100% */
+  display: flex;
+  /* 預設主軸為水平 */
+  justify-content: space-between;
+  /* 主軸均分貼齊頭尾 */
+  align-items: center;
+  padding: 30px;
+  background-color: #FFFEF6;
+  top: 0;
 }
 
 .navigation {
@@ -87,15 +86,12 @@ a {
   /* 主軸變垂直 */
   align-items: flex-start;
   /* 副軸水平 */
-  
+
 }
 
 .navigation .menu {
   display: flex;
   /* 控制父層的外距 */
-
-
-
 }
 
 .navigation .menu li h1 img {
@@ -113,7 +109,7 @@ a {
   /* icon */
   padding: 20px;
   margin: 0 70px;
-  background-color: #967777;
+  background-color: #ffffff;
 }
 
 .icon__search {
@@ -199,22 +195,62 @@ article.banner__item {
 #subject a {}
 
 #subject figure {
-  width: 200px;
-  height: 200px;
-  background-color: #1a63ac;
-  border-radius: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#subject figure.moktest {
+  background: url("../imgs/index-img/moktest.jpg");
+  border-radius: 24px;
+  font-size: 0;
+  width: 305px;
+  height: 228px;
+  background-size: cover;
+}
+
+#subject figure.moktest:hover {
+  background: url("../imgs/index-img/mocktest-hovar.jpg");
+
+  width: 305px;
+  height: 228px;
+  background-size: cover;
+}
+
+#subject figure.course {
+  background: url("../imgs/index-img/course.jpg");
+  border-radius: 24px;
+  font-size: 0;
+  width: 305px;
+  height: 228px;
+  background-size: cover;
+}
+
+#subject figure.course:hover {
+  background: url("../imgs/index-img/course-hovar.jpg");
+  width: 305px;
+  height: 228px;
+  background-size: cover;
+}
+
+#subject figure.arrow {
+  background: url("../imgs/index-img/arrow.jpg");
+  /*預設顯示圖片*/
+  width: 90px;
+  height: 90px;
+  border-radius: 99px;
+  background-size: cover;
+}
+
+
+.arrow {
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+  border-radius: 99px;
 
 }
 
-#subject img {
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 
 /* marquee */
@@ -239,14 +275,15 @@ section#marquee {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left:100px;
+  margin-left: 100px;
 }
+
 .news_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right:100px;
+  margin-right: 100px;
 }
 
 .test_box__list {
@@ -256,7 +293,7 @@ section#marquee {
   justify-content: space-between;
   margin: 0 50px;
   margin-top: 80px;
- 
+
 }
 
 .news__test__item {
@@ -270,7 +307,7 @@ section#marquee {
   /* 設定高度以便觀察效果 */
 }
 
-.info_box__list{
+.info_box__list {
   width: 540px;
   height: 525px;
   display: flex;
@@ -282,17 +319,17 @@ section#marquee {
 
 }
 
-.news__item p{
-    /* 多行省略的語法 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* 文字溢出時出現省略號，若有設定line-clame時，瀏覽器會自動加入 */
-    display: -webkit-box;
-    /* 彈性布局 */
-    -webkit-box-orient: vertical;
-    /* 定義box垂直布局 */
-    -webkit-line-clamp: 3;
-    /* 行數 */
+.news__item p {
+  /* 多行省略的語法 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 文字溢出時出現省略號，若有設定line-clame時，瀏覽器會自動加入 */
+  display: -webkit-box;
+  /* 彈性布局 */
+  -webkit-box-orient: vertical;
+  /* 定義box垂直布局 */
+  -webkit-line-clamp: 3;
+  /* 行數 */
 }
 
 #news figure {
@@ -311,20 +348,23 @@ section#marquee {
   align-items: center;
   height: 100vh;
 }
-.member_box__list{
+
+.member_box__list {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
-  
+
 }
-#member figure{
+
+#member figure {
   width: 400px;
   height: 580px;
   margin: 0 50px;
   border: #000 2px solid;
 
 }
+
 /* footer */
 
 footer {
@@ -337,10 +377,12 @@ footer {
   height: 10vh;
   padding: 20px;
 }
-.footer__box__list{
+
+.footer__box__list {
   display: flex;
 
 }
-.footer__box__list li{
+
+.footer__box__list li {
   margin: 0 10px;
 }

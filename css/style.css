@@ -2,6 +2,27 @@
 
 /* UTF-8一定要在行數1 */
 
+:root {
+  --primary-b-1: #48B2FF;
+  --primary-b-2: #4395E6;
+
+  --secondary-y-1: #FFDE67;
+  --secondary-b-1: #276BC6;
+
+  --tertiary: #ecf0f4;
+
+  --font-b-1: #1C276D;
+  /* 輔助 */
+  --lesser-background-y-: #FFFEF6;
+  --lesser-background-b-: #EFF5FF;
+
+
+
+
+  /* 漸層 */
+}
+
+
 /* 重置所有標籤的樣式 */
 * {
   /* '*'代表全部所有東西 重製全部東西 */
@@ -65,59 +86,53 @@ a {
 
 /* header區 */
 #topbar {
-  position: fixed;
-  /* 固定定位 部會跟著卷軸走 */
   z-index: 999;
   width: 100%;
-  /* 定位會變成抓內容的尺寸，所以要手動設定回w100% */
+  height: 60px;
   display: flex;
-  /* 預設主軸為水平 */
   justify-content: space-between;
-  /* 主軸均分貼齊頭尾 */
   align-items: center;
-  padding: 30px;
-  background-color: #FFFEF6;
-  top: 0;
+  background-color: var(--lesser-background-b-);
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
-  /* 主軸變垂直 */
   align-items: flex-start;
-  /* 副軸水平 */
 
 }
 
 .navigation .menu {
   display: flex;
-  /* 控制父層的外距 */
+
 }
 
 .navigation .menu li h1 img {
-  height: 50px;
+  height: 30px;
   width: 50px;
-  margin-top: -15px;
+  font-size: 18px;
 }
 
 .navigation .menu li {
-  margin: 0 50px;
-  padding-top: 30px;
+  margin: 0 80px;
+  padding-top: 10px;
+
 }
 
+/* 
 #topbar div {
-  /* icon */
+
   padding: 20px;
   margin: 0 70px;
   background-color: #ffffff;
-}
+} */
 
 .icon__search {
-  background-image: url(../imgs/test.svg);
+  background-image: url(../imgs/index-img/search.svg);
 }
 
 .icon__member {
-  background-image: url(../imgs/test.svg);
+  background-image: url(../imgs/index-img/member.svg);
 }
 
 
@@ -153,6 +168,9 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: var(--lesser-background-b-);
+
+
 }
 
 article.banner__item {
@@ -171,7 +189,6 @@ article.banner__item {
 
 }
 
-.icon__certain {}
 
 .btn__arrow {
   width: 90px;
@@ -187,8 +204,10 @@ article.banner__item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
-  margin: 10px 100px;
+  background-color: var(--lesser-background-b-);
+  background-size: cover;
 
 }
 
@@ -201,44 +220,40 @@ article.banner__item {
 }
 
 #subject figure.moktest {
-  background: url("../imgs/index-img/moktest.jpg");
-  border-radius: 24px;
-  font-size: 0;
-  width: 305px;
-  height: 228px;
+  background: url("../imgs/index-img/moktest.svg");
+  width: 300px;
+  height: 224px;
   background-size: cover;
+  transition: 0.35s;
 }
 
 #subject figure.moktest:hover {
-  background: url("../imgs/index-img/mocktest-hovar.jpg");
-
-  width: 305px;
-  height: 228px;
+  background: url("../imgs/index-img/text.svg");
   background-size: cover;
+  box-shadow: 4px 4px 4px rgb(39, 107, 198,0.25);
+  border-radius:20px ;
+
+  
 }
 
 #subject figure.course {
-  background: url("../imgs/index-img/course.jpg");
-  border-radius: 24px;
-  font-size: 0;
+  background: url("../imgs/index-img/course.svg");
   width: 305px;
   height: 228px;
   background-size: cover;
+  transition: 0.35s;
 }
 
 #subject figure.course:hover {
-  background: url("../imgs/index-img/course-hovar.jpg");
-  width: 305px;
-  height: 228px;
+  background: url("../imgs/index-img/course-hover.svg");
   background-size: cover;
 }
 
 #subject figure.arrow {
-  background: url("../imgs/index-img/arrow.jpg");
+  background: url("../imgs/index-img/arrow.svg");
   /*預設顯示圖片*/
   width: 90px;
   height: 90px;
-  border-radius: 99px;
   background-size: cover;
 }
 
@@ -268,6 +283,9 @@ section#marquee {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url(../imgs/index-img/background-news.svg);
+  background-size: cover;
+
 }
 
 .news__test {
@@ -297,15 +315,40 @@ section#marquee {
 }
 
 .news__test__item {
+  display: flex;
+  align-items: center;
   writing-mode: vertical-lr;
-  /* 文字從左到右的垂直排列 */
-  text-orientation: upright;
-  /* 文字保持直立 */
-  border: 1px solid #000;
   padding: 10px;
   height: 525px;
   /* 設定高度以便觀察效果 */
 }
+
+
+.news__test__item .test_image {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.test_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news__test__item h3 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--font-b-1)
+}
+
+.news__test__item p {
+  margin: 0;
+  font-size: 18px;
+}
+
 
 .info_box__list {
   width: 540px;
@@ -319,25 +362,59 @@ section#marquee {
 
 }
 
+.news__item ul{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news__item li{
+
+    margin: 0 10px;
+}
+
+
+.news__item .test_image {
+  width: 180px;
+  height: 110px;
+  border-radius: 175px;
+  /* Oval shape */
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.news__item .test_image-2 {
+  width: 110px;
+  height: 180px;
+  border-radius: 175px;
+  /* Oval shape */
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.news__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news__item h3 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--font-b-1);
+}
+
+
 .news__item p {
-  /* 多行省略的語法 */
+
   overflow: hidden;
   text-overflow: ellipsis;
-  /* 文字溢出時出現省略號，若有設定line-clame時，瀏覽器會自動加入 */
   display: -webkit-box;
-  /* 彈性布局 */
   -webkit-box-orient: vertical;
-  /* 定義box垂直布局 */
   -webkit-line-clamp: 3;
-  /* 行數 */
+  font-size: 18px;
 }
 
-#news figure {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 /* member */
@@ -360,8 +437,8 @@ section#marquee {
 #member figure {
   width: 400px;
   height: 580px;
-  margin: 0 50px;
-  border: #000 2px solid;
+  margin: 0 -5px;
+ 
 
 }
 

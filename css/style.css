@@ -15,7 +15,7 @@
 
   --font-b-1: #1C276D;
   --font-b-2: #276BC6;
-  
+
   /* 輔助 */
   --lesser-background-y-: #FFFEF6;
   --lesser-background-b-: #EFF5FF;
@@ -44,10 +44,10 @@ body {
 
   font-family: sans-serif;
   font-family:
-      /*西文*/
-      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
-      /*中文*/
-      "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    /*西文*/
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/
+    "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
   font-size: 100%;
   line-height: 1.5;
 }
@@ -115,20 +115,24 @@ a {
   display: flex;
   align-items: center;
 }
+
 .navigation .menu li {
   font-family: "Noto Sans TC", sans-serif;
-    font-size: 18px;
+  font-size: 18px;
 }
+
 .navigation .menu li h1 {
   font-family: "Train One", sans-serif;
-    font-size: 34px;
+  font-size: 34px;
 }
+
 .navigation .menu h1 a {
-  color:var(--secondary-b-1)
+  color: var(--secondary-b-1)
 }
-.navigation .menu  a {
+
+.navigation .menu a {
   margin: 0 80px;
-  color:var(--font-b-1)
+  color: var(--font-b-1)
 }
 
 
@@ -174,35 +178,41 @@ a {
   width: 100%;
   background-color: var(--lesser-background-b-);
 }
+
 #banner .logo {
   width: 366px;
   height: 246px;
   background-image: url(../imgs/index-img/logo-banner.svg);
 }
-#banner h1{
+
+#banner h1 {
   font-family: "Train One", sans-serif;
-    font-weight:regular;
-    font-size: 96px;
-    color:var(--secondary-b-1)
+  font-weight: regular;
+  font-size: 96px;
+  color: var(--secondary-b-1)
 }
-#banner .facia{
+
+#banner .facia {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-margin-bottom: 200px;
+  margin-bottom: 200px;
+  max-width: 1440px;
 }
- .moon{
+
+.moon {
   position: absolute;
-    /* 絕對定位 */
-   right: 150px;
+  /* 絕對定位 */
+  right: 150px;
   top: 100px;
   height: 143px;
   width: 143px;
 }
-.star{
+
+.star {
   position: absolute;
-    /* 絕對定位 */
+  /* 絕對定位 */
   left: 150px;
   bottom: 180px;
   height: 148px;
@@ -219,13 +229,13 @@ margin-bottom: 200px;
   align-items: center;
   width: 100%;
   height: 100vh;
-  
   background-color: var(--lesser-background-b-);
 }
+
 #subject .checklist {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   z-index: 5;
 }
@@ -241,15 +251,15 @@ margin-bottom: 200px;
   width: 300px;
   height: 224px;
   background-size: cover;
-  border-radius:23px ;
+  border-radius: 23px;
   transition: 0.35s;
 }
 
 #subject figure.moktest:hover {
   background: url("../imgs/index-img/text.svg");
   background-size: cover;
-  box-shadow: 4px 4px 4px rgb(39, 107, 198,0.25);
-  
+  box-shadow: 4px 4px 4px rgb(39, 107, 198, 0.25);
+
 }
 
 #subject figure.course {
@@ -257,7 +267,7 @@ margin-bottom: 200px;
   width: 305px;
   height: 228px;
   background-size: cover;
-  border-radius:23px ;
+  border-radius: 23px;
   transition: 0.35s;
 }
 
@@ -274,36 +284,40 @@ margin-bottom: 200px;
   background-size: cover;
 }
 
-#subject .box__list ul{
+#subject .box__list ul {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
-#subject .box__list li{
- margin: 0 20px;
+
+#subject .box__list li {
+  margin: 0 20px;
 }
-.oval{
+
+.oval {
   position: absolute;
   justify-content: center;
   align-items: center;
-  top:0;
+  top: 0;
   height: 300px;
   width: 100%;
   max-width: 1440px;
 }
-.star-2{
+
+.star-2 {
   position: absolute;
   z-index: 3;
-    /* 絕對定位 */
-   right: 100px;
+  /* 絕對定位 */
+  right: 100px;
   top: 100px;
   height: 143px;
   width: 143px;
 }
-.moon-2{
+
+.moon-2 {
   position: absolute;
   z-index: 3;
-   left: 100px;
+  left: 100px;
   top: 100px;
   height: 143px;
   width: 143px;
@@ -332,10 +346,10 @@ section#marquee {
 }
 
 #news h2 {
-    font-size: 36px;
-    color: var(--font-b-1);
-    font-weight: bold;
-  }
+  font-size: 36px;
+  color: var(--font-b-1);
+  font-weight: bold;
+}
 
 .news__test {
   display: flex;
@@ -369,7 +383,7 @@ section#marquee {
   writing-mode: vertical-lr;
   padding: 10px;
   height: 525px;
-  
+
 }
 
 .news__test__item .test_image {
@@ -387,7 +401,7 @@ section#marquee {
 }
 
 .news__test__item h3 {
-/* border-left: #FFDE67 5px solid; */
+  /* border-left: #FFDE67 5px solid; */
   font-size: 24px;
   color: var(--font-b-1);
   font-weight: bold;
@@ -412,12 +426,13 @@ section#marquee {
 
 }
 
-.news__item ul{
+.news__item ul {
   display: flex;
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-.news__item li{
+
+.news__item li {
   margin: 0 10px;
 }
 
@@ -506,9 +521,10 @@ footer {
 
 footer ul {
   display: flex;
+  max-width: 1440px;
 }
 
-a{
+a {
   color: var(--lesser-background-y-);
   margin-right: 5px;
   margin-bottom: 5px;
@@ -517,9 +533,9 @@ a{
 .footer__box__list li {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  margin: 0 50px;
+  margin: 0 25px;
   width: 106px;
   height: 72px;
   background-image: url(../imgs/index-img/planet.svg);

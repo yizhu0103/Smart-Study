@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Train+One&display=swap');
+/* UTF-8一定要在行數1 */
+
+
+
+:root {
+  --primary-b-1: #48B2FF;
+  --primary-b-2: #4395E6;
+
+  --secondary-y-1: #FFDE67;
+  --secondary-b-1: #276BC6;
+
+  --tertiary: #ecf0f4;
+
+  --font-b-1: #1C276D;
+  --font-b-2: #276BC6;
+  
+  /* 輔助 */
+  --lesser-background-y-: #FFFEF6;
+  --lesser-background-b-: #EFF5FF;
+
+
+
+
+  /* 漸層 */
+}
+
+
+/* 重置所有標籤的樣式 */
+* {
+  /* '*'代表全部所有東西 重製全部東西 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  rwd一定要寫 不累加padding border*/
+  /* 不累加內容的padding */
+}
+
+/* 重置字體 */
+/* 字體會先抓前面的 */
+/* 英文字體不會設定中文字體 會直接往後找 font-family= '英文字體' '中文字體' */
+body {
+
+  font-family: sans-serif;
+  font-family:
+      /*西文*/
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+      /*中文*/
+      "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  text-decoration: none;
+  /* 將預設inline改為block */
+  /* 底線會先拿掉 */
+  color: #000;
+  /* 設定顏色 */
+}
+
+/* 共用區 */
+

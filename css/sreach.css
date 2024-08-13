@@ -15,7 +15,7 @@
 
   --font-b-1: #1C276D;
   --font-b-2: #276BC6;
-  
+
   /* 輔助 */
   --lesser-background-y-: #FFFEF6;
   --lesser-background-b-: #EFF5FF;
@@ -44,10 +44,10 @@ body {
 
   font-family: sans-serif;
   font-family:
-      /*西文*/
-      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
-      /*中文*/
-      "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    /*西文*/
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/
+    "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
   font-size: 100%;
   line-height: 1.5;
 }
@@ -88,3 +88,164 @@ a {
 
 /* 共用區 */
 
+/* sreach區 */
+#sreach {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--lesser-background-y-);
+
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 150px;
+  padding-top: 50px;
+  width: 100%;
+  max-width: 1440px;
+
+}
+
+.topbar h1 {
+  font-family: "Train One", sans-serif;
+  font-size: 34px;
+}
+
+.topbar h1 a {
+  color: var(--secondary-b-1);
+}
+
+.menu ul {
+  display: flex;
+}
+
+/* checklist區 */
+
+#checklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--lesser-background-y-);
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin-top: 100px;
+  max-width: 1440px;
+}
+
+.btn_c {
+  background-color: var(--primary-b-1);
+  color: white;
+  padding: 20px 59px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn_b {
+  background-color: var(--secondary-y-1);
+  color: var(--secondary-b-1);
+  padding: 20px 59px;
+  border: none;
+  border-radius: 5px;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--lesser-background-b-);
+}
+
+.checklist {
+  display: flex;
+
+  max-width: 1440px;
+  width: 80%;
+  background-color: var(--lesser-background-b-);
+}
+
+.checklist_menu {
+  display: flex;
+  margin: 67px 0;
+}
+
+.checklist_menu li {
+  margin: 30px;
+}
+
+.checklist_menu img {
+  width: 72px;
+  height: 82px;
+}
+
+
+.invantory{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--lesser-background-b-);
+  padding-top: 140px;
+  height: 80vh;
+  overflow: auto;
+  padding-right: 1rem;
+}
+.box_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+  height: 173px;
+ margin: 20px 0;
+
+}
+.box_list ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.box_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 199px;
+  height: 173px;
+  background-image: url(../imgs/sraech-img/background.svg);
+}
+.box_list li::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.box_list li::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+}
+
+.box_list li::-webkit-scrollbar-track {
+  border-radius: 99px;
+}
+
+.box_list li::-webkit-scrollbar-button {
+  display: none;
+  /* 若預設就是display none 是因為body有設定botton 所以需要另外設定取消 */
+}
+
+.box_list li::-webkit-scrollbar-corner {
+  border-radius: 50%;
+}

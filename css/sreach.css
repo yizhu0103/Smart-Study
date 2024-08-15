@@ -135,6 +135,22 @@ object-fit: cover;
   display: flex;
 }
 
+
+#sreach input{
+    width: 100%;
+    padding: 6px;
+  background-color: var(--lesser-background-b-);
+    /* 用戶輸入文字的顏色 */
+    font-weight: 600;
+    font-family: 'Noto Sans HK', sans-serif;
+
+    border-radius: 10px;
+    /* 取消表單元件的預設備景色 */
+    background-color: transparent;
+    border: none;
+
+}
+
 /* checklist區 */
 
 #checklist {
@@ -153,8 +169,9 @@ object-fit: cover;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  padding-right: 280px;
-  margin-top: 100px;
+  max-width: 1440px;
+  padding-right: 2.8vh;
+  margin-top: 1vh;
 
 }
 
@@ -214,19 +231,19 @@ object-fit: cover;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 75%;
+  width: 80%;
   background-color: var(--lesser-background-b-);
-  height: 688px;
+  height: 68vh;
   overflow: auto;
   margin: 50px 0;
-  
+
 }
 
 .box_list {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 960px;
+  width: 1218px;
   margin: 58px 0;
 
 }
@@ -242,6 +259,7 @@ object-fit: cover;
 
 .box_list li {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 199px;
@@ -249,14 +267,14 @@ object-fit: cover;
   border-radius: 10px;
   background-image: url(../imgs/sraech-img/background.svg);
 }
-
+/* 
 .box_list li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-}
+} */
 
 .box_list li p {
   font-size: 18px;

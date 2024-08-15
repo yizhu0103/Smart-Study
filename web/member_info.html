@@ -10,83 +10,97 @@
 
 <body>
     <section>
-    <header id="c_topbar">
-        <h1><a href="../index.html"><img src="../imgs/index-img/logo.svg" alt="首頁"></a></h1>
-        <ul class="nav">
-            <li><a href="#"></a>課程</li>
-            <li><a href="#"></a>考試</li>
-            <li><a href="#"></a>最新</li>
-            <li><a href="#"></a>關於</li>
-            <li><a href="#"></a>收藏</li>
-            <li class="log_out"><a href="#"></a>登出</li>
-        </ul>
-    </header>
-
-    <main>
-        
-        <div id="head">
-            <div>
-                <figure class="head"><img src="../imgs/member_img/head.svg" alt=""></figure>
-            </div>
-            <ul class="info">
-                <li><a href="#">基本資料</a></li>
-                <li><a href="#">我的紀錄</a></li>
-                <li><a href="#">我的收藏</a></li>
-                <li><a href="#">會員方案</a></li>
+        <header id="c_topbar">
+            <h1><a href="../index.html"><img src="../imgs/index-img/logo.svg" alt="首頁"></a></h1>
+            <ul class="nav">
+                <li><a href="#"></a>課程</li>
+                <li><a href="#"></a>考試</li>
+                <li><a href="#"></a>最新</li>
+                <li><a href="#"></a>關於</li>
+                <li><a href="#"></a>收藏</li>
+                <li class="log_out"><a href="#"></a>登出</li>
             </ul>
-        </div>
+        </header>
 
-<div id="me">
-        <h3>修改基本資料</h3>
-        <form action="" method="post" name="member_edit" id="member_edit" title="會員資料修改表單">
-            <label for="username">名稱</label>
-            <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" autocomplete>
+        <main>
 
-            <label for="gender">性別</label>
-            <select name="gender" id="gender" title="性別選項">
-                <option value=""></option>
-                <option value="生理男">男</option>
-                <option value="生理女">女</option>
-            </select>
+            <div id="head">
+                <div>
+                    <figure class="head"><img src="../imgs/member_img/head.svg" alt=""></figure>
+                </div>
+                <ul class="info">
+                    <li><a href="#">基本資料</a></li>
+                    <li><a href="#">我的紀錄</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">會員方案</a></li>
+                </ul>
+            </div>
 
-            <label for="birthday">生日</label>
-            <input type="date" name="birthday" id="birthday" title="生日欄位" placeholder="請選擇生日">
+            <div id="me">
+                <h3>修改基本資料</h3>
+                <form action="" method="post" name="member_edit" id="member_edit" title="會員資料修改表單">
 
+                    <!-- 第一欄 -->
+                    <div class="name">
+                        <label for="username">名稱</label>
+                        <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" autocomplete>
 
-            <h3>更改帳號</h3>
-            <label for="email">信箱</label>
-            <input type="email" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱"><button>變更</button>
-            <p>綁定</p><button class="google">google</button><button class="fb">fb</button>
+                        <label for="gender">性別</label>
+                        <select name="gender" id="gender" title="性別選項">
+                            <option value=""></option>
+                            <option value="生理男">男</option>
+                            <option value="生理女">女</option>
+                        </select>
 
-            <h3>修改密碼</h3>
-            <label for="password">輸入目前密碼</label>
-            <input type="password" name="password" id="password"><br>
+                        <label for="birthday">生日</label>
+                        <input type="date" name="birthday" id="birthday" title="生日欄位" placeholder="請選擇生日">
+                    </div>
 
-            <label for="password">修改密碼</label>
-            <input type="password" name="password" id="password-1"><br>
-    
-            <label for="password-1">確認密碼</label>
-            <input type="password" name="password" id="password-2"><button>設定</button>
+                    <!-- 第二欄 -->
+                    <div id="account">
+                        <h3>更改帳號</h3>
+                        <label for="email">信箱</label>
+                        <input type="email" name="email" id="email" title="email欄位"
+                            placeholder="請輸入電子郵件信箱"><button>變更</button>
+                        <p>綁定</p><button class="google">google</button><button class="fb">fb</button>
 
-            <h3>選擇身分</h3>
+                    </div>
+                    <!-- 第三欄 -->
+                    <div class="pw">
+                        <h3>修改密碼</h3>
+                        <label for="password">輸入目前密碼</label>
+                        <input type="password" name="password" id="password"><br>
 
-            <input type="radio" name="member" id="member-1" value="國一">
-            <label for="member-1">國一</label>
+                        <label for="password">修改密碼</label>
+                        <input type="password" name="password" id="password-1"><br>
 
-            <input type="radio" name="member" id="member-1" value="國二">
-            <label for="member-2">國二</label>
+                        <label for="password-1">確認密碼</label>
+                        <input type="password" name="password" id="password-2"><button>設定</button>
+                    </div>
+                    <!-- 第四欄 -->
+                    <div class="identity">
+                        <h3>選擇身分</h3>
 
-            <input type="radio" name="member" id="member-1" value="國三">
-            <label for="member-3">國三</label><br>
-        <div>
-            <input type="submit" name="btn__submit--member--edit" id="btn__submit--member--edit" title="會員資料儲存送出"
-            value="儲存資料">
-    </div>
-        </form>
-    </div>
-        <div><figure class="bell"></figure></div>
-    </main>
-</section>
+                        <input type="radio" name="member" id="member-1" value="國一">
+                        <label for="member-1">國一</label>
+
+                        <input type="radio" name="member" id="member-1" value="國二">
+                        <label for="member-2">國二</label>
+
+                        <input type="radio" name="member" id="member-1" value="國三">
+                        <label for="member-3">國三</label><br>
+                        <div>
+                            <input type="submit" name="btn__submit--member--edit" id="btn__submit--member--edit"
+                                title="會員資料儲存送出" value="儲存資料">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <figure class="bell"></figure>
+            </div>
+        </main>
+    </section>
 </body>
 
 </html>

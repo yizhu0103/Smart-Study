@@ -108,7 +108,7 @@ a {
 
 section {
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     background-image: url(../imgs/member_img/background.svg);
@@ -116,6 +116,9 @@ section {
     /* 根據需要設置寬度 */
 }
 
+main{
+    display: flex;
+}
 /* 頁首區 */
 
 #c_topbar {
@@ -156,7 +159,7 @@ h1 {
 #head {
     width: 312.33px;
     height: 877px;
-    margin: 67px 140px;
+    margin: 67px 0 0 140px;
     border-radius: 20px;
     background-color: var(--lesser-background-b-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -189,16 +192,46 @@ h1 {
 
 .info li {
     display: flex;
+    align-items: center;
+    justify-content: space-around; 
     margin: auto;
     font-size: 20px;
 }
 
+.info a {
+    width: 200px;
+    height: 50px;
+    border: 1px solid var(--primary-b-1);
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; 
+}
+
+
 /* 修改區 */
 #me{
+    margin: 65px 0 0 116px;
     display: flex;
     flex-direction: column;
     align-items:baseline;
-    width: 1034px;
+    width: 100%;
     height: 1017px;
-    border: #000 1px solid;
+}
+.name{
+    width: 1034px;
+    height: 156px;
+    border: 1.25px solid var(--primary-b-1);
+    border-radius: 25px;
+    background-color: var();
+}
+.account{
+    width: 100%;
+}
+.pw{
+    width: 100%;
+}
+.identity{
+    width: 100%;
 }

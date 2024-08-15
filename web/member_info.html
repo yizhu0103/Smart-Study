@@ -12,13 +12,13 @@
     <section>
     <header id="c_topbar">
         <h1><a href="../index.html"><img src="../imgs/index-img/logo.svg" alt="首頁"></a></h1>
-        <ul>
+        <ul class="nav">
             <li><a href="#"></a>課程</li>
             <li><a href="#"></a>考試</li>
             <li><a href="#"></a>最新</li>
             <li><a href="#"></a>關於</li>
             <li><a href="#"></a>收藏</li>
-            <li><a href="#"></a>登出</li>
+            <li class="log_out"><a href="#"></a>登出</li>
         </ul>
     </header>
 
@@ -36,20 +36,22 @@
             </ul>
         </div>
 
+<div id="me">
         <h3>修改基本資料</h3>
-        <form action="" method="post" name="form__member--edit" id="form__member--edit" title="會員資料修改表單">
+        <form action="" method="post" name="member_edit" id="member_edit" title="會員資料修改表單">
             <label for="username">名稱</label>
             <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入姓名" autocomplete>
 
             <label for="gender">性別</label>
             <select name="gender" id="gender" title="性別選項">
-                <option value="">請選擇</option>
+                <option value=""></option>
                 <option value="生理男">男</option>
                 <option value="生理女">女</option>
             </select>
 
             <label for="birthday">生日</label>
             <input type="date" name="birthday" id="birthday" title="生日欄位" placeholder="請選擇生日">
+
 
             <h3>更改帳號</h3>
             <label for="email">信箱</label>
@@ -81,7 +83,7 @@
             value="儲存資料">
     </div>
         </form>
-
+    </div>
         <div><figure class="bell"></figure></div>
     </main>
 </section>

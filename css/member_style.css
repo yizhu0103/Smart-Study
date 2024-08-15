@@ -105,51 +105,63 @@ a {
 }
 
 
+
 section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; 
     align-items: flex-start;
     width: 100%;
+    background-image: url(../imgs/member_img/background.svg);
+    background-color: var(--lesser-background-y-);
     /* 根據需要設置寬度 */
 }
 
 /* 頁首區 */
 
 #c_topbar {
-    width: 100px;
-    height: 800px;
+    width: 125px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--lesser-background-b-);
 }
 
-#c_topbar ul{
-    margin-top: 170px;
+#c_topbar ul {
+    width: 36px;
+    height: 748px;
+    margin-top: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#c_topbar li {
-    margin: 80px 0;
 
+.nav li {
+    margin: auto;
+    font-size: 18px;
 }
 
+#c_topbar .nav .log_out {
+    font-size: 16px;
+}
 
 h1 {
-    width: 24px;
-    height: 31px;
-    margin: 38px;
+    width: 48px;
+    height: 48px;
+    margin: 47.47px;
 }
 
 /* 頭像區 */
 
 #head {
-    width: 250px;
-    height: 702px;
-    margin: 54px 113px;
+    width: 312.33px;
+    height: 877px;
+    margin: 67px 140px;
     border-radius: 20px;
-    background-color:var(--lesser-background-b-);
+    background-color: var(--lesser-background-b-);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -157,19 +169,36 @@ h1 {
     margin: 66px 40px;
     width: 164px;
     height: 183px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.info{
+.info {
     width: 222px;
     height: 321px;
-    padding: 33px 28px;
+    padding: 62px 50px;
     border-radius: 20px;
+    margin-top: 62px;
     background-color: var(--lesser-background-y-);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.info li{
+.info li {
+    display: flex;
     margin: auto;
+    font-size: 20px;
+}
+
+/* 修改區 */
+#me{
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    width: 1034px;
+    height: 1017px;
+    border: #000 1px solid;
 }

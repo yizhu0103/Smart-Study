@@ -104,16 +104,20 @@ a {
     --lesser-background-b-: #EFF5FF;
 }
 
-
+h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--font-b-1);
+}
 
 section {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
     background-image: url(../imgs/member_img/background.svg);
     background-color: var(--lesser-background-y-);
-    /* 根據需要設置寬度 */
+    background-size: cover;
 }
 
 main{
@@ -122,16 +126,17 @@ main{
 /* 頁首區 */
 
 #c_topbar {
-    width: 125px;
-    height: 1000px;
+    width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--lesser-background-b-);
+    color: var(--primary-b-2);
 }
 
 #c_topbar ul {
-    width: 36px;
+    width: 30%;
     height: 748px;
     margin-top: 132px;
     display: flex;
@@ -149,7 +154,7 @@ main{
 }
 
 h1 {
-    width: 48px;
+    width: 30%;
     height: 48px;
     margin: 47.47px;
 }
@@ -157,7 +162,7 @@ h1 {
 /* 頭像區 */
 
 #head {
-    width: 312.33px;
+    width: 50%;
     height: 877px;
     margin: 67px 0 0 140px;
     border-radius: 20px;
@@ -178,22 +183,17 @@ h1 {
 }
 
 .info {
-    width: 222px;
+    width: auto;
     height: 321px;
     padding: 62px 50px;
     border-radius: 20px;
     margin-top: 62px;
     background-color: var(--lesser-background-y-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .info li {
     display: flex;
-    align-items: center;
-    justify-content: space-around; 
     margin: auto;
     font-size: 20px;
 }
@@ -219,19 +219,122 @@ h1 {
     width: 100%;
     height: 1017px;
 }
+#member_edit{
+    font-family: 'Noto Sans TC', sans-serif;
+    align-content: center;
+}
+#member_edit {
+    font-size: 18px;
+    margin-top: 1rem;
+    width: 100%;
+    color: var(--font-b-1);
+}
+#member_edit input,
+#member_edit textarea,
+#member_edit select{
+    width:234px;
+    height: 37.48px;
+    padding: 6px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: var(--secondary-b-1);
+    background-color: var(--lesser-background-b-);
+    border:transparent;
+    
+}
+
+#member_edit  input:focus,
+#member_edit  textarea:focus,
+#member_edit  select:focus {
+    outline: transparent;
+}
 .name{
     width: 1034px;
-    height: 156px;
+    height: 156.6px;
     border: 1.25px solid var(--primary-b-1);
     border-radius: 25px;
-    background-color: var();
+    background-color: var(--lesser-background-y-);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    margin-top: 41.5px;
 }
 .account{
-    width: 100%;
+    width: 1034px;
+    height: 156.6px;
+    margin-top: 1rem;
+    padding: 20px;
+    border: 1.25px solid var(--primary-b-1);
+    border-radius: 25px;
+    background-color: var(--lesser-background-y-);
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+#member_edit #email{
+    width: 280px;
+    margin: 0 29px 0 36.77px;
+}
+
+.account button{
+    width: 95px;
+    height: 35px;
+    margin-right: 46.61px;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: var(--secondary-y-1);
+    border: none;
+}
+
+.account p{
+    margin-right: 23.4px;
+}
+
+.account .google{
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background-image: url(../imgs/member_img/google.svg);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden;
+    margin-right: 26px;
+    cursor: pointer;
+}
+.account .fb{
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background-image: url(../imgs/member_img/fb.svg);
+    border: none;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden;
+    cursor: pointer;
 }
 .pw{
     width: 100%;
 }
 .identity{
     width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.bell{
+    width: 60px;
+    height: 60px;
+    background-image: url(../imgs/member_img/bell.svg);
 }

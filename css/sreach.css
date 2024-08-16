@@ -134,17 +134,19 @@ a {
   height: 48px; /*图片显示的高*/
   }
 
-
+.search_label{
+  width: 40%;
+}
 input {
   background-color: var(--lesser-background-b-);
-  width: 674px;
+  width:100%;
   height: 5.5vh;
   font-size: 1.2rem;
   color: var(--font-b-2);
   margin-bottom: 10px;
   border-radius: 99px;
   border: var(--primary-b-2) 1px solid;
-  padding-left: 48px;
+  padding:0 48px;
 }
 
 input:focus {

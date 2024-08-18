@@ -87,7 +87,10 @@ a {
 }
 
 /* 共用區 */
-
+main{
+  background: url(../imgs/sraech-img/background-se.svg);
+  background-color: var(--lesser-background-y-);
+}
 /* sreach區 */
 #sreach {
   display: flex;
@@ -96,9 +99,10 @@ a {
   align-items: center;
   width: 100%;
   height: 64.5vh;
-  background: url(../imgs/sraech-img/background-se.svg);
-  background-color: var(--lesser-background-y-);
-  background-position: 0 -40px;
+  background-image: url(../imgs/sraech-img/line-bkg.svg);
+  background-position: 0 -20px;
+  background-position: 100% auto;
+
 
 }
 
@@ -163,6 +167,49 @@ input:focus {
   width: 100%;
 }
 
+
+/* 跑馬燈 */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+
+}
+
+/* 跑馬燈項目樣式 */
+.marquee-item {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: var(--font-b-1);
+  padding: 5px 50px;
+  border-radius: 99px;
+  border: var(--primary-b-2) 3px solid;
+  background-color: var(--lesser-background-b-);
+  right: -300px; /* 初始在容器右側 */
+  animation: moveLeft 15s linear infinite;
+}
+
+/* 跑馬燈的動畫效果 */
+@keyframes moveLeft {
+  0% {
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      transform: translateX(-120vw) translateY(0);
+  }
+}
+
+/* 分散每個項目的初始位置 */
+.marquee-item:nth-child(1) { top: 10%; animation-delay: -8s; }
+.marquee-item:nth-child(2) { top: 70%; animation-delay: -5s; }
+.marquee-item:nth-child(3) { top: 50%; animation-delay: 3s; }
+.marquee-item:nth-child(4) {top: 30%; animation-delay: 0s; }
+.marquee-item:nth-child(5) { top: 90%; animation-delay: -3s; }
+
+
+
 .totsub {
   display: flex;
   justify-content: space-between;
@@ -184,6 +231,7 @@ input:focus {
   color: var(--primary-b-2);
   background-color: var(--lesser-background-b-);
   transition: 0.35s;
+  position: relative;
 }
 
 .menu .subject:hover {
@@ -194,10 +242,12 @@ input:focus {
 
 .sublist {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 5px;
-
+  z-index: 5;
+  position: absolute;
+  top: 210px;
 
 }
 
@@ -215,6 +265,7 @@ input:focus {
   border-radius: 10px;
   border: var(--primary-b-2) 3px solid;
   background-color: var(--lesser-background-b-);
+  
 
 }
 
@@ -239,8 +290,7 @@ input:focus {
   align-items: center;
   width: 100%;
   height: 800px;
-  background: url(../imgs/sraech-img/background-se.svg);
-  background-color: var(--lesser-background-y-);
+
 }
 
 .btns {
@@ -392,4 +442,8 @@ input:focus {
 .sublist .list::-webkit-scrollbar-corner {
 
   border-radius: 50%;
+}
+.invantory::-webkit-scrollbar-thumb:hover ,
+.sublist .list::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-b-1);
 }

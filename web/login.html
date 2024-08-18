@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育平台</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <main>
+        <section id="login">
+            <!-- <div class="star"></div> -->
+            <div class="register">
+                <button type="button" class="register_btn">註冊</button>
+            </div>
+            <div class="login">
+                <div class="login_box">
+                    <h3>登入</h3>
+                    <div class="login_list">
+                        <div class="uid">
+                           
+                            <input type="text" name="uid" id="uid" title="帳號欄位" placeholder="帳號">
+                        </div>
+                        <div class="psw">
+                         
+                            <input type="text" name="psw" id="psw" title="密碼欄位" placeholder="密碼">
+                        </div>
+                        <div class="forgetpsw">
+                            <div>
+                            <input type="radio" name="rememberpsw" id="rememberpsw" value="忘記密碼">
+                            <label for="">記住我</label></div>
+                            <a href="">忘記密碼</a>
+                        </div>
+
+                    </div>
+                    
+                    <button type="button" class="login_btn">登入</button>
+                </div>
+
+                <div class="or_login">
+                    <h3>or</h3>
+                    <div class="btn_list">
+                        <span id="GOOGLE_STATUS_1"></span>
+                        <div id="g_id_onload" data-client_id="5432xxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com"
+                            data-callback="onSignIn1"></div>
+                        <div class="g_id_signin" data-type="standard"></div>
+
+    
+                        <button type="button">
+                            facebook</button>
+
+                        <button type="button">
+                            訪客登入
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <script>
+            // 登入之後
+            function onSignIn1(response) {
+                var credential = response.credential,
+                    profile = JSON.parse(decodeURIComponent(escape(window.atob(credential.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))))), // 對 JWT 進行解碼
+                    target = document.getElementById("GOOGLE_STATUS_1"),
+                    html = "";
+
+                html += "ID: " + profile.sub + "<br/>";
+                html += "會員暱稱： " + profile.name + "<br/>";
+                html += "會員頭像：" + profile.picture + "<br/>";
+                html += "會員 email：" + profile.email + "<br/>";
+                target.innerHTML = html;
+            }
+        </script>
+    </main>
+
+
+</body>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+</html>

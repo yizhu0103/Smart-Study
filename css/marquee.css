@@ -26,7 +26,7 @@
 .tag-scroller {
 	display: grid;
 	gap: 1.5rem;
-	mask: linear-gradient(90deg, #0a84e9, var(--background) 15%, var(--background) 85%, #0000);
+	mask: linear-gradient(90deg, #4395E6,#4395E6 15%, #4395E6 85%, #0000);
 }
 
 .tag-list {
@@ -74,7 +74,7 @@
 		AND border
 */
 .tag-list li {
-	background-color:  var(--secondary-b-1);
+	background-color:  var(--primary-b-2);
 	font-family:'Noto Sans TC' sans-serif;
 	font-size: 32px;
 	line-height: 1;

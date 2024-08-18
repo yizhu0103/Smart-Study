@@ -104,9 +104,16 @@ a {
     --lesser-background-b-: #EFF5FF;
 }
 
-h3{
+h2 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--font-b-1);
+}
+
+h3 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--font-b-1);
 }
 
@@ -120,24 +127,27 @@ section {
     background-size: cover;
 }
 
-main{
+main {
     display: flex;
 }
+
 /* 頁首區 */
 
 #c_topbar {
-    width: 70%;
+    width: 125px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--lesser-background-b-);
     color: var(--primary-b-2);
+    z-index: 999;
+    position: fixed;
 }
 
 #c_topbar ul {
     width: 30%;
-    height: 748px;
+    height: 100%;
     margin-top: 132px;
     display: flex;
     flex-direction: column;
@@ -149,12 +159,19 @@ main{
     font-size: 18px;
 }
 
+.nav li a {
+    color: var(--primary-b-2);
+    margin: auto;
+    font-size: 16px;
+}
+
+
 #c_topbar .nav .log_out {
     font-size: 16px;
 }
 
 h1 {
-    width: 30%;
+    width: 48px;
     height: 48px;
     margin: 47.47px;
 }
@@ -162,15 +179,17 @@ h1 {
 /* 頭像區 */
 
 #head {
-    width: 50%;
+    width: 315px;
     height: 877px;
-    margin: 67px 0 0 140px;
+    margin: 67px 0 0 260px;
     border-radius: 20px;
     background-color: var(--lesser-background-b-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 999;
+    /* position: fixed; */
 }
 
 #head .head {
@@ -183,8 +202,12 @@ h1 {
 }
 
 .info {
-    width: auto;
-    height: 321px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 50%;
     padding: 62px 50px;
     border-radius: 20px;
     margin-top: 62px;
@@ -194,62 +217,78 @@ h1 {
 
 .info li {
     display: flex;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
+    width: 200px;
 }
+
 
 .info a {
     width: 200px;
     height: 50px;
-    border: 1px solid var(--primary-b-1);
+    border: 2px solid var(--primary-b-2);
+    background-color: var(--primary-b-2);
+    color: var(--tertiary);
     border-radius: 99px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px; 
+}
+
+.info a:hover {
+    background-color: var(--secondary-y-1);
+    color: var(--secondary-b-1);
+    font-weight: 600;
 }
 
 
 /* 修改區 */
-#me{
+#me {
     margin: 65px 0 0 116px;
     display: flex;
     flex-direction: column;
-    align-items:baseline;
+    align-items: baseline;
     width: 100%;
-    height: 1017px;
+    height: 100%;
 }
-#member_edit{
-    font-family: 'Noto Sans TC', sans-serif;
-    align-content: center;
-}
+
 #member_edit {
     font-size: 18px;
     margin-top: 1rem;
     width: 100%;
     color: var(--font-b-1);
+    font-family: 'Noto Sans TC', sans-serif;
+    align-content: center;
 }
+
 #member_edit input,
 #member_edit textarea,
-#member_edit select{
-    width:234px;
+#member_edit select {
+    width: 20%;
     height: 37.48px;
     padding: 6px;
     border-radius: 25px;
     font-size: 16px;
     color: var(--secondary-b-1);
     background-color: var(--lesser-background-b-);
-    border:transparent;
-    
+    border: transparent;
 }
 
-#member_edit  input:focus,
-#member_edit  textarea:focus,
-#member_edit  select:focus {
-    outline: transparent;
+#member_edit select {
+    justify-content: center;
 }
-.name{
-    width: 1034px;
+
+#member_edit input:focus,
+#member_edit textarea:focus,
+#member_edit select:focus {
+    outline: transparent;
+    border: transparent;
+}
+
+/* 第一欄 */
+.name {
+    width: 100vh;
     height: 156.6px;
     border: 1.25px solid var(--primary-b-1);
     border-radius: 25px;
@@ -258,11 +297,14 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
-.title{
+
+/* 第二欄 */
+.title {
     margin-top: 41.5px;
 }
-.account{
-    width: 1034px;
+
+.account {
+    width: 100vh;
     height: 156.6px;
     margin-top: 1rem;
     padding: 20px;
@@ -274,12 +316,12 @@ h1 {
     align-items: center;
 }
 
-#member_edit #email{
-    width: 280px;
+#member_edit #email {
+    width: 30%;
     margin: 0 29px 0 36.77px;
 }
 
-.account button{
+.account button {
     width: 95px;
     height: 35px;
     margin-right: 46.61px;
@@ -287,25 +329,27 @@ h1 {
     font-size: 16px;
     background-color: var(--secondary-y-1);
     border: none;
+    cursor: pointer;
 }
 
-.account p{
+.account p {
     margin-right: 23.4px;
 }
 
-.account .google{
+.account .google {
     width: 48px;
     height: 48px;
     border-radius: 50px;
     background-image: url(../imgs/member_img/google.svg);
     background-color: transparent;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     overflow: hidden;
     margin-right: 26px;
     cursor: pointer;
 }
-.account .fb{
+
+.account .fb {
     width: 48px;
     height: 48px;
     border-radius: 50px;
@@ -313,28 +357,158 @@ h1 {
     border: none;
     background-color: transparent;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     overflow: hidden;
     cursor: pointer;
 }
-.pw{
+
+.pw {
     width: 100%;
 }
-.identity{
+
+.identity {
     width: 100%;
 }
 
+/* 第三欄 */
+
+.pw {
+    width: 100vh;
+    height: 30%;
+    margin-top: 1rem;
+    padding: 50px 20px;
+    border: 1.25px solid var(--primary-b-1);
+    border-radius: 25px;
+    background-color: var(--lesser-background-y-);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.pw .gap {
+    margin: 20px 0;
+}
+
+.pw #password-o {
+    width: 35%;
+    padding: 10px;
+    margin: 0 42px;
+    align-content: space-between;
+}
+
+.pw #password {
+    width: 35%;
+    padding: 10px;
+    margin: 0 60px;
+    align-content: space-between;
+}
+
+.pw button {
+    width: 95px;
+    height: 35px;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: var(--secondary-y-1);
+    border: none;
+    cursor: pointer;
+}
+
+/* 第四欄 */
+.identity {
+    width: 100vh;
+    height: 15%;
+    margin-top: 1rem;
+    padding: 50px;
+    border: 1.25px solid var(--primary-b-1);
+    border-radius: 25px;
+    background-color: var(--lesser-background-y-);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.identity #member {
+    width: 24%;
+    height: 30%;
+    align-content: center;
+}
 
 
+/* 儲存按鈕 */
+#save {
+    width: 100vh;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#submit {
+    width: 150px;
+    height: 35px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 45px 20px 0 0;
+    background-color: var(--secondary-y-1);
+    border: none;
+    cursor: pointer;
+}
 
 
+#bell {
+    width: 20vh;
+    height: 100px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+    cursor: pointer;
+}
 
-
-
-
-
-.bell{
+.bell {
     width: 60px;
     height: 60px;
     background-image: url(../imgs/member_img/bell.svg);
+}
+
+/* 我的紀錄區 */
+#record {
+    width: 100vh;
+    margin: 107px 0 0 130px;
+    flex-direction: column;
+    border: #000 1px solid;
+}
+
+#record figure{
+    width: 200px;
+    height: 213px;
+}
+#test {
+    display: flex;
+    border: #000 1px solid;
+    margin: 50px;
+}
+
+#program {
+    border: #000 1px solid;
+    margin: 50px;
+}
+
+
+progress {
+    width: 30%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FFFEF6;
+    border: 1px solid var(--font-b-1);
+}
+
+progress::-webkit-progress-bar {
+    background-color: #FFFEF6;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-b-2);
+    border-radius: 30px;
 }

@@ -18,12 +18,12 @@
                 <li><a href="#">最新</a></li>
                 <li><a href="#">關於</a></li>
                 <li><a href="#">收藏</a></li>
-                <li class="log_out"><a href="#"></a>登出</li>
+                <li class="log_out"><a href="#">登出</a></li>
             </ul>
         </header>
 
         <main>
-
+            <!-- 頭像區 -->
             <div id="head">
                 <div>
                     <figure class="head"><img src="../imgs/member_img/head.svg" alt=""></figure>
@@ -66,34 +66,44 @@
                     <!-- 第三欄 -->
                     <h3 class="title">修改密碼</h3>
                     <div class="pw">
-                        <label for="password">輸入目前密碼</label>
-                        <input type="password" name="password" id="password"><br>
-
-                        <label for="password">修改密碼</label>
-                        <input type="password" name="password" id="password-1"><br>
-
-                        <label for="password-1">確認密碼</label>
-                        <input type="password" name="password" id="password-2"><button>設定</button>
+                        <div class="gap">
+                            <label for="password">輸入目前密碼</label>
+                            <input type="password" name="password" id="password-o"><br>
+                        </div>
+                        <div class="gap">
+                            <label for="password">輸入新密碼</label>
+                            <input type="password" name="password" id="password"><br>
+                        </div>
+                        <div class="gap">
+                            <label for="password">確認新密碼</label>
+                            <input type="password" name="password" id="password">
+                            <button>設定</button>
+                        </div>
                     </div>
                     <!-- 第四欄 -->
                     <h3 class="title">選擇身分</h3>
                     <div class="identity">
-                        <input type="radio" name="member" id="member-1" value="國一">
-                        <label for="member-1">國一</label>
-
-                        <input type="radio" name="member" id="member-1" value="國二">
-                        <label for="member-2">國二</label>
-
-                        <input type="radio" name="member" id="member-1" value="國三">
-                        <label for="member-3">國三</label><br>
                         <div>
-                            <input type="submit" name="btn__submit--member--edit" id="btn__submit--member--edit"
-                                title="會員資料儲存送出" value="儲存資料">
-                        </div>
+                        <input type="radio" name="member" id="member" value="國一">
+                        <label for="member-1">國一</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="member" id="member" value="國二">
+                        <label for="member-2">國二</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="member" id="member" value="國三">
+                        <label for="member-3">國三</label>
+                    </div>
                     </div>
                 </form>
+
+                <div id="save">
+                    <input type="submit" name="btn__submit--member--edit" id="submit"
+                        title="會員資料儲存送出" value="儲存資料">
+                </div>
             </div>
-            <div>
+            <div id="bell">
                 <figure class="bell"></figure>
             </div>
         </main>

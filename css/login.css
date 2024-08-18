@@ -19,6 +19,8 @@
   /* 輔助 */
   --lesser-background-y-: #FFFEF6;
   --lesser-background-b-: #EFF5FF;
+  --input-b-1: #76AFE8;
+  --input-y-2: #F9E28F
 
 
 
@@ -108,50 +110,56 @@ input{
 section#login{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: var(--lesser-background-y-);
+  background-image: url(../imgs/login-img/background.svg);
+  background-size: cover;
+  background-position: 0 -40px;
 }
 .register{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 80%;
-  border: #000 2px solid ;
 
 }
 .register_btn{
 clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 100%, 0 100%);  background-color: #FFDE67;
 background-color: var(--secondary-y-1);
-padding:30px 20px 20px;
+padding:60px 30px 30px;
 right: 200px;
 
-
+font-size: 1.5rem;
+color: var(--font-b-1);
+font-family: "Noto Sans TC" ,sans-serif;
 }
 
 .login{
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  
 width: 100%;
-height: 80vh;
-  border: #000 2px solid ;
-background-color: var(--lesser-background-b-);
+height: 75vh;
+
+
+
+
 }
-.login_box{
+.login_box,.or_login{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width:40%;
-  height: 50%;
-  border: #000 2px solid ;
+  height: 80%;
 }
 
 .forgetpsw{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width:100%;
 }
@@ -159,33 +167,44 @@ background-color: var(--lesser-background-b-);
 .login h3{
 font-size: 1.5rem;
 color: var(--font-b-1);
-font-family: "Noto Sans TC" sans-serif;
+font-family: "Noto Sans TC" ,sans-serif;
+margin: 20px;
 }
 .login_list{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  border: #000 2px solid ;
+  width: 45%;
+ 
 }
-input{
-  /* background-color: var(--input-b-1); */
-  padding: 5px 0 5px 15px;
+input#uid,
+input#psw{
+  background-color: var(--input-b-1);
   margin: 10px 0;
-  border-radius: 99px;
+  width:100%;
+  height: 4vh;
   font-size: 0.75rem;
-  width: 100%;
-  border: #000 2px solid ;
+  color: var(--lesser-background-y-);
+  border-radius: 99px;
+  padding:5px 20px 5px 20px;
+}
+input::placeholder {
+  color: var(--lesser-background-y-);
 }
 
-
-.or_login{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width:40%;
-  height: 50%;
-  border: #000 2px solid ;
+.forgetpsw .forgetpsw_text{
+  color: var(--font-b-1);
 }
+.forgetpsw a{
+  margin-left: 10px;
+  color: var(--font-b-2);
+}
+.login_btn{
+  background-color: var(--input-y-2);
+  font-size: 1.125rem;
+  border-radius: 99px;
+  padding: 5px 20px;
+  margin-top: 20px;
+}
+

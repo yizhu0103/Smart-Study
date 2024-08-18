@@ -104,6 +104,13 @@ a {
     --lesser-background-b-: #EFF5FF;
 }
 
+h2 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--font-b-1);
+}
+
 h3 {
     font-size: 22px;
     font-weight: 600;
@@ -140,7 +147,7 @@ main {
 
 #c_topbar ul {
     width: 30%;
-    height: 748px;
+    height: 100%;
     margin-top: 132px;
     display: flex;
     flex-direction: column;
@@ -151,6 +158,13 @@ main {
     margin: auto;
     font-size: 18px;
 }
+
+.nav li a {
+    color: var(--primary-b-2);
+    margin: auto;
+    font-size: 16px;
+}
+
 
 #c_topbar .nav .log_out {
     font-size: 16px;
@@ -411,7 +425,6 @@ h1 {
     background-color: var(--lesser-background-y-);
     display: flex;
     align-items: center;
-    justify-items: center;
     justify-content: space-around;
 }
 
@@ -423,7 +436,7 @@ h1 {
 
 
 /* 儲存按鈕 */
-#save{
+#save {
     width: 100vh;
     height: 100px;
     display: flex;
@@ -442,7 +455,7 @@ h1 {
 }
 
 
-#bell{
+#bell {
     width: 20vh;
     height: 100px;
     margin-top: 40px;
@@ -456,4 +469,46 @@ h1 {
     width: 60px;
     height: 60px;
     background-image: url(../imgs/member_img/bell.svg);
+}
+
+/* 我的紀錄區 */
+#record {
+    width: 100vh;
+    margin: 107px 0 0 130px;
+    flex-direction: column;
+    border: #000 1px solid;
+}
+
+#record figure{
+    width: 200px;
+    height: 213px;
+}
+#test {
+    display: flex;
+    border: #000 1px solid;
+    margin: 50px;
+}
+
+#program {
+    border: #000 1px solid;
+    margin: 50px;
+}
+
+
+progress {
+    width: 30%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FFFEF6;
+    border: 1px solid var(--font-b-1);
+}
+
+progress::-webkit-progress-bar {
+    background-color: #FFFEF6;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-b-2);
+    border-radius: 30px;
 }

@@ -479,24 +479,31 @@ h1 {
     border: #000 1px solid;
 }
 
-#record figure{
-    width: 200px;
-    height: 213px;
+#record figure {
+    width: 20vh;
 }
+
 #test {
-    display: flex;
     border: #000 1px solid;
+    width: 90vh;
+    display: flex;
     margin: 50px;
+    justify-content: space-around;
+    overflow: auto;
+    padding-bottom: 30px;
 }
 
 #program {
     border: #000 1px solid;
+    display: flex;
     margin: 50px;
+    justify-content: space-evenly;
+    overflow: auto;
 }
 
 
 progress {
-    width: 30%;
+    width: 90%;
     height: 20px;
     border-radius: 10px;
     background-color: #FFFEF6;
@@ -511,4 +518,40 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     background-color: var(--primary-b-2);
     border-radius: 30px;
+}
+
+#test::-webkit-scrollbar,
+.sublist .list::-webkit-scrollbar {
+    background-color: var(--lesser-background-y-);
+    border: var(--primary-b-1) 1px solid;
+    border-radius: 99px;
+
+}
+
+#test::-webkit-scrollbar-thumb,
+.sublist .list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-b-2);
+    border-radius: 99px;
+}
+
+#test::-webkit-scrollbar-track,
+.sublist .list::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+#test::-webkit-scrollbar-button,
+.sublist .list::-webkit-scrollbar-button {
+    display: none;
+    /* 若預設就是display none 是因為body有設定botton 所以需要另外設定取消 */
+}
+
+#test::-webkit-scrollbar-corner,
+.sublist .list::-webkit-scrollbar-corner {
+
+    border-radius: 50%;
+}
+
+#test::-webkit-scrollbar-thumb:hover,
+.sublist .list::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-b-1);
 }

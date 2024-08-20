@@ -29,7 +29,7 @@
                         </div>
                         <div class="forgetpsw">
                             <div>
-                                <input type="radio" name="rememberpsw" id="rememberpsw" value="忘記密碼">
+                                <input type="checkbox" name="rememberpsw" id="rememberpsw" value="忘記密碼">
                                 <label class="forgetpsw_text" for="">記住我</label>
                             </div>
                             <a href="">忘記密碼</a>
@@ -48,11 +48,10 @@
                             data-callback="onSignIn1"></div>
                         <div class="g_id_signin" data-type="standard"></div>
 
-
-                        <button type="button">
-                            facebook</button>
-
-                        <button type="button">
+                        <div class="fb-login-button"></div>
+                        
+                        
+                        <button type="button" class="tourists_login_btn">
                             訪客登入
                         </button>
                     </div>
@@ -76,6 +75,8 @@
                 html += "會員 email：" + profile.email + "<br/>";
                 target.innerHTML = html;
             }
+
+            
         </script>
     </main>
 

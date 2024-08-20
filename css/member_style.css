@@ -106,6 +106,7 @@ a {
 
 h2 {
     width: 100%;
+    padding-bottom: 40px;
     font-size: 30px;
     font-weight: 600;
     color: var(--font-b-1);
@@ -471,20 +472,20 @@ h1 {
     background-image: url(../imgs/member_img/bell.svg);
 }
 
-/* 我的紀錄區 */
+/* 我的紀錄頁 */
+
 #record {
     width: 100vh;
     margin: 107px 0 0 130px;
     flex-direction: column;
-    border: #000 1px solid;
 }
 
 #record figure {
     width: 20vh;
+    padding-bottom: 10px;
 }
 
 #test {
-    border: #000 1px solid;
     width: 90vh;
     display: flex;
     margin: 50px;
@@ -494,16 +495,16 @@ h1 {
 }
 
 #program {
-    border: #000 1px solid;
     display: flex;
     margin: 50px;
     justify-content: space-evenly;
     overflow: auto;
+    padding-bottom: 30px;
 }
 
 
 progress {
-    width: 90%;
+    width: 95%;
     height: 20px;
     border-radius: 10px;
     background-color: #FFFEF6;
@@ -521,7 +522,7 @@ progress::-webkit-progress-value {
 }
 
 #test::-webkit-scrollbar,
-.sublist .list::-webkit-scrollbar {
+#program::-webkit-scrollbar {
     background-color: var(--lesser-background-y-);
     border: var(--primary-b-1) 1px solid;
     border-radius: 99px;
@@ -529,29 +530,35 @@ progress::-webkit-progress-value {
 }
 
 #test::-webkit-scrollbar-thumb,
-.sublist .list::-webkit-scrollbar-thumb {
+#program::-webkit-scrollbar-thumb {
     background-color: var(--primary-b-2);
     border-radius: 99px;
 }
 
 #test::-webkit-scrollbar-track,
-.sublist .list::-webkit-scrollbar-track {
+#program::-webkit-scrollbar-track {
     border-radius: 99px;
 }
 
 #test::-webkit-scrollbar-button,
-.sublist .list::-webkit-scrollbar-button {
+#program::-webkit-scrollbar-button {
     display: none;
     /* 若預設就是display none 是因為body有設定botton 所以需要另外設定取消 */
 }
 
 #test::-webkit-scrollbar-corner,
-.sublist .list::-webkit-scrollbar-corner {
-
+#program::-webkit-scrollbar-corner {
     border-radius: 50%;
 }
 
 #test::-webkit-scrollbar-thumb:hover,
-.sublist .list::-webkit-scrollbar-thumb:hover {
+#program::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-b-1);
+}
+
+/* 我的收藏頁 */
+
+#collect{
+    display: flex;
+    flex-direction: column-reverse;
 }

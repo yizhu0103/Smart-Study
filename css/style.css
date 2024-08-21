@@ -716,7 +716,6 @@ section#marquee {
   background: linear-gradient(0turn, var(--secondary-y-1) 40%, transparent 0%);
   width: 17rem;
   font-size: 1.5rem;
-
   color: var(--font-b-1);
   font-weight: bold;
 }
@@ -753,7 +752,6 @@ section#marquee {
   height: 100vh;
   background-color: var(--lesser-background-b-);
   background-image: url(../imgs/index-img/member-bk.svg);
-
   background-size: 100% 100%;
   background-position: 0 -100px;
   
@@ -785,7 +783,7 @@ section#marquee {
   background-size: 100% auto;
 }
 #member .member_box__list a{
-  margin: 0 -30px;
+  margin: 0 -10px;
 }
 #member .memberimg {
   width: 100%;
@@ -798,6 +796,9 @@ section#marquee {
   margin-bottom: 200px;
 }
 #member .member-star {
+  position: absolute;
+  bottom: 50px;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -819,7 +820,7 @@ section#marquee {
   width: 100%;
   height: 25vh;
   border-radius:50%;
-  border: #000 2px solid;
+  border:#1C276D 2px solid;
   position: absolute;
   bottom: -120px;
 }
@@ -844,10 +845,12 @@ footer ul {
 
 }
 
-a {
+.footer__box__list a {
   color: var(--lesser-background-y-);
   margin-right: 5px;
   margin-bottom: 5px;
+  width: 50%;
+  height: 50%;
 }
 
 .footer__box__list {
@@ -859,18 +862,24 @@ a {
   z-index: 3;
 }
 
-
-
-
+.footer__box__list .li-1{
+  margin-bottom: 50px;
+}
+.footer__box__list .li-2{
+  margin-bottom: 20px;
+}
+.footer__box__list .li-4{
+  margin-top: 20px;
+}
 .footer__box__list .plant {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 25px;
-  width: 141px;
-  height: 96px;
+  width: 100%;
+  height: 10vh;
   background-image: url(../imgs/index-img/planet.svg);
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 footer small {

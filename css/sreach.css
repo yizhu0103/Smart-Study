@@ -252,7 +252,7 @@ input:focus {
 }
 
 .sublist .list {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -289,7 +289,8 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 800px;
+  
+
 
 }
 
@@ -305,17 +306,17 @@ input:focus {
 }
 
 .btn_c {
-
-  background-color: var(--primary-b-2);
-  color: var(--lesser-background-y-);
+  background-color: var(--secondary-y-1);
+  color: var(--secondary-b-1);
+  
   padding: 20px 59px 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .btn_b {
-  background-color: var(--secondary-y-1);
-  color: var(--secondary-b-1);
+background-color: var(--primary-b-2);
+  color: var(--lesser-background-y-);
   padding: 20px 59px 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -334,8 +335,9 @@ input:focus {
 .checklist {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   width: 100%;
+
   background-color: var(--lesser-background-b-);
 }
 
@@ -353,8 +355,17 @@ input:focus {
   height: 82px;
 }
 
+.checklist_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
 
-.invantory {
+}
+
+
+.invantory,.courseList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -414,7 +425,8 @@ input:focus {
 }
 
 .invantory::-webkit-scrollbar,
-.sublist .list::-webkit-scrollbar {
+.sublist .list::-webkit-scrollbar,
+.courseList::-webkit-scrollbar {
   background-color: var(--lesser-background-y-);
   border: var(--primary-b-1) 1px solid;
   border-radius: 99px;
@@ -422,28 +434,39 @@ input:focus {
 }
 
 .invantory::-webkit-scrollbar-thumb,
+.courseList::-webkit-scrollbar-thumb,
 .sublist .list::-webkit-scrollbar-thumb {
   background-color: var(--primary-b-2);
   border-radius: 99px;
 }
 
 .invantory::-webkit-scrollbar-track,
+.courseList::-webkit-scrollbar-track,
 .sublist .list::-webkit-scrollbar-track {
   border-radius: 99px;
 }
 
 .invantory::-webkit-scrollbar-button,
+.courseList::-webkit-scrollbar-button,
 .sublist .list::-webkit-scrollbar-button {
   display: none;
   /* 若預設就是display none 是因為body有設定botton 所以需要另外設定取消 */
 }
 
 .invantory::-webkit-scrollbar-corner,
+.courseList::-webkit-scrollbar-corner,
 .sublist .list::-webkit-scrollbar-corner {
 
   border-radius: 50%;
 }
 .invantory::-webkit-scrollbar-thumb:hover ,
+.courseList::-webkit-scrollbar-thumb:hover ,
 .sublist .list::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-b-1);
+}
+
+
+#courseList{
+  visibility: hidden;
+  /*剛開始消失*/
 }

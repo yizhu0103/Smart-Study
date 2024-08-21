@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教育平台</title>
     <link rel="stylesheet" href="../css/login.css">
+
+    <script src="../js/login.js"></script>
 </head>
 
 <body>
@@ -13,52 +15,83 @@
         <section id="login">
             <!-- <div class="star"></div> -->
             <div class="register">
-                <button type="button" class="register_btn">註冊</button>
+                <button type="button" class="register_btn">
+                    <h5 onclick="show_hide()">註冊帳號</h5>
+                </button>
             </div>
-            <div class="login">
-                <div class="login_box">
-                    <h3>登入</h3>
-                    <div class="login_list">
-                        <div class="uid">
 
-                            <input type="text" name="uid" id="uid" title="帳號欄位" placeholder="帳號"size='100'>
-                        </div>
-                        <div class="psw">
 
-                            <input type="text" name="psw" id="psw" title="密碼欄位" placeholder="密碼" size='100'>
-                        </div>
-                        <div class="forgetpsw">
-                            <div>
-                                <input type="radio" name="rememberpsw" id="rememberpsw" value="忘記密碼">
-                                <label class="forgetpsw_text" for="">記住我</label>
-                            </div>
-                            <a href="">忘記密碼</a>
-                        </div>
+<div class="login-page">
+    <div class="login_box">
+            <div id="container1">
+                <div class="login">
+                    <h3>登入 </h3>
 
+                    <input type="text" id="username" name="username" placeholder="帳號">
+                    <div class="tab"></div>
+                    <input type="text" id="password" name="password" placeholder="密碼">
+                    <div class="tab"></div>
+                    <div class="forgetpsw">
+                        <div>
+                            <input type="checkbox" name="rememberpsw" id="rememberpsw" value="忘記密碼">
+                            <label class="forgetpsw_text" for="">記住我</label>
+                        </div>
+                        <a href="">忘記密碼</a>
                     </div>
-
                     <button type="button" class="login_btn">登入</button>
+
+
                 </div>
-
-                <div class="or_login">
-                    <h3>or</h3>
-                    <div class="btn_list">
-                        <span id="GOOGLE_STATUS_1"></span>
-                        <div id="g_id_onload" data-client_id="5432xxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com"
-                            data-callback="onSignIn1"></div>
-                        <div class="g_id_signin" data-type="standard"></div>
+            </div>
 
 
-                        <button type="button">
-                            facebook</button>
+            <div id="container2">
 
-                        <button type="button">
-                            訪客登入
-                        </button>
-                    </div>
+                <div class="signup">
+
+                    <h3>註冊 </h3>
+
+                    <input type="text" id="fullname" name="fullname" placeholder="姓">
+                    <div class="tab"></div>
+                    <input type="text" id="username2" name="username" placeholder="帳號">
+                    <div class="tab"></div>
+                    <input type="text" id="password2" name="password" placeholder="密碼">
+                    <div class="tab"></div>
+                    <input type="text" id="comfirm_password" name="comfirm_password" placeholder="確認密碼">
+                    <div class="tab"></div>
+                    <button type="button" class="login_btn">註冊</button>
+
+
+
+                </div><!-- signup end-->
+            </div><!-- container2 end-->
+        </div>
+
+            <div class="or_login">
+                <h3>or</h3>
+                <div class="btn_list">
+                    <span id="GOOGLE_STATUS_1"></span>
+                    <div id="g_id_onload" data-client_id="5432xxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com"
+                        data-callback="onSignIn1"></div>
+                    <div class="g_id_signin" data-type="standard"></div>
+
+                    <div class="fb-login-button"></div>
+
+
+                    <button type="button" class="tourists_login_btn">
+                        訪客登入
+                    </button>
                 </div>
+            </div>
 
             </div>
+
+        </div>
+
+
+
+
+
         </section>
 
 
@@ -76,6 +109,8 @@
                 html += "會員 email：" + profile.email + "<br/>";
                 target.innerHTML = html;
             }
+
+
         </script>
     </main>
 

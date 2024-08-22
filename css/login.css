@@ -301,22 +301,19 @@ input::placeholder {
 }
 
 
-.g_id_signin,
+
 .fb-login-button {
   margin: 10px 0;
   width: 80%;
-  height: 18vh;
+  height: 6vh;
 
 }
 
-.g_id_signin{
-  background-image: url(../imgs/login-img/google_login.svg);
-  background-size: 100% 100%;
-  cursor: pointer; 
-}
+
 .fb-login-button{
   background-image: url(../imgs/login-img/FB_login.svg);
   background-size: 100% 100%;
+width: 257px;
   cursor: pointer; 
 }
 

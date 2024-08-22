@@ -15,479 +15,487 @@
 <body>
     <main>
 
-    <section id="sreach">
+        <section id="sreach">
 
-        <div class="topbar">
-            <div class="logo">
-                <h1><a href="../index.html"><img src="../imgs/sraech-img/logo.svg" alt=""></a></h1>
-            </div>
-            <div class="search_label">
-                <div class="icon-user"></div>
-               
-                <input type="text" name="search" id="search" title="搜尋" placeholder="">
-       
-                <!-- <select name="other" id="other" title="類別選項">
-                    <option value="考試">考試</option>
-                    <option value="課程">課程</option>
-
-                </select> -->
-           
-            </div>
-            <div class="member"><a href="./member_info.html"><img src="../imgs/sraech-img/member.svg" alt=""></a></div>
-        </div>
-        <div class="menu">
-
-            <!-- https://www.vixual.net/blog/archives/163 -->
-        <div class="totsub">
-         <div class="subject" id="subjectCh">國文</div>
-         <div class="subject" id="subjectEn">英文</div>
-         <div class="subject" id="subjectMa">數學</div>
-         <div class="subject" id="subjectSe">自然</div>
-         <div class="subject" id="subjectSo">社會</div>
-        </div>
-        <div class="sublist">
-            <div class="list" id="listCh" >
-                <ul>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                </ul>
-            </div>
-            
-            <div class="list " id="listEn">
-                <ul>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                </ul>
-            </div>
-            <div class="list" id="listMath">
-                <ul>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                </ul>
-            </div>
-            <div class="list " id="listSe">
-                <ul>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                </ul>
-            </div> <div class="list" id="listSo">
-                <ul>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                    <li>113年度國文國中教育會考</li>
-                </ul>
-            </div>
-            
-           </div>
-        </div>
-      
-        <div class="marquee-container">
-            <div class="marquee-item">國文教育會考</div>
-            <div class="marquee-item">數學 - 數與數線</div>
-            <div class="marquee-item">國文 - 賣油翁 歐陽脩</div>
-            <div class="marquee-item">數學教育會考</div>
-            <div class="marquee-item">數學 - 一元一次方程式</div>
-        </div>
-    
-    </section>
-
-    <section id="checklist">
-        <div class="btns">
-            <h5 onclick="inv()" class="btn_c" id="btn_c">
-                考試
-            </h5>
-            <h5 onclick="course()" class="btn_b" id='btn_b'>
-                課程
-            </h5>
-        </div>
-        <!-- <div class="background"> -->
-
-
-        <div class="checklist">
-            <nav class="checklist_menu">
-                <div class="subject">
-                    <ul>
-                        <li><img src="../imgs/sraech-img/social.svg" alt=""></li>
-                        <li><img src="../imgs/sraech-img/english.svg" alt=""></li>
-                        <li><img src="../imgs/sraech-img/chinese.svg" alt=""></li>
-                        <li><img src="../imgs/sraech-img/math.svg" alt=""></li>
-                        <li><img src="../imgs/sraech-img/science.svg" alt=""></li>
-                    </ul>
+            <div class="topbar">
+                <div class="logo">
+                    <h1><a href="../index.html"><img src="../imgs/sraech-img/logo.svg" alt=""></a></h1>
                 </div>
-            </nav>
-<div class="checklist_list">
-            <div class="invantory" id="invantory">
-                <div class="box_list">
-                    <ul>
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                <div class="search_label">
+                    <div class="icon-search"></div>
+                    <select name="other" id="other" title="類別選項">
+                        <option value="考試">考試</option>
+                        <option value="課程">課程</option>
+                    </select>
+                        <input type="text" name="search" id="search" title="搜尋" placeholder="">
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-                    </ul>
+                 
 
                 </div>
-                <div class="box_list">
-                    <ul>
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                <div class="member"><a href="./member_info.html"><img src="../imgs/sraech-img/member.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="menu">
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                <!-- https://www.vixual.net/blog/archives/163 -->
+                <div class="totsub">
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                    <div class="main-menu" onclick="switchMenu( this, 'SubMenu1' )">國文
+                        <ul id="SubMenu1" class="sub-menu" style="display:none;">
+                            <li><a href="">113年度國文國中教育會考</a></li>
+                            <li><a href="">113年度國文國中教育會考</a></li>
+                            <li><a href="">113年度國文國中教育會考</a></li>
+                            <li><a href="">113年度國文國中教育會考</a></li>
+                            <li><a href="">113年度國文國中教育會考</a></li>
+                            <li><a href="">113年度國文國中教育會考</a></li>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                        </ul>
+                    </div>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-                    </ul>
 
-                </div><div class="box_list">
-                    <ul>
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                    <div class="main-menu" onclick="switchMenu( this, 'SubMenu2' )">英文
+                        <ul id="SubMenu2" class="sub-menu" style="display:none;">
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                            <li><a href="">113年度英文國中教育會考</a></li>
+                        </ul>
+                    </div>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
+                    <div class="main-menu" onclick="switchMenu( this, 'SubMenu3' )">數學
+                        <ul id="SubMenu3" class="sub-menu" style="display:none;">
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                            <li><a href="">113年度數學國中教育會考</a></li>
+                        </ul>
+                    </div>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-                    </ul>
+                    <div class="main-menu" onclick="switchMenu( this, 'SubMenu4' )">自然
+                        <ul id="SubMenu4" class="sub-menu" style="display:none;">
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                            <li><a href="">113年度自然國中教育會考</a></li>
+                        </ul>
+                    </div>
 
-                </div><div class="box_list">
-                    <ul>
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
 
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-
-                        <a href="">
-                            <li>
-                                <p>113年度國中</p>
-                                <p>國文教育會考</p>
-                            </li>
-                        </a>
-                    </ul>
-
+                    <div class="main-menu" onclick="switchMenu( this, 'SubMenu5' )">社會
+                        <ul id="SubMenu5" class="sub-menu" style="display:none;">
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                            <li><a href="">113年度社會國中教育會考</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-        </div>
 
-        <div class="courseList" id="courseList" style="display: none;">
-            <div class="box_list">
-                <ul>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
 
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
+                <div class="marquee-container">
+                    <div class="marquee-item">國文教育會考</div>
+                    <div class="marquee-item">數學 - 數與數線</div>
+                    <div class="marquee-item">國文 - 賣油翁 歐陽脩</div>
+                    <div class="marquee-item">數學教育會考</div>
+                    <div class="marquee-item">數學 - 一元一次方程式</div>
+                </div>
 
-                </ul>
+        </section>
 
+        <section id="checklist">
+            <div class="btns">
+                <h5 onclick="inv()" class="btn_c" id="btn_c">
+                    考試
+                </h5>
+                <h5 onclick="course()" class="btn_b" id='btn_b'>
+                    課程
+                </h5>
             </div>
-            <div class="box_list">
-                <ul>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
+            <!-- <div class="background"> -->
 
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
 
-                </ul>
+            <div class="checklist">
+                <nav class="checklist_menu">
+                    <div class="subject">
+                        <ul>
+                            <li><img src="../imgs/sraech-img/social.svg" alt=""></li>
+                            <li><img src="../imgs/sraech-img/english.svg" alt=""></li>
+                            <li><img src="../imgs/sraech-img/chinese.svg" alt=""></li>
+                            <li><img src="../imgs/sraech-img/math.svg" alt=""></li>
+                            <li><img src="../imgs/sraech-img/science.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="checklist_list">
+                    <div class="invantory" id="invantory">
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
 
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>113年度國中</p>
+                                        <p>國文教育會考</p>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="courseList" id="courseList" style="display: none;">
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+                        <div class="box_list">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <p>國中 - 七年級</p>
+                                        <p>國文 - 賣油翁 歐陽脩</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="box_list">
-                <ul>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
 
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-
-                </ul>
-
-            </div>
-            <div class="box_list">
-                <ul>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-
-                </ul>
-
-            </div>
-            <div class="box_list">
-                <ul>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <p>國中 - 七年級</p>
-                            <p>國文 - 賣油翁 歐陽脩</p>
-                        </li>
-                    </a>
-
-                </ul>
-
-            </div>
-
-    </div>
-        </div>
-    </div>
-
-    </section>
-</main>
+        </section>
+    </main>
 
 
 

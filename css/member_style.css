@@ -108,18 +108,19 @@ h2 {
     width: 100%;
     padding-bottom: 36px;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--font-b-1);
 }
 
 h3 {
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 600;
     color: var(--font-b-1);
 }
 
 section {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -127,6 +128,7 @@ section {
     background-color: var(--lesser-background-y-);
     background-size: cover;
     position: relative;
+
 }
 
 main {
@@ -183,7 +185,7 @@ h1 {
 #head {
     width: 315px;
     height: 877px;
-    margin: 67px 0 0 260px;
+    margin: 2.5% 0 0 260px;
     border-radius: 20px;
     background-color: var(--lesser-background-b-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -212,7 +214,6 @@ h1 {
     height: 50%;
     padding: 62px 50px;
     border-radius: 20px;
-    margin-top: 62px;
     background-color: var(--lesser-background-y-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -446,14 +447,20 @@ h1 {
 }
 
 #submit {
-    width: 150px;
-    height: 35px;
+    width: 20%;
+    height: 50px;
     border-radius: 25px;
     font-size: 16px;
     margin: 45px 20px 0 0;
     background-color: var(--secondary-y-1);
     border: none;
     cursor: pointer;
+}
+
+#submit:hover {
+    background-color: var(--secondary-b-1);
+    color: var(--secondary-y-1);
+    font-weight: 600;
 }
 
 
@@ -497,7 +504,7 @@ h1 {
     justify-content: space-around;
     overflow: auto;
     padding-bottom: 30px;
-    gap:40px;
+    gap: 40px;
 }
 
 #program {
@@ -716,7 +723,7 @@ input {
 }
 
 input:focus {
-    outline:var(--font-b-1) 3px solid;
+    outline: var(--font-b-1) 3px solid;
 }
 
 .menu {
@@ -771,7 +778,7 @@ input:focus {
 
 .my_content ul {
     width: 400px;
-    height: 80%;
+    height: 87%;
     margin-top: 30px;
     padding: 10px;
     margin-right: 10vh;
@@ -783,9 +790,16 @@ input:focus {
     align-items: center;
 }
 
-.record1{
+.record1 {
     margin-right: 20vh;
 }
+
+.record1 .record {
+    counter-reset: list-counter;
+    position: relative;
+    padding-bottom: 50px; /* 為了避免按鈕覆蓋最後一個列表項目 */
+}
+
 .my_content img {
     width: 24px;
     height: 24px;
@@ -802,6 +816,23 @@ input:focus {
     width: 80%;
     justify-content: center;
     align-content: center;
+    counter-increment: list-counter;
+    list-style: none;
+    position: relative;
+    font-size: 16px;
+}
+
+ul .first li::before {
+    content: counter(list-counter) ". ";
+    /* 顯示計數器數字 */
+    position: absolute;
+    /* 絕對定位 */
+    left: -2em;
+    /* 調整數字與文字之間的距離 */
+    font-weight: normal;
+    /* 可選，將數字設置為粗體 */
+    color: var(--font-b-1)
+        /* 可選，設置數字的顏色 */
 }
 
 .first a {
@@ -816,13 +847,24 @@ input:focus {
     text-decoration: underline;
     color: var(--font-b-2);
 }
-
+.record button{
+    position: absolute; /* 設置按鈕為絕對定位 */
+    
+    right: 50px; /* 距離右側10px */
+    bottom: 10px; /* 距離底部10px */
+    padding: 3px 20px; /* 按鈕的內邊距（可選） */
+    background-color: #007bff; /* 按鈕背景顏色（可選） */
+    color: white; /* 按鈕文字顏色（可選） */
+    border: none; /* 移除按鈕邊框 */
+    border-radius: 15px; /* 按鈕圓角（可選） */
+    cursor: pointer; /* 滑鼠移上去時顯示手型 */
+}
 
 /* test 頭像區 */
 #test_head {
     width: 315px;
     height: 877px;
-    margin: 67px 10vh 0 0;
+    margin: 2.5% 10vh 0 0;
     border-radius: 20px;
     background-color: var(--lesser-background-b-);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);

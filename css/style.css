@@ -227,6 +227,7 @@ a {
   font-size: 96px;
   color: var(--secondary-b-1)
 }
+
 h1 span {
   display: inline-block;
   animation: float .2s ease-in-out infinite;
@@ -236,15 +237,15 @@ h1 span {
 
   0%,
   100% {
-      transform: none;
+    transform: none;
   }
 
   33% {
-      transform: translateY(-1px) rotate(-2deg);
+    transform: translateY(-1px) rotate(-2deg);
   }
 
   66% {
-      transform: translateY(1px) rotate(2deg);
+    transform: translateY(1px) rotate(2deg);
   }
 }
 
@@ -256,15 +257,15 @@ body:hover span {
 
   0%,
   100% {
-      transform: translate(0);
+    transform: translate(0);
   }
 
   25% {
-      transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
   }
 
   50% {
-      transform: translateY(-20px) rotate(3deg) scale(1.1);
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
   }
 }
 
@@ -320,6 +321,7 @@ h1 span:nth-child(13) {
 h1 span:nth-child(14) {
   animation-delay: .65s;
 }
+
 #banner .facia {
   display: flex;
   flex-direction: column;
@@ -421,6 +423,7 @@ h1 span:nth-child(14) {
   background-position: 0 -50px;
   background-size: cover;
   background-color: var(--lesser-background-b-);
+  position:relative;
 }
 
 
@@ -481,13 +484,15 @@ h1 span:nth-child(14) {
   box-shadow: 4px 4px 4px rgb(39, 107, 198, 0.25);
 }
 
-#subject figure.arrow {
-  margin-top: 20px;
-  background: url("../imgs/index-img/arrow.svg");
-  /*預設顯示圖片*/
+#subject .arrow {
+  top: 50%;
+  left: 50%;
   width: 90px;
   height: 90px;
-  background-size: 100% 100%;
+  position: absolute;
+  background-color: var(--secondary-y-1);
+  border-radius: 50%;
+  clip-path: polygon(52% 1%, 100% 81%, 62% 71%, 62% 100%, 41% 100%, 38% 70%, 0 82%);
 }
 
 #subject .box__list {
@@ -658,7 +663,7 @@ section#marquee {
   width: 4px;
   height: 28px;
   transform: rotate(330deg);
-  
+
 }
 
 .line-2 {
@@ -677,11 +682,17 @@ section#marquee {
   background-color: var(--secondary-y-1);
   animation-name: newsline;
   animation-duration: 0.8s;
-  animation-iteration-count :infinite
+  animation-iteration-count: infinite
 }
+
 @keyframes newsline {
-  0%   { background-color:var(--secondary-y-1)}
-  100%  { background-color:rgba(255, 222, 103, 0.2)}
+  0% {
+    background-color: var(--secondary-y-1)
+  }
+
+  100% {
+    background-color: rgba(255, 222, 103, 0.2)
+  }
 
 }
 
@@ -742,7 +753,7 @@ section#marquee {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 10px;
-  transition:  0.3.5s ease-in-out;
+  transition: 0.3.5s ease-in-out;
 }
 
 .test_image img {
@@ -759,23 +770,26 @@ section#marquee {
   background: linear-gradient(0.25turn, #FFDE67 40%, transparent 0%);
   margin: 0rem 0.25rem;
   padding: 0rem 0.25rem;
-  transition:  0.3.5s ease-in-out ;
+  transition: 0.3.5s ease-in-out;
 }
 
 .news__test__item p {
   color: var(--font-b-1);
   font-size: 18px;
   font-weight: bold;
-  transition:  0.3.5s ease-in-out ;
+  transition: 0.3.5s ease-in-out;
 }
+
 .news__test__item:hover {
   background-color: var(--lesser-background-b-);
   border-radius: 80px;
-  }
-  .news__item:hover{
-    background-color: var(--lesser-background-b-);
-    border-radius: 60px;
-    }
+}
+
+.news__item:hover {
+  background-color: var(--lesser-background-b-);
+  border-radius: 60px;
+}
+
 .news__test__item:hover .test_image {
   width: 140px;
   height: 140px;
@@ -800,13 +814,14 @@ section#marquee {
   align-items: center;
   margin-top: 40px;
 }
-.news__item{
+
+.news__item {
   width: 90%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  transition:  0.3.5s ease-in-out ;
+  transition: 0.3.5s ease-in-out;
 
 }
 
@@ -848,6 +863,7 @@ section#marquee {
   width: 110px;
   height: 180px;
 }
+
 .news__item img {
   width: 100%;
   height: 100%;
@@ -906,17 +922,19 @@ section#marquee {
   background-image: url(../imgs/index-img/member-bk.svg);
   background-size: 100% 100%;
   background-position: 0 -100px;
-  
-}
-.item_member{
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-width: 90%;
-height: 80%;
 
 }
+
+.item_member {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+
+}
+
 .arrow_member {
   position: absolute;
   width: 254px;
@@ -926,6 +944,7 @@ height: 80%;
   background-image: url(../imgs/index-img/arrow-member.svg);
   background-size: cover;
 }
+
 .member_box__list {
   display: flex;
   justify-content: center;
@@ -943,15 +962,17 @@ height: 80%;
   background-image: url(../imgs/index-img/cloud-member.svg);
   background-size: 100% auto;
 }
+
 #member h2 {
   font-size: 2.25rem;
   color: var(--font-b-1);
   font-weight: bold;
 }
 
-#member .member_box__list a{
+#member .member_box__list a {
   margin: 0 -10px;
 }
+
 #member .memberimg {
   width: 100%;
   height: 480px;
@@ -959,10 +980,12 @@ height: 80%;
 
 
 }
-#member .memberimg:hover{
+
+#member .memberimg:hover {
   z-index: 5;
   margin-top: 0;
 }
+
 #member .member-star {
   position: absolute;
   bottom: 50px;
@@ -984,11 +1007,12 @@ height: 80%;
   width: 126px;
   height: 123px;
 }
-.circle-line{
+
+.circle-line {
   width: 100%;
   height: 25vh;
-  border-radius:50%;
-  border:#1C276D 2px solid;
+  border-radius: 50%;
+  border: #1C276D 2px solid;
   position: absolute;
   bottom: -120px;
 }
@@ -1030,15 +1054,18 @@ footer ul {
   z-index: 3;
 }
 
-.footer__box__list .li-1{
+.footer__box__list .li-1 {
   margin-bottom: 50px;
 }
-.footer__box__list .li-2{
+
+.footer__box__list .li-2 {
   margin-bottom: 20px;
 }
-.footer__box__list .li-4{
+
+.footer__box__list .li-4 {
   margin-top: 20px;
 }
+
 .footer__box__list .plant {
   display: flex;
   justify-content: center;
@@ -1046,9 +1073,38 @@ footer ul {
   margin: 0 25px;
   width: 100%;
   height: 10vh;
-  background-image: url(../imgs/index-img/planet.svg);
   background-size: 100% 100%;
 }
+
+.footer__box__list .plant-1 {
+  background-image: url(../imgs/index-img/footer-1.svg);
+}
+
+.footer__box__list .plant-2 {
+  background-image: url(../imgs/index-img/footer-2.svg);
+}
+
+.footer__box__list .plant-3 {
+  background-image: url(../imgs/index-img/footer-3.svg);
+}
+
+.footer__box__list .plant-4 {
+  background-image: url(../imgs/index-img/footer-4.svg);
+}
+
+.footer__box__list .plant-5 {
+  background-image: url(../imgs/index-img/footer-5.svg);
+}
+
+.footer__box__list .plant-6 {
+  background-image: url(../imgs/index-img/footer-6.svg);
+}
+.footer__box__list .plant-7 {
+  background-image: url(../imgs/index-img/footer-7.svg);
+  }
+  .footer__box__list .plant-8 {
+    background-image: url(../imgs/index-img/footer-8.svg);
+    }
 
 footer small {
   color: var(--font-b-2);

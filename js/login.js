@@ -6,22 +6,23 @@ function show_hide() {
    
   
     if (login.style.display === "none") {
-        login.style.display = "flex";  //lonin出現
-        document.getElementById("username").value="";
-        document.getElementById("password").value="";
-        signup.style.display = "none";  //signup消失
-        btnLogin.style.display = "none"; 
-     
-    } else {
-        login.style.display = "none";   //login消失
-        signup.style.display = "flex"; //signup出現
-        signup.style.display = "flex"; //signup出現
+        login.style.display = "flex";  
+        signup.style.display = "none";  
         signup.style.visibility="visible";
+        btnSignup.style.display = "flex";  
+        btnLogin.style.display = "none";  
+        btnLogin.style.visibility="visible";
+      
       
      
-        document.getElementById("fullname").value="";
-        document.getElementById("username2").value="";
-        document.getElementById("password2").value="";
-        document.getElementById("comfirm_password").value="";
+    } else {
+        login.style.display = "none";  
+        signup.style.display = "flex"; 
+        signup.style.visibility="visible";
+        btnSignup.style.display = "none";  
+        btnLogin.style.display = "flex"; 
+        btnLogin.style.visibility="visible";
+   
+     
     }
 }

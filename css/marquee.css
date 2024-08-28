@@ -13,16 +13,12 @@
 	}
 }
 
-/*	CURRENT MAX WIDTH IS JUST FOR DEMO PURPOSES */
 .marquee {
 	width: 100%;
-
 	overflow: hidden;
 }
 
-/*	POSSIBLY UPDATE COLORS IN THE GRADIENT
-		TO MATCH THE PROJECTS DESIGN SYSTEM
-*/
+
 .tag-scroller {
 	display: grid;
 	gap: 1.5rem;
@@ -35,31 +31,17 @@
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
-	/*	IF THE GAP IS CHANGED, DON'T FORGET TO CHANGE 
-			THE TRANSFORM VALUE IN THE SCROLL ANIMATION
-			AT THE END OF THE STYLING
-	*/
 	gap: 1.5rem;
 }
 
-/*	IF THE USERS PREFERS REDUCED MOTION
-		PRESENT THEM WITH A HOROZONTAL LIST
-		OF ALL ELEMENTS AND GIVE THEM THE
-		OPTION TO MANUALLY SCROLL BY SWIPING
-*/
 @media (prefers-reduced-motion) {
 	.tag-list {
 		flex-flow: row nowrap;
 		overflow: auto;
 		scrollbar-width: none;
-		/* scrollbar-color: #0a84e9 #0a84e9; */
+
 	}
-	.tag-list::-webkit-scrollbar-track {
-		/* background: #0a84e9; */
-	}
-	.tag-list::-webkit-scrollbar-thumb {
-		/* background:  #0a84e9; */
-	}
+
 	.tag-list::-webkit-scrollbar {
 		display: none;
 		width: 0;
@@ -67,12 +49,6 @@
 	}
 }
 
-/*	BASIC STYLING OF THE LIST ITEMS
-		FOR DEMO PURPOSES. MOST PROPERTIES
-		SHOULD BE KEPT AS IS BUT PROBABLY
-		UPDATE THE VALUE FOR font-family
-		AND border
-*/
 .tag-list li {
 	background-color:  var(--primary-b-2);
 	font-family:'Noto Sans TC' sans-serif;
@@ -86,14 +62,6 @@
 	
 }
 
-/*	THE DURATION IS SET FROM A CUSTOM PROPERTY
-		CALCULATED IN THE SCRIPT AS IT'S ONLY NEEDED
-		IF THE ANIMATION SHOULD RUN, WHICH IS ALSO
-		CHECKED BY THE SCRIPT
-
-		THE DIRECTION IS SET TO normal AS DEFULT
-		AND THEN SET TO reverse	FOR EVERY OTHER SCROLLER
-*/
 .tag-scroller.scrolling .tag-list {
 	width: max-content;
 	flex-wrap: nowrap;
@@ -104,16 +72,11 @@
 	--direction: reverse;
 }
 
-/* PAUSING THE ANIMATION ON HOVER
-.tag-scroller:hover .tag-list {
-	animation-play-state: paused;
-} */
+
 
 @keyframes horizontal-scroll {
 	to {
-		/*	0.75rem FOR HALF THE GAP
-				OF THE .tag-scroller
-		*/
+		
 		transform: translateX(calc(-50% - .75rem));
 	}
 }

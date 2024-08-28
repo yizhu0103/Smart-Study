@@ -13,6 +13,21 @@ $(function () {/* 一個js只要執行一次就可以了 */
 
 });
 
+const arrow_box = document.querySelectorAll('.arrow_box');
+document.addEventListener('mousemove', (e) => {
+    arrow_box.forEach(arrow_box => {
+        const rect = arrow_box.getBoundingClientRect();
+        const arrow_boxCenterX = rect.left + rect.width ;
+        const arrow_boxCenterY = rect.top + rect.height ;
+        const arrow = arrow_box.querySelector('.arrow');
+
+        const angle = Math.atan2(e.clientY - arrow_boxCenterY, e.clientX - arrow_boxCenterX) * 180 / Math.PI; // 轉換為角度
+        arrow.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`; // 根據角度旋轉箭頭
+
+    });
+});
+
+
 
 
 

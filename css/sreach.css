@@ -158,7 +158,7 @@ input {
 }
 
 #other {
-padding: 0 15px;
+  padding: 0 15px;
   position: absolute;
   z-index: 5;
   width: 100px;
@@ -213,8 +213,9 @@ input:focus,
 }
 
 .marquee-item a {
- color: var(--font-b-1);
+  color: var(--font-b-1);
 }
+
 .marquee-item:hover {
   animation-play-state: paused;
 
@@ -257,6 +258,19 @@ input:focus,
   top: 90%;
   animation-delay: -3s;
 }
+.marquee-item:nth-child(6) {
+  top: 75%;
+  animation-delay: -1s;
+}
+.marquee-item:nth-child(7) {
+  top: 45%;
+  animation-delay: 8s;
+}
+.marquee-item:nth-child(8) {
+  top: 20%;
+  animation-delay: 2s;
+}
+
 
 
 
@@ -283,7 +297,7 @@ input:focus,
   transition: 0.35s;
   position: relative;
   cursor: pointer;
-  
+
 }
 
 .main-menu:hover {
@@ -323,7 +337,7 @@ input:focus,
   border-bottom: solid 1px transparent;
 }
 
-.sub-menu li a:hover{
+.sub-menu li a:hover {
   border-bottom: var(--font-b-1) solid 1px;
   transition: .35s ease-in-out;
 }
@@ -373,7 +387,8 @@ input:focus,
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.btns h5{
+
+.btns h5 {
   font-size: 1.2rem;
 }
 
@@ -390,14 +405,46 @@ input:focus,
   margin: 67px 0;
 }
 
-.checklist_menu li {
+.checklist_menu .sub {
   margin: 30px;
-}
-
-.checklist_menu img {
   width: 72px;
   height: 82px;
+  background-size: 100% 100%;
+  transition: 0.4s;
+  cursor: pointer;
 }
+
+.subject .so {
+  background-image: url(../imgs/sraech-img/social.svg);
+}
+.subject .so:hover {
+  background-image: url(../imgs/sraech-img/social-hover.svg);
+}
+.subject .en {
+  background-image: url(../imgs/sraech-img/english.svg);
+}
+.subject .en:hover {
+  background-image: url(../imgs/sraech-img/english-hover.svg);
+}
+.subject .ch {
+  background-image: url(../imgs/sraech-img/chinese.svg);
+}
+.subject .ch:hover {
+  background-image: url(../imgs/sraech-img/chinese-hover.svg);
+}
+.subject .math {
+  background-image: url(../imgs/sraech-img/math.svg);
+}
+.subject .math:hover {
+  background-image: url(../imgs/sraech-img/math-hover.svg);
+}
+.subject .sc {
+  background-image: url(../imgs/sraech-img/science.svg);
+}
+.subject .sc:hover {
+  background-image: url(../imgs/sraech-img/science-hover.svg);
+}
+
 
 .checklist_list {
   display: flex;
@@ -405,7 +452,6 @@ input:focus,
   justify-content: flex-start;
   align-items: center;
   width: 85%;
-
 }
 
 
@@ -425,17 +471,17 @@ input:focus,
 
 .box_list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 1218px;
+  width: 100%;
   margin: 58px 0;
 
 }
 
 .box_list ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
   width: 100%;
   height: 100%;
 }
@@ -447,6 +493,7 @@ input:focus,
   align-items: center;
   width: 199px;
   height: 173px;
+  margin: 50px 25px;
   border-radius: 10px;
   background-image: url(../imgs/sraech-img/background.svg);
 }

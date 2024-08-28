@@ -118,7 +118,6 @@ section#login {
   display: flex;
   justify-content: flex-start;
   width: 80%;
-
 }
 /* 按鈕區 */
 .register {
@@ -126,7 +125,6 @@ section#login {
   justify-content: flex-end;
   align-items: center;
   width: 80%;
-
 }
 
 #register_btn_signup,#register_btn_login {
@@ -191,7 +189,7 @@ position: relative;
    /*定位對齊*/
    position:absolute;   
    margin: auto;
-  
+
 }
 
 .or_login,

@@ -207,6 +207,9 @@ position: relative;
   position: relative;
 
 }
+.or_login{
+  height: 50%;
+}
 
 
 .forgetpsw {
@@ -283,7 +286,9 @@ input::placeholder {
 
 .login_btn,
 .tourists_login_btn {
-  background-color: var(--input-y-2);
+  background-color: var(--secondary-y-1);
+  color: var(--font-b-1);
+  font-weight: 500;
   font-size: 1.125rem;
   border-radius: 99px;
   padding: 5px 25px;

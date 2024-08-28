@@ -202,7 +202,6 @@ input:focus,
   position: absolute;
   white-space: nowrap;
   font-size: 1rem;
-  color: var(--font-b-1);
   padding: 5px 50px;
   border-radius: 99px;
   border: var(--primary-b-2) 3px solid;
@@ -210,7 +209,17 @@ input:focus,
   right: -300px;
   /* 初始在容器右側 */
   animation: moveLeft 15s linear infinite;
+
 }
+
+.marquee-item a {
+ color: var(--font-b-1);
+}
+.marquee-item:hover {
+  animation-play-state: paused;
+
+}
+
 
 /* 跑馬燈的動畫效果 */
 @keyframes moveLeft {
@@ -274,24 +283,17 @@ input:focus,
   transition: 0.35s;
   position: relative;
   cursor: pointer;
+  
 }
 
 .main-menu:hover {
   border: var(--primary-b-1) solid 3px;
   color: var(--primary-b-2);
   background-color: var(--secondary-y-1);
+  transition: .35s ease-in-out;
 }
 
-.sub-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 5px;
-  z-index: 5;
-  position: absolute;
-  top: 50px;
 
-}
 
 .sub-menu {
   display: none;
@@ -303,17 +305,27 @@ input:focus,
   font-size: 1.25rem;
   overflow: auto;
   padding: 8px;
-  /* margin: 0 -100px; */
   border-radius: 10px;
   border: var(--primary-b-2) 3px solid;
   background-color: var(--lesser-background-b-);
-
-
+  margin-top: 5px;
+  z-index: 5;
+  position: absolute;
+  top: 50px;
 }
 
+
 .sub-menu li a {
-  margin: 9px 2px;
+  margin: 10px 2px;
+  padding-bottom: px;
   color: var(--font-b-1);
+  transition: 0.35ms;
+  border-bottom: solid 1px transparent;
+}
+
+.sub-menu li a:hover{
+  border-bottom: var(--font-b-1) solid 1px;
+  transition: .35s ease-in-out;
 }
 
 
@@ -332,9 +344,6 @@ input:focus,
   justify-content: center;
   align-items: center;
   width: 100%;
-
-
-
 }
 
 .btns {
@@ -345,14 +354,14 @@ input:focus,
   max-width: 1440px;
   padding-right: 2.8vh;
   margin-top: 1vh;
+  cursor: pointer;
 
 }
 
 .btn_c {
   background-color: var(--secondary-y-1);
   color: var(--secondary-b-1);
-
-  padding: 20px 59px 10px;
+  padding: 20px 49px 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -360,27 +369,19 @@ input:focus,
 .btn_b {
   background-color: var(--primary-b-2);
   color: var(--lesser-background-y-);
-  padding: 20px 59px 10px;
+  padding: 20px 49px 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-/* .background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  background-color: var(--lesser-background-b-);
-} */
+.btns h5{
+  font-size: 1.2rem;
+}
 
 .checklist {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-
   background-color: var(--lesser-background-b-);
 }
 
@@ -417,7 +418,7 @@ input:focus,
   width: 80%;
   background-color: var(--lesser-background-b-);
   height: 68vh;
-  overflow: auto;
+  overflow-y: auto;
   margin: 50px 0;
 
 }
@@ -439,7 +440,6 @@ input:focus,
   height: 100%;
 }
 
-
 .box_list li {
   display: flex;
   flex-direction: column;
@@ -450,15 +450,6 @@ input:focus,
   border-radius: 10px;
   background-image: url(../imgs/sraech-img/background.svg);
 }
-
-/* 
-.box_list li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-} */
 
 .box_list li p {
   font-size: 18px;

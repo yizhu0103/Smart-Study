@@ -104,10 +104,10 @@
 	--direction: reverse;
 }
 
-/* PAUSING THE ANIMATION ON HOVER */
+/* PAUSING THE ANIMATION ON HOVER
 .tag-scroller:hover .tag-list {
 	animation-play-state: paused;
-}
+} */
 
 @keyframes horizontal-scroll {
 	to {

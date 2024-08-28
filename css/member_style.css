@@ -148,8 +148,7 @@ main {
     z-index: 999;
     position: fixed;
 }
-
-#c_topbar ul {
+#c_topbar .nav {
     width: 30%;
     height: 100%;
     margin-top: 132px;
@@ -161,14 +160,54 @@ main {
 .nav li {
     margin: auto;
     font-size: 18px;
+    position: relative;
 }
-
 .nav li a {
     color: var(--primary-b-2);
     margin: auto;
     font-size: 16px;
 }
 
+.sub-menu {
+    height:60vh;
+    width: 11vh;
+    color: var(--lesser-background-y-); /* 這裡設置的文字顏色將應用到未被覆蓋的地方 */
+    background-color: var(--primary-b-2);
+    padding: 10px; /* 調整padding，不讓子選單內部太大 */
+    list-style-type: none;
+    position: absolute;
+    top: -40px;
+    left: 100%;
+    margin-left: 6vh;
+    border-radius: 25px;
+    text-align-last:center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu li {
+    padding: 3px 5px;
+    text-align: center;
+    color: var(--lesser-background-y-); /* 這裡設置每個列表項的文字顏色 */
+}
+
+.sub-menu li:hover {
+    color: var(--primary-b-2); /* 應用背景色與文字顏色的對比 */
+    background-color: var(--secondary-y-1);
+    border-radius: 50%;
+}
+
+.nav .sub-menu a {
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    color: var(--lesser-background-y-); /* 讓文字顏色繼承自li的設定，確保一致性 */
+}
+
+.sub-menu a:hover {
+    color: var(--primary-b-2); /* 鼠標懸停時的文字顏色 */
+    text-decoration: none;
+}
 
 #c_topbar .nav .log_out {
     font-size: 16px;
@@ -270,7 +309,7 @@ h1 {
 #member_edit select {
     width: 20%;
     height: 37.48px;
-    padding: 6px;
+    padding: 20px;
     border-radius: 25px;
     font-size: 16px;
     color: var(--secondary-b-1);

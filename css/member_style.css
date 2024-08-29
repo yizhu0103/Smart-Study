@@ -1044,8 +1044,8 @@ input:focus {
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 160vh;
-    margin-top: 15vh;
+    height: 200vh;
+    margin-top: 5vh;
     margin-left: 20%;
     background-image: url(../imgs/member_img/aibg.svg);
     background-size: 100% auto;

@@ -271,7 +271,7 @@ input::placeholder {
   color: var(--font-b-1);
 }
 
-.forgetpsw a {
+.forget {
   margin-left: 10px;
   color: var(--font-b-2);
 }
@@ -327,4 +327,10 @@ width: 257px;
   visibility: hidden;
   /*剛開始消失*/
  
+}
+
+dialog {
+  border: none;
+ margin: auto;
+ background-color: transparent;
 }

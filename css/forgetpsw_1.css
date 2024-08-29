@@ -1,119 +1,110 @@
-/* 背景覆蓋樣式 */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    z-index: -5; /* 確保在最上層 */
-}
 
-/* 忘記密碼彈跳視窗樣式 */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-}
-#forgetpsw {
+#forgetpsw-page1,#forgetpsw-page2,#forgetpsw-page3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #276BC6;
-    height: 513px;
-    width: 503px;
+    min-width:537px;
+    min-height: 513px;
     margin: auto;
     border-radius: 20px;
     padding:  80px;
     position: relative;
+    
 }
 
 .close-btn {
     position: absolute;
-    top: 10px; /* 距離上方 */
-    right: 10px; /* 距離右側 */
+    top: 1.5rem; /* 距離上方 */
+    right: 2rem; /* 距離右側 */
     background-color: transparent;
     border: none;
-    font-size: 24px;
-    color: #1C276D;
+    font-size: 1.5rem;
+    color: var(--font-b-1);
     cursor: pointer;
 }
 
 .close-btn:hover {
-    color: #FFD700; /* 滑鼠懸停時變成黃色 */
+    color: var(--secondary-y-1); /* 滑鼠懸停時變成黃色 */
 }
-.step {
+.step-other {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 50px;
     z-index: 5;
 
 }
-.line {
-    width: 333px;
+.line-other {
+    width: 60%;
     height: 3px;
     background-color: #FFFEF6;
     position: absolute;
-    top:122px;
+    top:105px;
+
+}
+.linepage1{
     background: linear-gradient(0.25turn,#48B2FF 25%,#ffffff 0%);
 }
-.forget_list {
+.linepage2 {
+    background: linear-gradient(0.25turn,#48B2FF 75%,#ffffff 0%);
+}
+.linepage3 {
+    background: linear-gradient(0.25turn,#48B2FF 100%,#ffffff 0%);
+}
+.forget_list-other {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.forget_list input {
+.forget_list-other input {
     margin-bottom: 30px;
     border: none;
     border-radius: 99px;
     width: 100%;
     height: 40px;
-    max-width: 345px;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding-left: 15px;
+color: var(--font-b-1);
 }
-input::placeholder {
+.forget_list-other input::placeholder {
     color: rgba(67, 148, 230, 0.6) ;
 }
-input:focus{
+.forget_list-other input:focus{
     outline: none;
 }
 .ai_confirm {
     display: flex;
     flex-direction: row;
-    width: 72%;
+    width:100%
 }
 .imgconf {
+    width: 180px;
     margin: 0 0 0 36px;
 }
 .email_confirm {
     display: flex;
     flex-direction: row;
-    width: 72%;
+    width:100%
 }
-.forget_list button {
-    background-color: #FFD700;
+.forget_list-other button {
+    background-color:var(--secondary-y-1);
     border: none;
     border-radius: 99px;
-    color: #4395E6;
+    color: var(--font-b-1);
     font-size: 12px;
     min-width: 130px;
     height: 40px;
     cursor: pointer;
 }
 
-.forget_list button:hover {
+.forget_list-other button:hover {
     transform : scale(1.2);
 }
-.forget_list .submit_0 {
+.forget_list-other .submit_0 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +118,7 @@ input:focus{
     height: 40px;
     cursor: pointer;
 }
-.forget_list .submit_0:hover {
+.forget_list-other .submit_0:hover {
     color: #276BC6;
     
 }

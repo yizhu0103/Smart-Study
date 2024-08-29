@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教育平台</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/forgetpsw_1.css">
     <link rel="icon" href="../S.ico">
     <script src="../js/login.js"></script>
 </head>
@@ -13,6 +14,7 @@
 <body>
     <main>
         <section id="login">
+         
             <!-- <div class="star"></div> -->
             <div class="logo">
                 <h1><a href="../index.html"><img src="../imgs/sraech-img/logo.svg" alt=""></a></h1>
@@ -46,7 +48,7 @@
                                     <input type="checkbox" name="rememberpsw" id="rememberpsw" value="忘記密碼">
                                     <label class="forgetpsw_text" for="">記住我</label>
                                 </div>
-                                <a href="">忘記密碼</a>
+                                <div class="forget" onclick="show()">忘記密碼</div>
                             </div>
                             <a href="./member_info.html">
                                 <button type="button" class="login_btn">登入</button></a>
@@ -115,6 +117,84 @@
             </div>
             </div>
 
+         
+            <dialog id="infoModal">
+                <section id="forgetpsw-page1">
+             
+                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="step-other">
+                        <div class="step-1">
+                            <figure><img src="../imgs/edu_img/驗證.png" alt="啟動"></figure>
+                        </div>
+                        <div class="step-2">
+                            <figure><img src="../imgs/edu_img/新密碼1.png" alt="新密碼"></figure>
+                        </div>
+                        <div class="step-3">
+                            <figure><img src="../imgs/edu_img/完成.png" alt="完成"></figure>
+                        </div>
+                        
+                    </div>
+                    <div class="line-other linepage1"></div> <!-- 添加連線 -->
+                    <div class="forget_list-other">
+                            <input type="text" placeholder="輸入密碼" required>
+                            <div class="ai_confirm">
+                                <input type="img_confirm" placeholder="輸入圖形驗證碼" required>
+                                <figure class="imgconf"><img src="../imgs/edu_img/圖形驗證.png" alt="圖形驗證碼"></figure>
+                            </div>
+                            <div class="email_confirm">
+                                <input type="password" placeholder="輸入信箱驗證碼" required>
+                                <div class="submit_0" type="submit">發送驗證碼</div>
+                            </div>
+                            <button type="submit" onclick="page1()">下一步</button>
+                        </button>
+                    </div>
+                </section>
+                <section id="forgetpsw-page2" >
+                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="step-other">
+                        <div class="step-1">
+                            <figure><img  onclick="gotopage1()"src="../imgs/edu_img/驗證.png" alt="啟動" ></figure>
+                        </div>
+                        <div class="step-2">
+                            <figure><img src="../imgs/edu_img/新密碼.png" alt="新密碼"></figure>
+                        </div>
+                        <div class="step-3">
+                            <figure><img src="../imgs/edu_img/完成.png" alt="完成"></figure>
+                        </div>
+                        
+                    </div>
+                    <div class="line-other linepage2"></div> <!-- 添加連線 -->
+                    <div class="forget_list-other">
+                            <input type="text" placeholder="輸入密碼" required>
+                            <input type="password" placeholder="確認新密碼" required>
+                            <button type="submit" onclick="page2()">提交</button>
+                        </button>
+                    </div>
+        
+                </section>
+                <section id="forgetpsw-page3" >
+                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="step-other">
+                        <div class="step-1">
+                            <figure><img onclick="gotopage1()" src="../imgs/edu_img/驗證.png" alt="啟動"></figure>
+                        </div>
+                        <div class="step-2">
+                            <figure><img onclick="gotopage2()" src="../imgs/edu_img/新密碼.png" alt="新密碼"></figure>
+                        </div>
+                        <div class="step-3">
+                            <figure><img src="../imgs/edu_img/完成3.png" alt="完成"></figure>
+                        </div>
+                        
+                    </div>
+                    <div class="line-other linepage3"></div> <!-- 添加連線 -->
+                    <div class="forget_list-other">
+                            <button type="submit" onclick="closeDialog()">重新登入</button>
+                        </button>
+                    </div>
+        
+                </section>
+            
+              </dialog>
 
         </section>
 
@@ -145,6 +225,9 @@
 
 </body>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
 
 
 </html>

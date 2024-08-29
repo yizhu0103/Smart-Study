@@ -301,6 +301,20 @@ input:focus,
 
 }
 
+
+/* .sub-menu ul::before {
+  content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+  z-index: 6;
+	border: transparent 10px solid;
+	border-bottom: var(--primary-b-2) 10px solid;
+
+} */
+
 .main-menu:hover {
   border: var(--primary-b-1) solid 3px;
   color: var(--primary-b-2);

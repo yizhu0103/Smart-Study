@@ -490,7 +490,7 @@ h1 span:nth-child(14) {
   position: absolute;
   background-color: var(--secondary-y-1);
   border-radius: 50%;
-  clip-path: polygon(52% 1%, 100% 81%, 62% 71%, 62% 100%, 41% 100%, 38% 70%, 0 82%);
+  clip-path: polygon(0 40%, 38% 40%, 20% 0, 100% 50%, 20% 100%, 37% 60%, 0 60%);
 }
 
 #subject .box__list {

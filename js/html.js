@@ -17,8 +17,9 @@ const arrow_box = document.querySelectorAll('.arrow_box');
 document.addEventListener('mousemove', (e) => {
     arrow_box.forEach(arrow_box => {
         const rect = arrow_box.getBoundingClientRect();
-        const arrow_boxCenterX = rect.left + rect.width ;
-        const arrow_boxCenterY = rect.top + rect.height ;
+        const arrow_boxCenterX = rect.left + rect.width / 2;
+        const arrow_boxCenterY = rect.top + rect.height / 2;
+        
         const arrow = arrow_box.querySelector('.arrow');
 
         const angle = Math.atan2(e.clientY - arrow_boxCenterY, e.clientX - arrow_boxCenterX) * 180 / Math.PI; // 轉換為角度

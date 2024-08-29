@@ -148,6 +148,7 @@ main {
     z-index: 999;
     position: fixed;
 }
+
 #c_topbar .nav {
     width: 100%;
     height: 100%;
@@ -155,7 +156,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:8vh;
+    gap: 8vh;
 }
 
 .nav li {
@@ -163,20 +164,24 @@ main {
     cursor: pointer;
     position: relative;
 }
-.item-s{
+
+.item-s {
     width: 75%;
     height: 6.5vh;
     display: flex;
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    text-align: center; /* 確保文字居中 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    text-align: center;
+    /* 確保文字居中 */
 }
 
 
-.item-s:hover{
-color: var(--secondary-y-1);
-background-color: var(--primary-b-2);
-border-radius:38% 62% 67% 33% / 49% 51% 49% 51%;
+.item-s:hover {
+    color: var(--secondary-y-1);
+    background-color: var(--primary-b-2);
+    border-radius: 38% 62% 67% 33% / 49% 51% 49% 51%;
 }
 
 .nav li a {
@@ -186,34 +191,40 @@ border-radius:38% 62% 67% 33% / 49% 51% 49% 51%;
 }
 
 .sub-menu {
-    height:60vh;
+    height: 60vh;
     width: 11vh;
-    color: var(--lesser-background-y-); /* 這裡設置的文字顏色將應用到未被覆蓋的地方 */
+    color: var(--lesser-background-y-);
+    /* 這裡設置的文字顏色將應用到未被覆蓋的地方 */
     background-color: var(--primary-b-2);
-    padding: 10px; /* 調整padding，不讓子選單內部太大 */
+    padding: 10px;
+    /* 調整padding，不讓子選單內部太大 */
     list-style-type: none;
     position: absolute;
     top: -15vh;
     left: 95%;
     border-radius: 25px;
-    text-align-last:center;
+    text-align-last: center;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .sub-menu li {
-    display: flex; /* 讓li使用flexbox布局 */
-    align-items: center; /* 垂直置中 */
-    justify-content: center; /* 水平置中 */
+    display: flex;
+    /* 讓li使用flexbox布局 */
+    align-items: center;
+    /* 垂直置中 */
+    justify-content: center;
+    /* 水平置中 */
     padding: 3px 5px;
     text-align: center;
-    color: var(--lesser-background-y-); 
+    color: var(--lesser-background-y-);
     margin: 0;
     height: 15%;
 }
 
 .sub-menu li:hover {
-    color: var(--primary-b-2); /* 應用背景色與文字顏色的對比 */
+    color: var(--primary-b-2);
+    /* 應用背景色與文字顏色的對比 */
     background-color: var(--secondary-y-1);
     border-radius: 50%;
 }
@@ -222,12 +233,14 @@ border-radius:38% 62% 67% 33% / 49% 51% 49% 51%;
     text-align: center;
     display: block;
     text-decoration: none;
-    color: var(--lesser-background-y-); /* 讓文字顏色繼承自li的設定，確保一致性 */
+    color: var(--lesser-background-y-);
+    /* 讓文字顏色繼承自li的設定，確保一致性 */
     font-weight: 600;
 }
 
-.sub-menu li:hover a{
-    color: var(--primary-b-2); /* 鼠標懸停時的文字顏色 */
+.sub-menu li:hover a {
+    color: var(--primary-b-2);
+    /* 鼠標懸停時的文字顏色 */
     text-decoration: none;
     font-weight: 600;
 }
@@ -842,47 +855,68 @@ input:focus {
 .record1 .record {
     counter-reset: list-counter;
     position: relative;
-    padding-bottom: 50px; /* 為了避免按鈕覆蓋最後一個列表項目 */
+    padding-bottom: 50px;
+    /* 為了避免按鈕覆蓋最後一個列表項目 */
 }
 
-.collect1{
-    padding:2px;
+.collect1 {
+    padding: 2px;
 }
+
 .collect1 .collect {
     position: relative;
-    padding-bottom: 50px; /* 為了避免按鈕覆蓋最後一個列表項目 */
+    padding-bottom: 50px;
+    /* 為了避免按鈕覆蓋最後一個列表項目 */
 }
 
-.record button{
-    position: absolute; /* 設置按鈕為絕對定位 */
-    right: 50px; /* 距離右側10px */
-    bottom: 10px; /* 距離底部10px */
-    padding: 3px 20px; /* 按鈕的內邊距（可選） */
-    background-color:var(--primary-b-2); /* 按鈕背景顏色（可選） */
-    color: var(--lesser-background-y-); /* 按鈕文字顏色（可選） */
-    border: none; /* 移除按鈕邊框 */
-    border-radius: 15px; /* 按鈕圓角（可選） */
-    cursor: pointer; /* 滑鼠移上去時顯示手型 */
+.record button {
+    position: absolute;
+    /* 設置按鈕為絕對定位 */
+    right: 50px;
+    /* 距離右側10px */
+    bottom: 10px;
+    /* 距離底部10px */
+    padding: 3px 20px;
+    /* 按鈕的內邊距（可選） */
+    background-color: var(--primary-b-2);
+    /* 按鈕背景顏色（可選） */
+    color: var(--lesser-background-y-);
+    /* 按鈕文字顏色（可選） */
+    border: none;
+    /* 移除按鈕邊框 */
+    border-radius: 15px;
+    /* 按鈕圓角（可選） */
+    cursor: pointer;
+    /* 滑鼠移上去時顯示手型 */
 }
 
-.record button:hover{
+.record button:hover {
     background-color: var(--secondary-y-1);
     color: var(--secondary-b-1);
 }
 
-.collect button{
-    position: absolute; /* 設置按鈕為絕對定位 */
-    right: 50px; /* 距離右側10px */
-    bottom: 10px; /* 距離底部10px */
-    padding: 3px 20px; /* 按鈕的內邊距（可選） */
-    background-color: var(--primary-b-2); /* 按鈕背景顏色（可選） */
-    color: var(--lesser-background-y-); /* 按鈕文字顏色（可選） */
-    border: none; /* 移除按鈕邊框 */
-    border-radius: 15px; /* 按鈕圓角（可選） */
-    cursor: pointer; /* 滑鼠移上去時顯示手型 */
+.collect button {
+    position: absolute;
+    /* 設置按鈕為絕對定位 */
+    right: 50px;
+    /* 距離右側10px */
+    bottom: 10px;
+    /* 距離底部10px */
+    padding: 3px 20px;
+    /* 按鈕的內邊距（可選） */
+    background-color: var(--primary-b-2);
+    /* 按鈕背景顏色（可選） */
+    color: var(--lesser-background-y-);
+    /* 按鈕文字顏色（可選） */
+    border: none;
+    /* 移除按鈕邊框 */
+    border-radius: 15px;
+    /* 按鈕圓角（可選） */
+    cursor: pointer;
+    /* 滑鼠移上去時顯示手型 */
 }
 
-.collect button:hover{
+.collect button:hover {
     background-color: var(--secondary-y-1);
     color: var(--secondary-b-1);
 }
@@ -891,6 +925,7 @@ input:focus {
     width: 24px;
     height: 24px;
 }
+
 /* 第一欄 */
 .first1 {
     width: 100%;
@@ -961,8 +996,9 @@ input:focus {
     text-decoration: underline;
     color: var(--font-b-2);
 }
-.second a img{
-margin: 5%;
+
+.second a img {
+    margin: 5%;
 }
 
 /* test 頭像區 */
@@ -987,4 +1023,115 @@ margin: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+/* AI頁 */
+#section-ai {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: none;
+    background-color: var(--lesser-background-y-);
+    background-size: cover;
+    position: relative;
+
+}
+
+.aiTest {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 160vh;
+    margin-top: 15vh;
+    margin-left: 20%;
+    background-image: url(../imgs/member_img/aibg.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+}
+
+.aiTest #test-body {
+    margin: 11% 0 0 9%;
+
+}
+
+.aiTest .title {
+    display: flex;
+    margin-top: 0;
+}
+
+.aiTest .question {
+    display: flex;
+}
+
+.aiTest .title img {
+    width: 50px;
+    height: 42px;
+    margin-right: 1%;
+}
+
+.aiTest .question img {
+    width: 24px;
+    height: 24px;
+}
+
+.aiTest h4,
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-b-1);
+}
+
+#question1 {
+    margin: 6% 0 0 1%;
+}
+
+
+
+.answer {
+    margin: 5% 0 0 4%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20%;
+}
+
+.icon-bar {
+    display: flex;
+}
+
+#test-bar {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+}
+
+.test-guide {
+    background-color: var(--lesser-background-b-);
+    border-radius: 20px;
+    position: relative;
+}
+
+#test-bar button {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    width: 60%;
+    height: 5%;
+    border-radius: 41px;
+    background-color: var(--secondary-y-1);
+    color: var(--primary-b-2);
+    border: none;
+    cursor: pointer;
+}
+
+#test-bar button:hover {
+    background-color: var(--primary-b-2);
+    color: var(--secondary-y-1);
+}
+
+#test-bar figure {
+    margin: 15% 0 90% 0;
 }

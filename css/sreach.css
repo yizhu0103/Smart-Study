@@ -212,8 +212,9 @@ input:focus,
 
 }
 
-.marquee-item a {
+.marquee-container a {
   color: var(--font-b-1);
+  font-weight: 600;
 }
 
 .marquee-item:hover {
@@ -334,12 +335,13 @@ input:focus,
   padding-bottom: px;
   color: var(--font-b-1);
   transition: 0.35ms;
-  border-bottom: solid 1px transparent;
+  border-bottom: solid 2px transparent;
 }
 
 .sub-menu li a:hover {
-  border-bottom: var(--font-b-1) solid 1px;
+  border-bottom:  var(--font-b-2) solid 2px;
   transition: .35s ease-in-out;
+  color: var(--font-b-2);
 }
 
 

@@ -149,19 +149,36 @@ main {
     position: fixed;
 }
 #c_topbar .nav {
-    width: 30%;
+    width: 100%;
     height: 100%;
     margin-top: 132px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:8vh;
 }
 
 .nav li {
-    margin: auto;
     font-size: 18px;
+    cursor: pointer;
     position: relative;
 }
+.item-s{
+    width: 75%;
+    height: 6.5vh;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    text-align: center; /* 確保文字居中 */
+}
+
+
+.item-s:hover{
+color: var(--secondary-y-1);
+background-color: var(--primary-b-2);
+border-radius:38% 62% 67% 33% / 49% 51% 49% 51%;
+}
+
 .nav li a {
     color: var(--primary-b-2);
     margin: auto;
@@ -176,19 +193,23 @@ main {
     padding: 10px; /* 調整padding，不讓子選單內部太大 */
     list-style-type: none;
     position: absolute;
-    top: -40px;
-    left: 100%;
-    margin-left: 6vh;
+    top: -15vh;
+    left: 95%;
     border-radius: 25px;
     text-align-last:center;
-    display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .sub-menu li {
+    display: flex; /* 讓li使用flexbox布局 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
     padding: 3px 5px;
     text-align: center;
-    color: var(--lesser-background-y-); /* 這裡設置每個列表項的文字顏色 */
+    color: var(--lesser-background-y-); 
+    margin: 0;
+    height: 15%;
 }
 
 .sub-menu li:hover {
@@ -198,15 +219,17 @@ main {
 }
 
 .nav .sub-menu a {
-    text-align: left;
+    text-align: center;
     display: block;
     text-decoration: none;
     color: var(--lesser-background-y-); /* 讓文字顏色繼承自li的設定，確保一致性 */
+    font-weight: 600;
 }
 
-.sub-menu a:hover {
+.sub-menu li:hover a{
     color: var(--primary-b-2); /* 鼠標懸停時的文字顏色 */
     text-decoration: none;
+    font-weight: 600;
 }
 
 #c_topbar .nav .log_out {

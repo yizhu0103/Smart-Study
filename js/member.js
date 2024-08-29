@@ -12,7 +12,7 @@ function switchMenu(theMainMenu, theSubMenu) {
     // 切換子選單的顯示狀態
     if (SubMenu.style.display === 'none') { // 顯示子選單
         SubMenu.style.minWidth = theMainMenu.clientWidth + 'px'; // 讓子選單的最小寬度與主選單相同
-        SubMenu.style.display = 'block';
+        SubMenu.style.display = 'flex';
         VisibleMenu = theSubMenu;
     } else { // 隱藏子選單
         SubMenu.style.display = 'none';

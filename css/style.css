@@ -125,12 +125,6 @@ a {
   align-items: center;
 }
 
-.navigation .menu li {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 18px;
-}
-
-
 .navigation .menu h1 a {
   background-image: url(../imgs/index-img/logo.svg);
   width: 32px;
@@ -140,8 +134,11 @@ a {
 }
 
 .navigation .menu a {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 450;
+  color: var(--font-b-1);
   margin: 0 53px;
-  color: var(--font-b-1)
 }
 
 .member {
@@ -155,9 +152,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--font-b-1);
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 450;
+  color: var(--font-b-1);
 }
 
 .icon__member {

@@ -13,6 +13,38 @@ $(function () {/* 一個js只要執行一次就可以了 */
 
 });
 
+
+window.addEventListener('scroll', () => {
+    const scrollValue = window.scrollY;
+    const ai = document.getElementById('ai');
+    const cloud_b = document.getElementById('cloud_b');
+    const lineb1 = document.getElementById('line-1-b');
+    const lineb2 = document.getElementById('line-2-b');
+    const facia = document.getElementById('facia');
+    const moomb = document.getElementById('moom-b');
+    const starb = document.getElementById('star-b');
+
+
+
+    if(scrollValue<900){
+        ai.style.top = 650+scrollValue*.5  + 'px';
+        cloud_b.style.top = 700+scrollValue*1.1  + 'px';
+        lineb1.style.top = 50+scrollValue*1  + 'px';
+        lineb2.style.top = 50+scrollValue*1  + 'px';
+        // facia.style.top = 100+scrollValue*1  + 'px';
+        moomb.style.top = 100+scrollValue*1  + 'px';
+        starb.style.top = 180+scrollValue*1  + 'px';
+
+    }
+
+
+   
+   
+});
+
+
+
+
 const arrow_box = document.querySelectorAll('.arrow_box');
 document.addEventListener('mousemove', (e) => {
     arrow_box.forEach(arrow_box => {

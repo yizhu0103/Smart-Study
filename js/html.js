@@ -9,37 +9,46 @@ $(function () {/* 一個js只要執行一次就可以了 */
     });
 
 
-    
+
 
 });
 
 
 window.addEventListener('scroll', () => {
     const scrollValue = window.scrollY;
-    const ai = document.getElementById('ai');
+
     const cloud_b = document.getElementById('cloud_b');
     const lineb1 = document.getElementById('line-1-b');
     const lineb2 = document.getElementById('line-2-b');
     const facia = document.getElementById('facia');
     const moomb = document.getElementById('moom-b');
     const starb = document.getElementById('star-b');
+    const logob = document.getElementById('logo_b');
+    const header = document.querySelector('header');
+    header.style.position = 'static'
 
 
+    if (1 <= scrollValue && scrollValue <= 700) {
 
-    if(scrollValue<900){
-        ai.style.top = 650+scrollValue*.5  + 'px';
-        cloud_b.style.top = 700+scrollValue*1.1  + 'px';
-        lineb1.style.top = 50+scrollValue*1  + 'px';
-        lineb2.style.top = 50+scrollValue*1  + 'px';
-        // facia.style.top = 100+scrollValue*1  + 'px';
-        moomb.style.top = 100+scrollValue*1  + 'px';
-        starb.style.top = 180+scrollValue*1  + 'px';
+        facia.style.filter = `blur(${scrollValue * 0.005}px)`;
+        header.style.position = 'fixed';
+        ai.style.top = 650 + scrollValue * .4 + 'px';
+        cloud_b.style.top = 700 + scrollValue * 1.2 + 'px';
+        lineb1.style.top = 50 + scrollValue * 1 + 'px';
+        lineb2.style.top = 50 + scrollValue * 1 + 'px';
+        facia.style.top = 200 + scrollValue * 1 + 'px';
+        moomb.style.top = 100 + scrollValue * 1 + 'px';
+        starb.style.top = 180 + scrollValue * 1 + 'px';
+        console.log(scrollValue);
+    }
+    if (scrollValue < 1500) {
+        header.style.position = 'fixed';
 
     }
 
 
-   
-   
+
+
 });
 
 
@@ -51,7 +60,7 @@ document.addEventListener('mousemove', (e) => {
         const rect = arrow_box.getBoundingClientRect();
         const arrow_boxCenterX = rect.left + rect.width / 2;
         const arrow_boxCenterY = rect.top + rect.height / 2;
-        
+
         const arrow = arrow_box.querySelector('.arrow');
 
         const angle = Math.atan2(e.clientY - arrow_boxCenterY, e.clientX - arrow_boxCenterX) * 180 / Math.PI; // 轉換為角度
@@ -68,8 +77,8 @@ $('.smoove').smoove({/* 全部人共用寫這邊 */
     offset: '20%'/* offset離螢幕底部 */
 });
 $('.smoove-z').smoove({
-    moveZ:'-500px',
-    rotateX:'90deg',
-    moveY:'250px'
-    
- });
+    moveZ: '-500px',
+    rotateX: '90deg',
+    moveY: '250px'
+
+});

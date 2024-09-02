@@ -189,7 +189,7 @@ main {
   position: absolute;
   width: 2px;
   height: 85vh;
-  background-color: #1C276D;
+  background-color: var(--font-b-1);
 }
 
 .decorate1 {
@@ -368,12 +368,6 @@ h1 span:nth-child(14) {
   display: flex;
   justify-content: center;
   align-items: center;
- /*  width: 100%;
-  height: 50vh;
-  border: #000 solid 1px;
-  backdrop-filter:blur(8px);  */
-  
-
 }
 #ai {
   display: flex;
@@ -381,7 +375,6 @@ h1 span:nth-child(14) {
   width: 60%;
   justify-content: space-between;
   top: 630px;
- 
 }
 
 .ai-1 {
@@ -407,6 +400,16 @@ h1 span:nth-child(14) {
 
 }
 
+.cloud_banner_b {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-image: url(../imgs/index-img/banner-cloud.svg);
+  width: 100%;
+  height: 60vh;
+  background-size: 100% 100%;
+  top: 550px;
+}
 .cloud_banner {
   display: flex;
   align-items: center;
@@ -415,7 +418,7 @@ h1 span:nth-child(14) {
   width: 100%;
   height: 40vh;
   background-size: 100% 100%;
-  top: 700px;
+  top: 750px;
 }
 
 /* subject */

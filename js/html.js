@@ -16,40 +16,52 @@ $(function () {/* 一個js只要執行一次就可以了 */
 
 window.addEventListener('scroll', () => {
     const scrollValue = window.scrollY;
-
     const cloud_b = document.getElementById('cloud_b');
+    const cloud_b_b = document.getElementById('cloud_b_b');
     const lineb1 = document.getElementById('line-1-b');
     const lineb2 = document.getElementById('line-2-b');
     const facia = document.getElementById('facia');
-    const moomb = document.getElementById('moom-b');
+    const ai = document.getElementById('ai');
+    
     const starb = document.getElementById('star-b');
-    const logob = document.getElementById('logo_b');
     const header = document.querySelector('header');
-    header.style.position = 'static'
+    //
 
-
-    if (1 <= scrollValue && scrollValue <= 700) {
+    if (0 <= scrollValue && scrollValue <= 700) {
 
         facia.style.filter = `blur(${scrollValue * 0.005}px)`;
         header.style.position = 'fixed';
-        ai.style.top = 650 + scrollValue * .4 + 'px';
-        cloud_b.style.top = 700 + scrollValue * 1.2 + 'px';
+        ai.style.top = 630 + scrollValue * .4 + 'px';
+        cloud_b_b.style.top = 550 + scrollValue * 1.2 + 'px';
+        cloud_b.style.top = 750 + scrollValue * 1.2 + 'px';
         lineb1.style.top = 50 + scrollValue * 1 + 'px';
         lineb2.style.top = 50 + scrollValue * 1 + 'px';
         facia.style.top = 200 + scrollValue * 1 + 'px';
-        moomb.style.top = 100 + scrollValue * 1 + 'px';
+        // moomb.style.top = 100 + scrollValue * 1 + 'px';
         starb.style.top = 180 + scrollValue * 1 + 'px';
         console.log(scrollValue);
     }
-    if (scrollValue < 1500) {
-        header.style.position = 'fixed';
+    else{
+        facia.style.filter = `blur(${700 * 0.005}px)`;
+        ai.style.top = 910+  'px';
+        cloud_b_b.style.top = 550 + 840 + 'px';
+        cloud_b.style.top = 750 + 840 + 'px';
+        lineb1.style.top = 50 + 700+ 'px';
+        lineb2.style.top = 50 + 700+ 'px';
+        facia.style.top = 200 + 700+ 'px';
+        // moomb.style.top = 100 + 700+ 'px';
+        starb.style.top = 180 + 700+ 'px';
+        header.style.position = 'static'
 
     }
-
-
-
+    // if (scrollValue < 1500) {
+    //     header.style.position = 'fixed';
+    // }
 
 });
+// ()=>{
+//     windtow.removeEventListener('scroll')
+// }
 
 
 

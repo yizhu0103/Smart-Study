@@ -455,7 +455,7 @@ h1 span:nth-child(14) {
   align-items: center;
   /* background-color: var(--lesser-background-y-); */
   width: 50%;
-  height: 606px;
+  height: 60vh;
   /* background-position: 0 -150px; */
 }
 
@@ -465,35 +465,14 @@ h1 span:nth-child(14) {
   align-items: center;
 }
 
-#subject figure.moktest {
-  background: url("../imgs/index-img/moktest.svg");
-  width: 303px;
-  height: 226px;
-  background-size: cover;
-  border-radius: 23px;
-  transition: 0.35s;
+.book_bkg{
+  width: 90%;
+  height: 75%;
 }
 
-#subject figure.moktest:hover {
-  background: url("../imgs/index-img/text.svg");
-  background-size: cover;
-  box-shadow: 4px 4px 4px rgb(39, 107, 198, 0.25);
-
-}
-
-#subject figure.course {
-  background: url("../imgs/index-img/course.svg");
-  width: 303px;
-  height: 226px;
-  background-size: cover;
-  border-radius: 23px;
-  transition: 0.35s;
-}
-
-#subject figure.course:hover {
-  background: url("../imgs/index-img/course-hover.svg");
-  background-size: cover;
-  box-shadow: 4px 4px 4px rgb(39, 107, 198, 0.25);
+.book_bkg img{
+  width: 100%;
+  height: 100%;
 }
 
 #subject .arrow {

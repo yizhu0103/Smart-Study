@@ -27,3 +27,16 @@ function hideMenu() {
         VisibleMenu = '';
     }
 }
+
+// AI頁選項底線
+document.querySelectorAll('.answer .option').forEach(option => {
+    option.addEventListener('click', function(event) {
+        event.preventDefault(); // 防止鏈接跳轉
+        // 找到最近的包含這個選項的問題容器
+        const question = this.closest('.answer');
+        // 移除該問題內其他選項的選中樣式
+        question.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+        // 為當前選中的選項添加選中樣式
+        this.classList.add('selected');
+    });
+});

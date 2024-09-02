@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/forgetpsw_1.css">
     <link rel="icon" href="../S.ico">
-    <script src="../js/login.js"></script>
+
 </head>
 
 <body>
@@ -105,10 +105,40 @@
                             data-text="signin_with" data-size="large" data-locale="en-GB" data-logo_alignment="left"
                             data-width="257">
                         </div>
-                        <div class="fb-login-button"></div>
+                        <div id="fb-root" ></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v20.0&appId=1046843650303180" nonce="M0qIEyrl"></script>
+                        <div class="fb-login-button " data-width="" data-size="large" data-shape="rounded" data-button-type="" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" 
+                        ></div>
 
-                        <a href="./member_info.html">
-                            <button type="button" class="tourists_login_btn">
+                        <!-- <script>
+                            var finished_rendering = function() {
+                              console.log("finished rendering plugins");
+                              var spinner = document.getElementById("spinner");
+                              spinner.removeAttribute("style");
+                              spinner.removeChild(spinner.childNodes[0]);
+                            }
+                            FB.Event.subscribe('xfbml.render', finished_rendering);
+                            </script>
+                            <div id="spinner"
+                                style="
+                                    background: #4267b2;
+                                    border-radius: 99px;
+                                    color: white;
+                                    height: 40px;
+                                    text-align: center;
+                                    width: 250px;">
+                                Loading
+                                <div
+                                class="fb-login-button"
+                                data-max-rows="1"
+                                data-size="large"
+                                data-button-type="continue_with"
+                                data-use-continue-as="true"
+                                ></div>
+                            </div> -->
+
+
+                        <button type="button" class="tourists_login_btn">
                                 訪客登入
                             </button></a>
                     </div>
@@ -227,7 +257,7 @@
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-
+<script src="../js/login.js"></script>
 
 
 </html>

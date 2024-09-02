@@ -288,37 +288,37 @@ input::placeholder {
   font-size: 1.125rem;
   border-radius: 99px;
   padding: 5px 25px;
-  margin-top: 20px;
+  margin-top: 40px;
   cursor: pointer; 
 }
 
 .btn_list {
   display: flex;
   flex-direction: column;
-  justify-content:  flex-start;
+  justify-content:  space-between;
   align-items: center;
   width: 45%;
   height: 20vh;
 }
+._xvm ._5h0c._5h0d ._5h0i{
+  border-radius: 99px;
+}
 
 
-
-.fb-login-button {
+/* .fb-login-button {
   margin: 10px 0;
   width: 80%;
   height: 6vh;
 
 }
+ */
 
-
-.fb-login-button{
+/* .fb-login-button{
   background-image: url(../imgs/login-img/FB_login.svg);
   background-size: 100% 100%;
 width: 257px;
   cursor: pointer; 
-}
-
-
+} */
 
 
 

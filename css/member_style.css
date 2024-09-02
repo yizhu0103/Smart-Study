@@ -781,7 +781,7 @@ input {
 }
 
 input:focus {
-    outline: var(--font-b-1) 3px solid;
+    outline: var(--font-b-1) 1px solid;
 }
 
 .menu {
@@ -1054,17 +1054,19 @@ input:focus {
 }
 
 .aiTest #test-body {
-    margin: 11% 0 0 9%;
+    margin-top: 11%;
 
 }
 
 .aiTest .title {
     display: flex;
     margin-top: 0;
+    margin-left: 9%;
 }
 
 .aiTest .question {
     display: flex;
+    margin-left: 12%;
 }
 
 .aiTest .title img {
@@ -1086,13 +1088,15 @@ p {
 }
 
 #question1 {
-    margin: 6% 0 0 1%;
+    margin-top: 6%;
 }
 
-
+.selected {
+    background: linear-gradient(0turn, #FFDE67 40%, transparent 0%);
+}
 
 .answer {
-    margin: 5% 0 0 4%;
+    margin: 5% 0 0 15%;
     display: flex;
     justify-content: space-between;
     padding-right: 20%;
@@ -1134,4 +1138,54 @@ p {
 
 #test-bar figure {
     margin: 15% 0 90% 0;
+}
+
+/* AI詳解頁 */
+
+.detail-ans {
+    margin: 5% 0 0 15%;
+}
+
+.detail-op {
+    margin-top: 3%;
+}
+
+#chat-container {
+    width: 70%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0 0 15%;
+    background-color: transparent;
+
+}
+
+#messages {
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+    padding: 5px;
+    background-color: var(--lesser-background-y-);
+    border-radius: 10px;
+    border:2px solid var(--primary-b-2);
+}
+
+
+
+#message-input {
+    flex: 1;
+    border:2px solid var(--primary-b-2);
+    position: relative;
+}
+
+
+#send-button {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 510px;
+    bottom: 860px;
+    background-image: url(../imgs/member_img/arrowbtn.svg);
+    border: none;
+    border-radius: 50%;
 }

@@ -1,7 +1,12 @@
 const responses = {
-    "你好": "你好！有什麼我可以幫助你的？",
-    "今天天氣怎麼樣": "我不能查看天氣，但你可以查看天氣預報網站。",
-    "再見": "再見！希望很快能再次見到你。",
+    "空格應該填哪個詞？": "空格應該填入「neck (脖子)」，因為題目說脖子痛到無法轉動。",
+    "arm": " 因為手臂的疼痛不會直接影響轉動脖子的能力，因此不適合。",
+    "arm": " 因為手臂的疼痛不會直接影響轉動脖子的能力，因此不適合。",
+    "knee": " 因為膝蓋的疼痛不會直接影響轉動脖子的能力，因此不適合。",
+    "neck": " 此為正確答案。",
+    "stomach": "因為胃的疼痛不會直接影響轉動脖子的能力，因此不適合。",
+    "為什麼選擇neck": "脖子痛會直接影響頭部的轉動，這與句子所描述的情境一致，因此選擇「neck」是最有邏輯的。",
+    "如果是膝蓋痛呢?":"句子可以改寫為「My knee hurts so much that I cannot even walk properly.」這樣會更符合膝蓋疼痛的情境。",
 };
 
 document.getElementById('send-button').addEventListener('click', () => {
@@ -36,7 +41,7 @@ function sendMessage() {
     displayMessage('user', message);
 
     // 模拟机器人回应
-    const botResponse = responses[message] || "对不起，我不明白你的问题。";
+    const botResponse = responses[message] || "對不起，我不明白你的問題。";
     setTimeout(() => {
         displayMessage('bot', botResponse);
     }, 500);

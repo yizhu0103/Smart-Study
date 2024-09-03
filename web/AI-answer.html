@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../S.ico">
+    <title>113年-國中教育會考:英文</title>
+    <link rel="stylesheet" href="../css/member_style.css">
+</head>
+
+<body>
+    <section id="section-ai">
+        <header id="c_topbar">
+            <h1><a href="../index.html"><img src="../imgs/index-img/logo.svg" alt="首頁"></a></h1>
+            <ul class="nav">
+                <li><a href="#">課程</a></li>
+                <li class="item-s" onclick="switchMenu(this, 'SubMenu1')">
+                    考試
+                    <ul id="SubMenu1" class="sub-menu" style="display:none;">
+                        <li><a href="#" target="_blank">國文</a></li>
+                        <li><a href="#" target="_blank">英文</a></li>
+                        <li><a href="#" target="_blank">數學</a></li>
+                        <li><a href="#" target="_blank">自然</a></li>
+                        <li><a href="#" target="_blank">社會</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">最新</a></li>
+                <li><a href="#">關於</a></li>
+                <li><a href="#">收藏</a></li>
+                <li class="log_out"><a href="#">登出</a></li>
+            </ul>
+        </header>
+
+        <main style="width: 100%; height: 100%;">
+
+            <div class="aiTest" style="background-image: url(../imgs/member_img/ai.ansbg.svg);height: 300vh; ">
+                <div id="test-body">
+
+                    <div class="title">
+                        <img src="../imgs/member_img/ai-star.svg" alt="" class="ai-star">
+                        <h3>113年-國中教育會考:英文</h3>
+                    </div>
+                    <div id="question1">
+                        <div class="question">
+                            <img src="../imgs/member_img/Bookmark.svg" alt="">
+                            <h4>1. Look at the picture. There is_____under the door.</h4>
+                        </div>
+                        <div class="answer">
+                            <div>
+
+                                <p style=" background: linear-gradient(0turn, #72E54A  40%, transparent 0%);">(A)　an
+                                    envelope </p>
+
+                                <p>(B)　a plant</p>
+
+                                <p>(C)　a sign </p>
+
+                                <p>(D)　an umbrella</p>
+
+                            </div>
+                            <figure><img src="../imgs/member_img/quse1.svg" alt="" style="width: 200%;"></figure>
+                        </div>
+                        <div class="detail-ans">
+                            <p>看這張圖片。門底下有___。<br>
+                                解析：看圖門底下，確實有一個信封 an
+                                envelope，信封開頭是a,e,i,o,u的e，前面定冠詞要放an，<br>
+                                因此刪掉B、C選項，留下A、D選項，又後面信封的英文是envelope，是e開頭，只有A的選項是e開頭，<br>
+                                因此本題選A答案。
+                            </p>
+                            <div class="detail-op">
+
+                                <p>(A)　an envelope　一個信封 (O)</p>
+
+                                <p>(B)　a plant　一顆植物 (X)</p>
+
+
+                                <p>(C)　a sign　一個號誌 (X)</p>
+
+
+                                <p>(D)　an umbrella　一把雨傘。(X)</p>
+
+                            </div>
+
+                        </div>
+                        <div id="chat-container">
+                            <div class="title">
+                                <figure><img src="../imgs/member_img/bot-star.svg" alt=""
+                                        style="width: 48px;height:48px;"></figure>
+                                <h5>AI答題</h5>
+                            </div>
+                            <div id="messages"></div>
+                            <div id="input" style="display: flex">
+                                <input type="text" id="message-input" placeholder="向AI發問"
+                                    style="background-color: var(--lesser-background-y-)">
+                                <button id="send-button"></button>
+                            </div>
+
+
+                        </div>
+
+
+                        <div id="question1">
+                            <div class="question">
+                                <img src="../imgs/member_img/Bookmark-y.svg" alt="">
+                                <h4>2. My_____hurts so much that I cannot even turn my head.</h4>
+                            </div>
+                            <div class="answer">
+                                <div>
+
+                                    <p>(A)　arm</p>
+
+
+                                    <p style=" background: linear-gradient(0turn, #E54A4A  40%, transparent 0%);">
+                                        (B)　knee</p>
+
+
+                                    <p style=" background: linear-gradient(0turn, #72E54A  40%, transparent 0%);">
+                                        (C)　neck</p>
+
+
+                                    <p>(D)　stomach</p>
+
+                                </div>
+                            </div>
+                            <div class="detail-ans">
+                                <p>題幹描述了一個疼痛的部位，並且這個疼痛會影響轉動頭部。選項中的手臂（arm）、膝蓋（knee）和<br>胃（stomach）
+                                    都不會直接影響到頭部的轉動，而脖子（neck）是支持頭部運動的關鍵部位，因此，<br>脖子疼痛最有可能導致無法轉動頭部。因此本題選C答案。
+                                </p>
+                                <div class="detail-op">
+
+                                    <p>(A)　arm　手臂 (X)</p>
+
+                                    <p>(B)　knee　膝蓋 (X)</p>
+
+
+                                    <p>(C)　neck　脖子 (O)</p>
+
+
+                                    <p>(D)　stomach　腸胃 (X)</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="question1">
+                            <div class="question">
+                                <img src="../imgs/member_img/Bookmark.svg" alt="">
+                                <h4>3. Our school basketball team won the national game last night. We are so_____them.
+                                </h4>
+                            </div>
+                            <div class="answer">
+                                <div>
+                                    <p>(A)　popular with</p>
+                                    <p style=" background: linear-gradient(0turn, #72E54A  40%, transparent 0%);">
+                                        (B)　proud of</p>
+                                    <p>(C)　sorry for</p>
+                                    <p>(D)　worried about</p>
+                                </div>
+                            </div>
+                            <div class="detail-ans">
+                                <p>這道題目的關鍵是根據語境選擇適當的情感表達方式。當提到某人或團隊取得了成就時，常見的情感反<br>
+                                    應是「感到驕傲」。因此，"proudof"（為……感到驕傲）是最合適的選擇，因為它表示對籃球隊勝利的<br>
+                                    欣賞和自豪感。
+                                </p>
+                                <div class="detail-op">
+
+                                    <p>(A)　popular with　受...歡迎 (X)</p>
+
+                                    <p>(B)　proud of　以...為榮 (O)</p>
+
+
+                                    <p>(C)　sorry for　對...感到抱歉 (X)</p>
+
+
+                                    <p>(D)　worried about　擔心... (X)</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="question1">
+                            <div class="question">
+                                <img src="../imgs/member_img/Bookmark.svg" alt="">
+                                <h4>4. Tomorrow is Sam's last day in the office. Nobody knows why he decided to _____.
+                                </h4>
+                            </div>
+                            <div class="answer">
+                                <div>
+
+                                    <p>(A)　hide</p>
+
+                                    <p style=" background: linear-gradient(0turn, #72E54A  40%, transparent 0%);">
+                                        (B)　leave</p>
+
+                                    <p>(C)　pack</p>
+
+                                    <p>(D)　walk</p>
+
+                                </div>
+                            </div>
+                            <div class="detail-ans">
+                                <p>題目中說明了Sam在辦公室的最後一天，暗示他將離開工作崗位。"leave"（離開）是最適合的詞，因為<br>
+                                    這裡要描述的是一個結束某段經歷或工作的行為。其他選項如"hide"（躲藏）、"pack"（打包）和"walk"<br>
+                                    （步行）都不符合這裡表達的意圖。
+                                </p>
+                                <div class="detail-op">
+
+                                    <p>(A)　hide　隱藏 (X)</p>
+
+                                    <p>(B)　leave　離開 (O)</p>
+
+
+                                    <p>(C)　pack　打包 (X)</p>
+
+
+                                    <p>(D)　walk　步行 (X)</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="test-bar">
+                    <div class="icon-bar">
+                        <img src="../imgs/member_img/search.svg" alt="">
+                        <img src="../imgs/member_img/bell.svg" alt="">
+                    </div>
+                    <figure><img src="../imgs/member_img/face.svg" alt=""></figure>
+                    <figure class="test-guide"><img src="../imgs/member_img/tryagain.svg" alt="">
+                        <a href="#"><button>再試一次</button></a>
+                    </figure>
+                </div>
+        </main>
+    </section>
+    <script src="../js/member.js"></script>
+    <script src="../js/AI.js"></script>
+</body>
+
+</html>

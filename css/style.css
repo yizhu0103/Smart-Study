@@ -350,9 +350,15 @@ h1 span:nth-child(14) {
   /* 絕對定位 */
   right: 150px;
   top: 100px;
-  height: 143px;
-  width: 143px;
+  height: 150px;
+  width: 150px;
 }
+.moon img,.moon-2 img{
+  height: 100%;
+  width: 100%;
+}
+
+
 
 .star {
   position: absolute;
@@ -431,13 +437,23 @@ h1 span:nth-child(14) {
   width: 100%;
   height: 100vh;
   background-image: url(../imgs/index-img/circl_background.svg);
-  background-position: 0 -50px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  /* background-position: 0 -50px; */
+  background-size: auto 100%;
+
   background-color: var(--lesser-background-b-);
   position: relative;
 }
 
+
+.sub_circle{
+  position: absolute;
+  background-color: var(--lesser-background-y-);
+  width: 100%;
+  height: 100vh;
+  clip-path: ellipse(50% 60% at 50% 0%);
+  /* box-shadow:0px 0px 10px rgba(0,0,0,.5); */
+
+}
 
 .box__list_options {
   width: 100%;
@@ -466,11 +482,13 @@ h1 span:nth-child(14) {
 }
 
 .book_bkg{
+  z-index: 5;
   width: 90%;
   height: 75%;
 }
 
 .book_bkg img{
+  z-index: 5;
   width: 100%;
   height: 100%;
 }
@@ -480,7 +498,7 @@ h1 span:nth-child(14) {
   height: 90px;
   position: absolute;
   background-color: var(--secondary-y-1);
-  border-radius: 50%;
+  border-radius: 99%;
   clip-path: polygon(0 40%, 38% 40%, 20% 0, 100% 50%, 20% 100%, 37% 60%, 0 60%);
 }
 
@@ -585,6 +603,7 @@ figure.sub-en:hover {
   top: 100px;
   height: 143px;
   width: 143px;
+  z-index: 5;
 }
 
 .moon-2 {
@@ -593,16 +612,20 @@ figure.sub-en:hover {
   top: 100px;
   height: 143px;
   width: 143px;
-  transform: rotate(20deg);
+  transform: rotate(-20deg);
+  z-index: 5;
 }
 
 .cloud-2 {
   position: absolute;
   width: 100%;
-  height: 30vh;
+  height:10vh;
   bottom: 0px;
-  background-image: url(../imgs/index-img/b-2.svg);
+  background-image: url(../imgs/index-img/sub_clound.svg);
   background-size: 100% auto;
+  background-repeat: no-repeat;
+  z-index: 2;
+
 }
 
 /* marquee */
@@ -613,6 +636,8 @@ section#marquee {
   justify-content: center;
   align-items: center;
   background-color: var(--lesser-background-y-);
+background-position:-100px 0;
+z-index: 3;
   /* background-position: 0 -80px;
   background-image: url(../imgs/index-img/b-2.svg); */
 }
@@ -892,11 +917,12 @@ section#marquee {
 }
 
 .wave {
-  width: 100%;
-  height: 100px;
+  width: 110%;
+  height: 1000px;
   position: absolute;
-  bottom: 0;
+  bottom: -800px;
   background-image: url(../imgs/index-img/news-wave.svg);
+  background-size: 100% auto;
 
 }
 

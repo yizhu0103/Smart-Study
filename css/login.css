@@ -153,11 +153,11 @@ position: relative;
 #star_login{
   position: absolute;
   z-index: 5;
-  top: -100px;
+  top: -80px;
   left: 150px;
-  width: 150px;
-  height: 160px;
-  background-image: url(../imgs/login-img/star_login.svg);
+  width: 120px;
+  height: 120px;
+  background-image: url(../imgs/index-img/moon.gif);
   background-size: 100% 100%;
 }
 /* #star_signup{
@@ -244,7 +244,6 @@ input#password,
   background-color: var(--input-b-1);
   margin: 10px 0;
   width:  100%;
-
   font-size: 0.75rem;
   color: var(--lesser-background-y-);
   border-radius: 99px;

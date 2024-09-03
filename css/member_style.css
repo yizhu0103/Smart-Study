@@ -597,7 +597,8 @@ h1 {
 #test::-webkit-scrollbar,
 #program::-webkit-scrollbar,
 .content ul::-webkit-scrollbar,
-#my_test::-webkit-scrollbar {
+#my_test::-webkit-scrollbar,
+#messages::-webkit-scrollbar {
     background-color: var(--lesser-background-y-);
     border: var(--primary-b-1) 1px solid;
     border-radius: 99px;
@@ -607,7 +608,8 @@ h1 {
 #test::-webkit-scrollbar-thumb,
 #program::-webkit-scrollbar-thumb,
 .content ul::-webkit-scrollbar-thumb,
-#my_test::-webkit-scrollbar-thumb {
+#my_test::-webkit-scrollbar-thumb,
+#messages::-webkit-scrollbar-thumb {
     background-color: var(--primary-b-2);
     border-radius: 99px;
 }
@@ -615,14 +617,16 @@ h1 {
 #test::-webkit-scrollbar-track,
 #program::-webkit-scrollbar-track,
 .content ul::-webkit-scrollbar-track,
-#my_test::-webkit-scrollbar-track {
+#my_test::-webkit-scrollbar-track,
+#messages::-webkit-scrollbar-track {
     border-radius: 99px;
 }
 
 #test::-webkit-scrollbar-button,
 #program::-webkit-scrollbar-button,
 .content ul::-webkit-scrollbar-button,
-#my_test::-webkit-scrollbar-button {
+#my_test::-webkit-scrollbar-button,
+#messages::-webkit-scrollbar-button {
     display: none;
     /* 若預設就是display none 是因為body有設定botton 所以需要另外設定取消 */
 }
@@ -630,14 +634,16 @@ h1 {
 #test::-webkit-scrollbar-corner,
 #program::-webkit-scrollbar-corner,
 .content ul::-webkit-scrollbar-corner,
-#my_test::-webkit-scrollbar-corner {
+#my_test::-webkit-scrollbar-corner,
+#messages::-webkit-scrollbar-corner {
     border-radius: 50%;
 }
 
 #test::-webkit-scrollbar-thumb:hover,
 #program::-webkit-scrollbar-thumb:hover,
 .content ul::-webkit-scrollbar-thumb:hover,
-#my_test::-webkit-scrollbar-thumb:hover {
+#my_test::-webkit-scrollbar-thumb:hover,
+#messages::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-b-2);
     border-radius: 99px;
 }
@@ -777,11 +783,11 @@ input {
     margin-bottom: 10px;
     border-radius: 99px;
     border: var(--primary-b-2) 1px solid;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 input:focus {
-    outline: var(--font-b-1) 3px solid;
+    outline: var(--font-b-1) 1px solid;
 }
 
 .menu {
@@ -1054,17 +1060,20 @@ input:focus {
 }
 
 .aiTest #test-body {
-    margin: 11% 0 0 9%;
+    margin-top: 11%;
+    position: relative;
 
 }
 
 .aiTest .title {
     display: flex;
-    margin-top: 0;
+    margin-top: 10%;
+    margin-left: 9%;
 }
 
 .aiTest .question {
     display: flex;
+    margin-left: 12%;
 }
 
 .aiTest .title img {
@@ -1086,13 +1095,15 @@ p {
 }
 
 #question1 {
-    margin: 6% 0 0 1%;
+    margin-top: 6%;
 }
 
-
+.selected {
+    background: linear-gradient(0turn, #FFDE67 40%, transparent 0%);
+}
 
 .answer {
-    margin: 5% 0 0 4%;
+    margin: 5% 0 0 15%;
     display: flex;
     justify-content: space-between;
     padding-right: 20%;
@@ -1134,4 +1145,119 @@ p {
 
 #test-bar figure {
     margin: 15% 0 90% 0;
+}
+
+/* AI詳解頁 */
+
+.detail-ans {
+    margin: 5% 0 0 15%;
+}
+
+.detail-op {
+    margin-top: 3%;
+}
+
+
+#chat-container {
+    width: 42%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0; /* 移除原有的 margin */
+    background-color: transparent;
+    z-index: 888;
+    position: fixed;
+    bottom: 0; /* 固定在视窗底部 */
+    right: 30%; /* 保持右侧的 margin */
+
+}
+
+#chat-container .title {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+
+}
+
+
+h5 {
+    width: 10%;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--lesser-background-y-);
+    background-color: var(--primary-b-2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#messages {
+    display: none; /* 初始状态下隐藏 */
+    flex-direction: column;
+    width: 100%;
+    height: 2%;
+    flex: 1;
+    overflow: auto;
+    padding: 5px;
+    background-color: var(--lesser-background-y-);
+    border-radius: 10px;
+    border: 2px solid var(--primary-b-2);
+}
+
+#input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#message-input {
+    flex: 1;
+    padding-right: 40px;
+    /* 預留空間給按鈕 */
+    border: 2px solid var(--primary-b-2);
+    background-color: var(--lesser-background-y-);
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    /* 添加動畫效果 */
+}
+
+.user-message {
+    background-color: var(--lesser-background-b-);
+    color: var(--font-b-1);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    align-self: flex-end;
+    font-weight: 600;
+}
+
+.bot-message {
+    background-color: var(--lesser-background-b-);
+    color: var(--font-b-1);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+}
+
+#send-button {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 10px;
+    /* 靠近輸入欄位右邊 */
+    top: 5px;
+    background-image: url(../imgs/member_img/arrowbtn.svg);
+    background-color: var(--primary-b-1);
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 }

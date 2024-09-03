@@ -350,9 +350,15 @@ h1 span:nth-child(14) {
   /* 絕對定位 */
   right: 150px;
   top: 100px;
-  height: 143px;
-  width: 143px;
+  height: 150px;
+  width: 150px;
 }
+.moon img,.moon-2 img{
+  height: 100%;
+  width: 100%;
+}
+
+
 
 .star {
   position: absolute;
@@ -430,7 +436,7 @@ h1 span:nth-child(14) {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url(../imgs/index-img/circl_background.svg);
+  /* background-image: url(../imgs/index-img/circl_background.svg); */
   background-position: 0 -50px;
   background-size: 100% auto;
   background-repeat: no-repeat;

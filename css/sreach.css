@@ -430,34 +430,38 @@ input:focus,
   cursor: pointer;
 }
 
+.filter-button.active {
+  background-color: #28a745;
+}
+
 .subject .so {
   background-image: url(../imgs/sraech-img/social.svg);
 }
-.subject .so:hover {
+.subject .so:hover,.subject .so.active {
   background-image: url(../imgs/sraech-img/social-hover.svg);
 }
 .subject .en {
   background-image: url(../imgs/sraech-img/english.svg);
 }
-.subject .en:hover {
+.subject .en:hover,.subject .en.active {
   background-image: url(../imgs/sraech-img/english-hover.svg);
 }
 .subject .ch {
   background-image: url(../imgs/sraech-img/chinese.svg);
 }
-.subject .ch:hover {
+.subject .ch:hover,.subject .ch.active {
   background-image: url(../imgs/sraech-img/chinese-hover.svg);
 }
 .subject .math {
   background-image: url(../imgs/sraech-img/math.svg);
 }
-.subject .math:hover {
+.subject .math:hover,.subject .math.active {
   background-image: url(../imgs/sraech-img/math-hover.svg);
 }
 .subject .sc {
   background-image: url(../imgs/sraech-img/science.svg);
 }
-.subject .sc:hover {
+.subject .sc:hover,.subject .sc.active {
   background-image: url(../imgs/sraech-img/science-hover.svg);
 }
 
@@ -512,6 +516,7 @@ input:focus,
   margin: 50px 25px;
   border-radius: 10px;
   background-image: url(../imgs/sraech-img/background.svg);
+  padding: 0 5px;
 }
 
 .box_list li p {
@@ -520,6 +525,12 @@ input:focus,
   color: var(--font-b-1);
   font-family: "Noto Sans TC", sans-serif;
   border-bottom: var(--secondary-b-1) solid 2px;
+  width: 60%;
+  text-align: center;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .invantory::-webkit-scrollbar,

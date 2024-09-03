@@ -59,4 +59,35 @@ function course() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
 
+    let currentFilter = ''; // 追蹤當前篩選的類型，如果為空則顯示所有動物
+    const subs = document.querySelectorAll('.sub');
+    const sujNames = document.querySelectorAll('.sujName');
+    
+    subs.forEach(function(sub) {
+        sub.addEventListener('click', function() {
+            const selectedType = this.getAttribute('data-type');
+    
+            // 如果再次點擊同一個篩選類型，則重置篩選
+            if (currentFilter === selectedType) {
+                currentFilter = '';
+                subs.forEach(btn => btn.classList.remove('active'));
+            } else {
+                currentFilter = selectedType;
+                subs.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            }
+    
+            // 根據當前篩選類型顯示或隱藏動物
+            sujNames.forEach(function(sujName) {
+                if (currentFilter === '' || sujName.getAttribute('data-type') === currentFilter) {
+                    sujName.style.display = 'block';
+                } else {
+                    sujName.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    });

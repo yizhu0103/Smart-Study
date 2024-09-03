@@ -22,9 +22,9 @@ window.addEventListener('scroll', () => {
     const lineb2 = document.getElementById('line-2-b');
     const facia = document.getElementById('facia');
     const ai = document.getElementById('ai');
-    
     const starb = document.getElementById('star-b');
     const header = document.querySelector('header');
+
     //
 
     if (0 <= scrollValue && scrollValue <= 700) {
@@ -39,7 +39,11 @@ window.addEventListener('scroll', () => {
         facia.style.top = 200 + scrollValue * 1 + 'px';
         // moomb.style.top = 100 + scrollValue * 1 + 'px';
         starb.style.top = 180 + scrollValue * 1 + 'px';
-        console.log(scrollValue);
+       
+    }
+    else if (3000 <= scrollValue && scrollValue <= 4000) {
+        const wave = document.getElementById('wave');
+        wave.style.bottom = -800 + (scrollValue-2950) *.8 + 'px';
     }
     else{
         facia.style.filter = `blur(${700 * 0.005}px)`;
@@ -52,6 +56,7 @@ window.addEventListener('scroll', () => {
         // moomb.style.top = 100 + 700+ 'px';
         starb.style.top = 180 + 700+ 'px';
         header.style.position = 'static'
+        wave.style.bottom = -800  + 'px';
 
     }
     // if (scrollValue < 1500) {
@@ -62,6 +67,15 @@ window.addEventListener('scroll', () => {
 // ()=>{
 //     windtow.removeEventListener('scroll')
 // }
+
+window.addEventListener('scroll', () => {
+    // 
+    const scrollValue = window.scrollY;
+    console.log(scrollValue);
+
+});
+
+
 
 
 

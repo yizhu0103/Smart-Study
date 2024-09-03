@@ -17,16 +17,27 @@ document.getElementById('message-input').addEventListener('keypress', (e) => {
 
 function sendMessage() {
     const inputElement = document.getElementById('message-input');
+    const messagesElement = document.getElementById('messages');
     const message = inputElement.value.trim();
 
     if (message === "") return;
 
-    displayMessage('User', message);
+    // 調試資訊
+    console.log("Message sent:", message);
+    console.log("Messages element display:", messagesElement.style.display);
+
+    // 首次輸入時顯示 messages
+    if (messagesElement.style.display === '' || messagesElement.style.display === 'none') {
+        console.log("Showing messages element.");
+        messagesElement.style.display = 'flex';
+    }
+
+    displayMessage('user', message);
 
     // 模擬機器人回應
     const botResponse = responses[message] || "對不起，我不明白你的問題。";
     setTimeout(() => {
-        displayMessage('Bot', botResponse);
+        displayMessage('bot', botResponse);
     }, 500);
 
     inputElement.value = "";
@@ -35,7 +46,13 @@ function sendMessage() {
 function displayMessage(sender, message) {
     const messagesElement = document.getElementById('messages');
     const messageElement = document.createElement('div');
-    messageElement.textContent = `${sender}: ${message}`;
+    messageElement.textContent = `${message}`;
+    messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
     messagesElement.appendChild(messageElement);
     messagesElement.scrollTop = messagesElement.scrollHeight; // 滾動到底部
 }
+
+
+
+
+

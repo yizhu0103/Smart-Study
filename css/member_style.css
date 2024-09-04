@@ -250,7 +250,12 @@ main {
 
 .nav .sub-menu a {
     text-align: center;
-    display: block;
+    display: flex;
+    /* 讓li使用flexbox布局 */
+    align-items: center;
+    /* 垂直置中 */
+    justify-content: center;
+    /* 水平置中 */
     text-decoration: none;
     color: var(--lesser-background-y-);
     /* 讓文字顏色繼承自li的設定，確保一致性 */

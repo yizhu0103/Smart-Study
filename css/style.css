@@ -445,14 +445,18 @@ h1 span:nth-child(14) {
 }
 
 
-.sub_circle{
+.sub_circle,.sub_circle_b{
   position: absolute;
-  background-color: var(--lesser-background-y-);
+  background: var(--lesser-background-y-);
   width: 100%;
   height: 100vh;
   clip-path: ellipse(50% 60% at 50% 0%);
-  /* box-shadow:0px 0px 10px rgba(0,0,0,.5); */
-
+  /* box-shadow:0px 5px 6px rgba(0,0,0,.5); */
+  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8)); */
+}
+.sub_circle_b{
+  background:linear-gradient(to bottom, rgba(39, 108, 198, 0.25) 0%, rgba(39, 108, 198, 0) 100%);
+  top:4px ;
 }
 
 .box__list_options {

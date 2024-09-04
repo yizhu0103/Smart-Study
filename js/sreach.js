@@ -2,16 +2,16 @@
 var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
 
 // 顯示或隱藏子選單
-function switchMenu( theMainMenu, theSubMenu, theEvent ){
-    var SubMenu = document.getElementById( theSubMenu );
-    if( SubMenu.style.display == 'none' ){ // 顯示子選單
+function switchMenu(theMainMenu, theSubMenu, theEvent) {
+    var SubMenu = document.getElementById(theSubMenu);
+    if (SubMenu.style.display == 'none') { // 顯示子選單
         SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
         SubMenu.style.display = 'block';
         hideMenu(); // 隱藏子選單
         VisibleMenu = theSubMenu;
     }
-    else{ // 隱藏子選單
-        if( theEvent != 'MouseOver' || VisibleMenu != theSubMenu ){
+    else { // 隱藏子選單
+        if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
             SubMenu.style.display = 'none';
             VisibleMenu = '';
         }
@@ -19,9 +19,9 @@ function switchMenu( theMainMenu, theSubMenu, theEvent ){
 }
 
 // 隱藏子選單
-function hideMenu(){
-    if( VisibleMenu != '' ){
-        document.getElementById( VisibleMenu ).style.display = 'none';
+function hideMenu() {
+    if (VisibleMenu != '') {
+        document.getElementById(VisibleMenu).style.display = 'none';
     }
     VisibleMenu = '';
 }
@@ -59,35 +59,60 @@ function course() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     let currentFilter = ''; // 追蹤當前篩選的類型，如果為空則顯示所有動物
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTypeFromUrl = urlParams.get('type') || ''; // 從URL中獲取篩選類型
+
     const subs = document.querySelectorAll('.sub');
     const sujNames = document.querySelectorAll('.sujName');
+
+
     
-    subs.forEach(function(sub) {
-        sub.addEventListener('click', function() {
+
+    // 如果 URL 中有篩選類型，則應用篩選並標記按鈕
+    if (selectedTypeFromUrl) {
+        currentFilter = selectedTypeFromUrl;
+        subs.forEach(sub => {
+            if (sub.getAttribute('data-type') === currentFilter) {
+                sub.classList.add('active');
+            }
+        });
+        sujNames.forEach(function(sujName) {
+            if (sujName.getAttribute('data-type') === currentFilter) {
+                sujName.style.display = 'block';
+            } else {
+                sujName.style.display = 'none';
+            }
+        });
+    } else {
+        sujNames.forEach(sujName => sujName.style.display = 'block'); // 沒有篩選時顯示所有動物
+    }
+
+    // 按鈕點擊事件
+    subs.forEach(function(button) {
+        button.addEventListener('click', function() {
             const selectedType = this.getAttribute('data-type');
-    
+
             // 如果再次點擊同一個篩選類型，則重置篩選
             if (currentFilter === selectedType) {
                 currentFilter = '';
-                subs.forEach(btn => btn.classList.remove('active'));
+                subs.forEach(sub => sub.classList.remove('active'));
+                sujNames.forEach(sujName => sujName.style.display = 'block');
             } else {
                 currentFilter = selectedType;
-                subs.forEach(btn => btn.classList.remove('active'));
+                subs.forEach(sub => sub.classList.remove('active'));
                 this.classList.add('active');
+                sujNames.forEach(function(sujName) {
+                    if (sujName.getAttribute('data-type') === currentFilter) {
+                        sujName.style.display = 'block';
+                    } else {
+                        sujName.style.display = 'none';
+                    }
+                });
             }
-    
-            // 根據當前篩選類型顯示或隱藏動物
-            sujNames.forEach(function(sujName) {
-                if (currentFilter === '' || sujName.getAttribute('data-type') === currentFilter) {
-                    sujName.style.display = 'block';
-                } else {
-                    sujName.style.display = 'none';
-                }
-            });
         });
     });
-    
-    });
+
+});

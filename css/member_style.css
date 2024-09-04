@@ -156,17 +156,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8vh;
+    gap: 6vh;
 }
 
 .nav li {
     font-size: 18px;
     cursor: pointer;
     position: relative;
+    justify-content: center;
 }
 
-.item-s {
-    width: 75%;
+.item-s,
+.item,
+.log_out {
+    width: 85%;
     height: 6.5vh;
     display: flex;
     align-items: center;
@@ -178,14 +181,30 @@ main {
 }
 
 
-.item-s:hover {
+.item-s:hover,
+.item :hover,
+.log_out:hover {
     color: var(--secondary-y-1);
-    background-color: var(--primary-b-2);
-    border-radius: 38% 62% 67% 33% / 49% 51% 49% 51%;
+    background-image: url(../imgs/member_img/sub-menu-hover.svg);
+    background-size: cover;
 }
 
 .nav li a {
     color: var(--primary-b-2);
+    /* margin: auto; */
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    text-align: center;
+}
+
+.nav li a:hover {
+    color: var(--secondary-y-1);
     margin: auto;
     font-size: 16px;
 }
@@ -245,7 +264,7 @@ main {
     font-weight: 600;
 }
 
-#c_topbar .nav .log_out {
+.log_out {
     font-size: 16px;
 }
 
@@ -521,11 +540,12 @@ h1 {
     justify-content: flex-end;
 }
 
-#btn-y:hover{
+#btn-y:hover {
     background-color: var(--secondary-b-1);
     color: var(--secondary-y-1);
     font-weight: 600;
 }
+
 #submit {
     width: 20%;
     height: 50px;
@@ -667,7 +687,7 @@ h1 {
     margin: 100px;
 }
 
-.moom{
+.moom {
     position: absolute;
     width: 130px;
     height: 130px;
@@ -676,6 +696,7 @@ h1 {
     background-image: url(../imgs/index-img/moon.gif);
     background-size: cover;
 }
+
 .content {
     width: 100%;
     height: 600px;
@@ -1179,12 +1200,15 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0; /* 移除原有的 margin */
+    margin: 0;
+    /* 移除原有的 margin */
     background-color: transparent;
     z-index: 888;
     position: fixed;
-    bottom: 0; /* 固定在视窗底部 */
-    right: 30%; /* 保持右侧的 margin */
+    bottom: 0;
+    /* 固定在视窗底部 */
+    right: 30%;
+    /* 保持右侧的 margin */
 
 }
 
@@ -1208,7 +1232,8 @@ h5 {
 }
 
 #messages {
-    display: none; /* 初始状态下隐藏 */
+    display: none;
+    /* 初始状态下隐藏 */
     flex-direction: column;
     width: 100%;
     height: 2%;

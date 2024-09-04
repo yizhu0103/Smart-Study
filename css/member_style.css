@@ -521,6 +521,11 @@ h1 {
     justify-content: flex-end;
 }
 
+#btn-y:hover{
+    background-color: var(--secondary-b-1);
+    color: var(--secondary-y-1);
+    font-weight: 600;
+}
 #submit {
     width: 20%;
     height: 50px;
@@ -537,6 +542,7 @@ h1 {
     color: var(--secondary-y-1);
     font-weight: 600;
 }
+
 
 
 #bell {

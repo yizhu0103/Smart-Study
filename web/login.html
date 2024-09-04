@@ -14,16 +14,16 @@
 <body>
     <main>
         <section id="login">
-         
+
             <!-- <div class="star"></div> -->
             <div class="logo">
                 <h1><a href="../index.html"><img src="../imgs/sraech-img/logo.svg" alt=""></a></h1>
             </div>
             <div class="register">
-                <h5 onclick="show_hide()" id="register_btn_login" >
+                <h5 onclick="show_hide()" id="register_btn_login">
                     登入
                 </h5>
-                <h5 onclick="show_hide()" id="register_btn_signup" >
+                <h5 onclick="show_hide()" id="register_btn_signup">
                     註冊
                 </h5>
 
@@ -41,7 +41,7 @@
 
                             <input type="text" id="username" name="username" placeholder="帳號">
                             <div class="tab"></div>
-                            <input type="password" id="password" name="password" placeholder="密碼" >
+                            <input type="password" id="password" name="password" placeholder="密碼">
                             <div class="tab"></div>
                             <div class="forgetpsw">
                                 <div>
@@ -105,14 +105,17 @@
                             data-text="signin_with" data-size="large" data-locale="en-GB" data-logo_alignment="left"
                             data-width="257">
                         </div>
-                        <div id="fb-root" ></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v20.0&appId=1046843650303180" nonce="M0qIEyrl"></script>
-                        <div class="fb-login-button " data-width="" data-size="large" data-shape="rounded" data-button-type="" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" 
-                        ></div>
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous"
+                            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v20.0&appId=1046843650303180"
+                            nonce="M0qIEyrl"></script>
+                        <div class="fb-login-button " data-width="" data-size="large" data-shape="rounded"
+                            data-button-type="" data-layout="rounded" data-auto-logout-link="false"
+                            data-use-continue-as="false"></div>
 
-                        
+
                         <a href="./member_info.html">
-                        <button type="button" class="tourists_login_btn">
+                            <button type="button" class="tourists_login_btn">
                                 訪客登入
                             </button></a>
                     </div>
@@ -121,10 +124,10 @@
             </div>
             </div>
 
-         
+
             <dialog id="infoModal">
                 <section id="forgetpsw-page1">
-             
+
                     <button class="close-btn" onclick="closeDialog()">X</button>
                     <div class="step-other">
                         <div class="step-1">
@@ -136,28 +139,28 @@
                         <div class="step-3">
                             <figure><img src="../imgs/edu_img/完成.png" alt="完成"></figure>
                         </div>
-                        
+
                     </div>
                     <div class="line-other linepage1"></div> <!-- 添加連線 -->
                     <div class="forget_list-other">
-                            <input type="text" placeholder="輸入密碼" required>
-                            <div class="ai_confirm">
-                                <input type="img_confirm" placeholder="輸入圖形驗證碼" required>
-                                <figure class="imgconf"><img src="../imgs/edu_img/圖形驗證.png" alt="圖形驗證碼"></figure>
-                            </div>
-                            <div class="email_confirm">
-                                <input type="password" placeholder="輸入信箱驗證碼" required>
-                                <div class="submit_0" type="submit">發送驗證碼</div>
-                            </div>
-                            <button type="submit" onclick="page1()">下一步</button>
+                        <input type="text" placeholder="輸入密碼" required>
+                        <div class="ai_confirm">
+                            <input type="img_confirm" placeholder="輸入圖形驗證碼" required>
+                            <figure class="imgconf"><img src="../imgs/edu_img/圖形驗證.png" alt="圖形驗證碼"></figure>
+                        </div>
+                        <div class="email_confirm">
+                            <input type="password" placeholder="輸入信箱驗證碼" required>
+                            <div class="submit_0" type="submit">發送驗證碼</div>
+                        </div>
+                        <button type="submit" onclick="page1()">下一步</button>
                         </button>
                     </div>
                 </section>
-                <section id="forgetpsw-page2" >
+                <section id="forgetpsw-page2">
                     <button class="close-btn" onclick="closeDialog()">X</button>
                     <div class="step-other">
                         <div class="step-1">
-                            <figure><img  onclick="gotopage1()"src="../imgs/edu_img/驗證.png" alt="啟動" ></figure>
+                            <figure><img onclick="gotopage1()" src="../imgs/edu_img/驗證.png" alt="啟動"></figure>
                         </div>
                         <div class="step-2">
                             <figure><img src="../imgs/edu_img/新密碼.png" alt="新密碼"></figure>
@@ -165,18 +168,18 @@
                         <div class="step-3">
                             <figure><img src="../imgs/edu_img/完成.png" alt="完成"></figure>
                         </div>
-                        
+
                     </div>
                     <div class="line-other linepage2"></div> <!-- 添加連線 -->
                     <div class="forget_list-other">
-                            <input type="password" placeholder="輸入密碼" required>
-                            <input type="password" placeholder="確認新密碼" required>
-                            <button type="submit" onclick="page2()">提交</button>
+                        <input type="password" placeholder="輸入密碼" required>
+                        <input type="password" placeholder="確認新密碼" required>
+                        <button type="submit" onclick="page2()">提交</button>
                         </button>
                     </div>
-        
+
                 </section>
-                <section id="forgetpsw-page3" >
+                <section id="forgetpsw-page3">
                     <button class="close-btn" onclick="closeDialog()">X</button>
                     <div class="step-other">
                         <div class="step-1">
@@ -188,17 +191,17 @@
                         <div class="step-3">
                             <figure><img src="../imgs/edu_img/完成3.png" alt="完成"></figure>
                         </div>
-                        
+
                     </div>
                     <div class="line-other linepage3"></div> <!-- 添加連線 -->
                     <div class="forget_list-other">
-                            <button type="submit" onclick="closeDialog()">重新登入</button>
+                        <button type="submit" onclick="closeDialog()">重新登入</button>
                         </button>
                     </div>
-        
+
                 </section>
-            
-              </dialog>
+
+            </dialog>
 
         </section>
 

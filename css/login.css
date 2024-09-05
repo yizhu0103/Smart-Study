@@ -135,7 +135,14 @@ section#login {
   color: var(--font-b-1);
   font-family: "Noto Sans TC", sans-serif;
   cursor: pointer; 
+  transition: .4s;
 }
+
+#register_btn_signup:hover,#register_btn_login:hover {
+color: var(--secondary-y-1);
+  background-color: var(--font-b-2);
+}
+
 
 
 /*主要登入區 */
@@ -279,8 +286,7 @@ input::placeholder {
 
 
 
-.login_btn,
-.tourists_login_btn {
+.login_btn{
   background-color: var(--secondary-y-1);
   color: var(--font-b-1);
   font-weight: 500;
@@ -297,27 +303,42 @@ input::placeholder {
   justify-content:  space-between;
   align-items: center;
   width: 45%;
-  height: 20vh;
 }
 ._xvm ._5h0c._5h0d ._5h0i{
   border-radius: 99px;
 }
 
 
-/* .fb-login-button {
-  margin: 10px 0;
+.fb-login-button,.google-login-button {
   width: 80%;
   height: 6vh;
 
 }
- */
-
-/* .fb-login-button{
+.fb-login-button{
   background-image: url(../imgs/login-img/FB_login.svg);
-  background-size: 100% 100%;
-width: 257px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+width: 189px;
   cursor: pointer; 
-} */
+}
+.google-login-button{
+  background-image: url(../imgs/login-img/google_login.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+width: 189px;
+  cursor: pointer; 
+}
+
+.tourists_login_btn {
+  background-color: var(--primary-b-2);
+  color: var(--lesser-background-y-);
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 99px;
+  width: 189px;
+  padding: 5px 0;
+  cursor: pointer; 
+}
 
 
 

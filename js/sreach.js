@@ -27,39 +27,76 @@ function hideMenu() {
 }
 
 
-function inv() {
+// function inv() {
+//     var invantory = document.getElementById("invantory");
+//     var courseList = document.getElementById("courseList");
+//     var btn_c = document.getElementById("btn_c");
+//     var btn_b = document.getElementById("btn_b");
+
+//     invantory.style.display = "flex";
+//     courseList.style.display = "none";
+//     btn_c.classList.add('selected');
+//     btn_b.classList.remove('selected')
+
+//     // btn_c.style.backgroundColor = "var(--secondary-y-1)";
+//     // btn_c.style.color = " var(--secondary-b-1)";
+//     // btn_b.style.backgroundColor = "var(--primary-b-2)";
+//     // btn_b.style.color = "var(--lesser-background-y-)";
+//     courseList.style.visibility = "visible";
+
+// }
+
+// function course() {
+//     var invantory = document.getElementById("invantory");
+//     var courseList = document.getElementById("courseList");
+
+//     invantory.style.display = "none";
+//     courseList.style.display = "flex";
+//     btn_b.classList.add('selected');
+//     btn_c.classList.remove('selected')
+//     // btn_c.style.backgroundColor = "var(--primary-b-2)";
+//     // btn_c.style.color = "var(--lesser-background-y-)";
+//     // btn_b.style.backgroundColor = "var(--secondary-y-1)";
+//     // btn_b.style.color = "var(--secondary-b-1)";
+//     courseList.style.visibility = "visible";
+
+// }
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
     var invantory = document.getElementById("invantory");
     var courseList = document.getElementById("courseList");
     var btn_c = document.getElementById("btn_c");
     var btn_b = document.getElementById("btn_b");
+    btn_c.addEventListener("click", () => {
 
-    invantory.style.display = "flex";
-    courseList.style.display = "none";
-    btn_c.style.backgroundColor = "var(--secondary-y-1)";
-    btn_c.style.color = " var(--secondary-b-1)";
-    btn_b.style.backgroundColor = "var(--primary-b-2)";
-    btn_b.style.color = "var(--lesser-background-y-)";
-    courseList.style.visibility = "visible";
-
-}
-
-function course() {
-    var invantory = document.getElementById("invantory");
-    var courseList = document.getElementById("courseList");
-
-    invantory.style.display = "none";
-    courseList.style.display = "flex";
-    btn_c.style.backgroundColor = "var(--primary-b-2)";
-    btn_c.style.color = "var(--lesser-background-y-)";
-    btn_b.style.backgroundColor = "var(--secondary-y-1)";
-    btn_b.style.color = "var(--secondary-b-1)";
-    courseList.style.visibility = "visible";
+        invantory.style.display = "flex";
+        courseList.style.display = "none";
+        btn_c.classList.add('selected');
+        btn_b.classList.remove('selected');
+        courseList.style.visibility = "visible";
 
 
-}
+    });
+    btn_b.addEventListener("click", () => {
+
+        invantory.style.display = "none";
+        courseList.style.display = "flex";
+        btn_c.classList.remove('selected');
+        btn_b.classList.add('selected');
+        courseList.style.visibility = "visible";
+
+    });
 
 
-document.addEventListener('DOMContentLoaded', function () {
+
+
+
+
 
     let currentFilter = ''; // 追蹤當前篩選的類型，如果為空則顯示所有動物
     const urlParams = new URLSearchParams(window.location.search);
@@ -69,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const sujNames = document.querySelectorAll('.sujName');
 
 
-    
+
+
 
     // 如果 URL 中有篩選類型，則應用篩選並標記按鈕
     if (selectedTypeFromUrl) {
@@ -79,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sub.classList.add('active');
             }
         });
-        sujNames.forEach(function(sujName) {
+        sujNames.forEach(function (sujName) {
             if (sujName.getAttribute('data-type') === currentFilter) {
                 sujName.style.display = 'block';
             } else {
@@ -91,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 按鈕點擊事件
-    subs.forEach(function(button) {
-        button.addEventListener('click', function() {
+    subs.forEach(function (button) {
+        button.addEventListener('click', function () {
             const selectedType = this.getAttribute('data-type');
 
             // 如果再次點擊同一個篩選類型，則重置篩選
@@ -104,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentFilter = selectedType;
                 subs.forEach(sub => sub.classList.remove('active'));
                 this.classList.add('active');
-                sujNames.forEach(function(sujName) {
+                sujNames.forEach(function (sujName) {
                     if (sujName.getAttribute('data-type') === currentFilter) {
                         sujName.style.display = 'block';
                     } else {

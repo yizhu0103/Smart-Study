@@ -259,14 +259,17 @@ input:focus,
   top: 90%;
   animation-delay: -3s;
 }
+
 .marquee-item:nth-child(6) {
   top: 75%;
   animation-delay: -1s;
 }
+
 .marquee-item:nth-child(7) {
   top: 45%;
   animation-delay: 8s;
 }
+
 .marquee-item:nth-child(8) {
   top: 20%;
   animation-delay: 2s;
@@ -353,7 +356,7 @@ input:focus,
 }
 
 .sub-menu li a:hover {
-  border-bottom:  var(--font-b-2) solid 2px;
+  border-bottom: var(--font-b-2) solid 2px;
   transition: .35s ease-in-out;
   color: var(--font-b-2);
 }
@@ -388,25 +391,37 @@ input:focus,
 
 }
 
-.btn_c {
-  background-color: var(--secondary-y-1);
-  color: var(--secondary-b-1);
-  padding: 20px 49px 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
 
-.btn_b {
+
+.btns h5 {
   background-color: var(--primary-b-2);
   color: var(--lesser-background-y-);
   padding: 20px 49px 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  transition: .4S;
+  box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.25);
 }
 
-.btns h5 {
-  font-size: 1.2rem;
+
+
+.btns h5:hover,
+.btns h5:active {
+  background-color: var(--secondary-y-1);
+  color: var(--secondary-b-1);
+  transform: scale(0.95);
 }
+
+/* 按下按鈕時改變樣式 */
+.btns h5.selected  {
+  background-color: var(--secondary-y-1);
+  color: var(--secondary-b-1);
+
+}
+
+
 
 .checklist {
   display: flex;
@@ -430,38 +445,50 @@ input:focus,
   cursor: pointer;
 }
 
-.filter-button.active {
-  background-color: #28a745;
-}
+
 
 .subject .so {
   background-image: url(../imgs/sraech-img/social.svg);
 }
-.subject .so:hover,.subject .so.active {
+
+.subject .so:hover,
+.subject .so.active {
   background-image: url(../imgs/sraech-img/social-hover.svg);
 }
+
 .subject .en {
   background-image: url(../imgs/sraech-img/english.svg);
 }
-.subject .en:hover,.subject .en.active {
+
+.subject .en:hover,
+.subject .en.active {
   background-image: url(../imgs/sraech-img/english-hover.svg);
 }
+
 .subject .ch {
   background-image: url(../imgs/sraech-img/chinese.svg);
 }
-.subject .ch:hover,.subject .ch.active {
+
+.subject .ch:hover,
+.subject .ch.active {
   background-image: url(../imgs/sraech-img/chinese-hover.svg);
 }
+
 .subject .math {
   background-image: url(../imgs/sraech-img/math.svg);
 }
-.subject .math:hover,.subject .math.active {
+
+.subject .math:hover,
+.subject .math.active {
   background-image: url(../imgs/sraech-img/math-hover.svg);
 }
+
 .subject .sc {
   background-image: url(../imgs/sraech-img/science.svg);
 }
-.subject .sc:hover,.subject .sc.active {
+
+.subject .sc:hover,
+.subject .sc.active {
   background-image: url(../imgs/sraech-img/science-hover.svg);
 }
 

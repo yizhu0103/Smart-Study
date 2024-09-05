@@ -187,14 +187,12 @@ input:focus,
   width: 100%;
 }
 
-
 /* 跑馬燈 */
 .marquee-container {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 42vh;
-
 }
 
 /* 跑馬燈項目樣式 */
@@ -207,9 +205,7 @@ input:focus,
   border: var(--primary-b-2) 3px solid;
   background-color: var(--lesser-background-b-);
   right: -300px;
-  /* 初始在容器右側 */
   animation: moveLeft 15s linear infinite;
-
 }
 
 .marquee-container a {
@@ -219,9 +215,7 @@ input:focus,
 
 .marquee-item:hover {
   animation-play-state: paused;
-
 }
-
 
 /* 跑馬燈的動畫效果 */
 @keyframes moveLeft {
@@ -274,7 +268,6 @@ input:focus,
   top: 20%;
   animation-delay: 2s;
 }
-
 
 
 

@@ -14,15 +14,28 @@ $(function () {/* 一個js只要執行一次就可以了 */
 
 
 
-    window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
+
+ // 在頁面加載完成後，滾動到頂部
+ window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
+// 也可以在重新整理之前強制滾回頂部
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);}
+
+
+
         const scrollValue = window.scrollY;
         const cloud_b = document.getElementById('cloud_b');
         const cloud_b_b = document.getElementById('cloud_b_b');
-        // const lineb1 = document.getElementById('line-1-b');
-        // const lineb2 = document.getElementById('line-2-b');
-        // const facia = document.getElementById('facia');
+        const lineb1 = document.getElementById('line-1-b');
+        const lineb2 = document.getElementById('line-2-b');
+        const facia = document.getElementById('facia');
         const ai = document.getElementById('ai');
         // const starb = document.getElementById('star-b');
+        // const moomb = document.getElementById('star-b');
         const wave = document.getElementById('wave');
         const memh2 = document.getElementById('memberh2');
 
@@ -33,9 +46,9 @@ $(function () {/* 一個js只要執行一次就可以了 */
             ai.style.top = 630 + scrollValue * .4 + 'px';
             cloud_b_b.style.top = 550 + scrollValue * 1.2 + 'px';
             cloud_b.style.top = 750 + scrollValue * 1.2 + 'px';
-            // lineb1.style.top = 50 + scrollValue * 1 + 'px';
-            // lineb2.style.top = 50 + scrollValue * 1 + 'px';
-            // facia.style.top = 200 + scrollValue * 1 + 'px';
+            lineb1.style.top = 50 + scrollValue * 1 + 'px';
+            lineb2.style.top = 50 + scrollValue * 1 + 'px';
+            facia.style.position =  'fixed';
             // moomb.style.top = 100 + scrollValue * 1 + 'px';
             // starb.style.top = 180 + scrollValue * 1 + 'px';
 
@@ -50,9 +63,9 @@ $(function () {/* 一個js只要執行一次就可以了 */
             ai.style.top = 910 + 'px';
             cloud_b_b.style.top = 550 + 840 + 'px';
             cloud_b.style.top = 750 + 840 + 'px';
-            // lineb1.style.top = 50 + 700+ 'px';
-            // lineb2.style.top = 50 + 700+ 'px';
-            // facia.style.top = 200 + 700+ 'px';
+            lineb1.style.top = 50 + 700+ 'px';
+            lineb2.style.top = 50 + 700+ 'px';
+            
             // moomb.style.top = 100 + 700+ 'px';
             // starb.style.top = 180 + 700 + 'px';
             wave.style.bottom = -800 + 'px';

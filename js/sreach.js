@@ -1,4 +1,6 @@
 
+
+
 var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
 
 // 顯示或隱藏子選單
@@ -18,56 +20,44 @@ function switchMenu(theMainMenu, theSubMenu, theEvent) {
     }
 }
 
-// 隱藏子選單
-function hideMenu() {
-    if (VisibleMenu != '') {
-        document.getElementById(VisibleMenu).style.display = 'none';
-    }
-    VisibleMenu = '';
-}
 
-
-// function inv() {
-//     var invantory = document.getElementById("invantory");
-//     var courseList = document.getElementById("courseList");
-//     var btn_c = document.getElementById("btn_c");
-//     var btn_b = document.getElementById("btn_b");
-
-//     invantory.style.display = "flex";
-//     courseList.style.display = "none";
-//     btn_c.classList.add('selected');
-//     btn_b.classList.remove('selected')
-
-//     // btn_c.style.backgroundColor = "var(--secondary-y-1)";
-//     // btn_c.style.color = " var(--secondary-b-1)";
-//     // btn_b.style.backgroundColor = "var(--primary-b-2)";
-//     // btn_b.style.color = "var(--lesser-background-y-)";
-//     courseList.style.visibility = "visible";
-
+// function hideMenu() {
+//     if (VisibleMenu != '') {
+//         document.getElementById(VisibleMenu).style.display = 'none';
+//     }
+//     VisibleMenu = '';
 // }
-
-// function course() {
-//     var invantory = document.getElementById("invantory");
-//     var courseList = document.getElementById("courseList");
-
-//     invantory.style.display = "none";
-//     courseList.style.display = "flex";
-//     btn_b.classList.add('selected');
-//     btn_c.classList.remove('selected')
-//     // btn_c.style.backgroundColor = "var(--primary-b-2)";
-//     // btn_c.style.color = "var(--lesser-background-y-)";
-//     // btn_b.style.backgroundColor = "var(--secondary-y-1)";
-//     // btn_b.style.color = "var(--secondary-b-1)";
-//     courseList.style.visibility = "visible";
-
-// }
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
+   // 定義切換選單的函數
+function switchMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+// 選取所有 main-menu 並加上事件監聽器
+const menus = document.querySelectorAll('.main-menu');
+menus.forEach(menu => {
+    menu.addEventListener('click', function() {
+        const menuId = this.getAttribute('data-menu'); // 取得對應的選單 ID
+        switchMenu(menuId); // 切換對應的選單
+    });
+});
+
+
+
+
+
+
+
+
+
+
     var invantory = document.getElementById("invantory");
     var courseList = document.getElementById("courseList");
     var btn_c = document.getElementById("btn_c");
@@ -98,18 +88,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    let currentFilter = ''; // 追蹤當前篩選的類型，如果為空則顯示所有動物
+    let currentFilter = ''; 
     const urlParams = new URLSearchParams(window.location.search);
-    const selectedTypeFromUrl = urlParams.get('type') || ''; // 從URL中獲取篩選類型
-
+    const selectedTypeFromUrl = urlParams.get('type') || ''; 
     const subs = document.querySelectorAll('.sub');
     const sujNames = document.querySelectorAll('.sujName');
 
 
 
 
-
-    // 如果 URL 中有篩選類型，則應用篩選並標記按鈕
     if (selectedTypeFromUrl) {
         currentFilter = selectedTypeFromUrl;
         subs.forEach(sub => {
@@ -125,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     } else {
-        sujNames.forEach(sujName => sujName.style.display = 'block'); // 沒有篩選時顯示所有動物
+        sujNames.forEach(sujName => sujName.style.display = 'block'); 
     }
 
     // 按鈕點擊事件

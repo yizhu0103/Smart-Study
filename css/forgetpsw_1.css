@@ -14,7 +14,7 @@
     
 }
 
-.close-btn {
+.close_btn {
     position: absolute;
     top: 1.5rem; /* 距離上方 */
     right: 2rem; /* 距離右側 */
@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 
-.close-btn:hover {
+.close_btn:hover {
     color: var(--secondary-y-1); /* 滑鼠懸停時變成黃色 */
 }
 .step-other {

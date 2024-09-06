@@ -20,10 +20,10 @@
                 <h1><a href="../index.html"><img src="../imgs/sraech-img/logo.svg" alt=""></a></h1>
             </div>
             <div class="register">
-                <h5 onclick="show_hide()" id="register_btn_login">
+                <h5  id="register_btn_login">
                     登入
                 </h5>
-                <h5 onclick="show_hide()" id="register_btn_signup">
+                <h5  id="register_btn_signup">
                     註冊
                 </h5>
 
@@ -48,7 +48,7 @@
                                     <input type="checkbox" name="rememberpsw" id="rememberpsw" value="忘記密碼">
                                     <label class="forgetpsw_text" for="">記住我</label>
                                 </div>
-                                <div class="forget" onclick="show()">忘記密碼</div>
+                                <div class="forget" id="forget" >忘記密碼</div>
                             </div>
                             <a href="./member_info.html">
                                 <button type="button" class="login_btn">登入</button></a>
@@ -75,9 +75,9 @@
                             <div class="tab"></div>
                             <input type="text" id="comfirm_password" name="comfirm_password" placeholder="確認密碼">
                             <div class="tab"></div>
-                            <div class="forgetpsw">
+                            <div class="forgetpsw register">
                                 <a href="">
-                                    <h5 onclick="show_hide()">已有帳號?</h5>
+                                    <h5 >已有帳號?</h5>
                                 </a>
                             </div>
                             <button type="button" class="login_btn">註冊</button>
@@ -130,7 +130,7 @@
             <dialog id="infoModal">
                 <section id="forgetpsw-page1">
 
-                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="close_btn" >X</div>
                     <div class="step-other">
                         <div class="step-1">
                             <figure><img src="../imgs/edu_img/驗證.png" alt="啟動"></figure>
@@ -159,7 +159,7 @@
                     </div>
                 </section>
                 <section id="forgetpsw-page2">
-                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="close_btn">X</div>
                     <div class="step-other">
                         <div class="step-1">
                             <figure><img onclick="gotopage1()" src="../imgs/edu_img/驗證.png" alt="啟動"></figure>
@@ -182,7 +182,7 @@
 
                 </section>
                 <section id="forgetpsw-page3">
-                    <button class="close-btn" onclick="closeDialog()">X</button>
+                    <div class="close_btn" >X</div>
                     <div class="step-other">
                         <div class="step-1">
                             <figure><img onclick="gotopage1()" src="../imgs/edu_img/驗證.png" alt="啟動"></figure>

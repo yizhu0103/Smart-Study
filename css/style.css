@@ -657,6 +657,7 @@ z-index: 3;
   background-image: url(../imgs/index-img/news-bk.svg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: var(--lesser-background-y-);
 
 }
 

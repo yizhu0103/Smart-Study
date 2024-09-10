@@ -295,6 +295,11 @@ input::placeholder {
   padding: 5px 25px;
   margin-top: 40px;
   cursor: pointer; 
+  transition: .4s;
+}
+.login_btn:hover{
+  background-color:var(--font-b-2);
+  color: var(--secondary-y-1);
 }
 
 .btn_list {

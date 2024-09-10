@@ -41,7 +41,7 @@ function sendMessage() {
     displayMessage('user', message);
 
     // 模拟机器人回应
-    const botResponse = responses[message] || "對不起，我不明白你的問題。";
+    const botResponse = responses[message] || "這個我不知道!請去問老師喔!";
     setTimeout(() => {
         displayMessage('bot', botResponse);
     }, 500);

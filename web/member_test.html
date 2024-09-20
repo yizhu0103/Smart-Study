@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <section>
+    <main>
         <header id="c_topbar">
             <h1><a href="../index.html"><img src="../imgs/index-img/logo.svg" alt="首頁"></a></h1>
             <ul class="nav">
                 <li class="item"><a href="#">課程</a></li>
-                <li  class="item-s" onclick="switchMenu(this, 'SubMenu1')">
+                <li class="item-s" onclick="switchMenu(this, 'SubMenu1')">
                     考試
                     <ul id="SubMenu1" class="sub-menu" style="display:none;">
                         <li><a href="../web/sraech.html?type=ch#checklist" target="_blank">國文</a></li>
@@ -28,30 +28,82 @@
                 <li class="item"><a href="../index.html#news">最新</a></li>
                 <li class="item"><a href="#">關於</a></li>
                 <li class="item"><a href="./member_collection.html">收藏</a></li>
-                <li class="log_out"><a href="../index.html">登出</a></li>
+
             </ul>
+            <div class="log_out"><a href="../index.html">登出</a></div>
         </header>
-        
 
-        <main id="test_main">
+        <section id="testpage">
 
-            <!-- 搜尋區 -->
-            <div id="search">
-                <h2 class="user">Hello!Martin</h2>
+            <div class="test_content">
+                <!-- 搜尋區 -->
+                <div id="search">
+                    <h2 class="user">Hello!Martin</h2>
 
-                <div class="search_label">
-                    <input type="text" name="search" id="search" title="搜尋" placeholder="">
-                    <div class="icon-user"></div>
+                    <div class="search_label">
+                        <input type="text" name="search" id="search" title="搜尋" placeholder="">
+                        <div class="icon-user"></div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 我的考試區 -->
-            <h3 class="test_title">我的考試</h3>
-            <div id="my_test">
+                <!-- 我的考試區 -->
+                 <div class="text_item">
+                <h3 class="test_title">我的考試</h3>
+                <div id="my_test">
 
-                <div class="test_control">
+                    <div class="test_control">
 
-                    <div id="content">
+                        <div id="content">
+                            <div>
+                                <a href="./AI.html">
+                                    <figure>
+                                        <img src="../imgs/member_img/subject1.svg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="content">
+                            <div>
+                                <a href="./AI.html">
+                                    <figure>
+                                        <img src="../imgs/member_img/subject2.svg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="content">
+                            <div>
+                                <a href="./AI.html">
+                                    <figure>
+                                        <img src="../imgs/member_img/subject3.svg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="content">
+                            <div>
+                                <a href="./AI.html">
+                                    <figure>
+                                        <img src="../imgs/member_img/subject4.svg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <a href="./AI.html">
+                                <figure>
+                                    <img src="../imgs/member_img/subject5.svg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="./AI.html">
+                                <figure>
+                                    <img src="../imgs/member_img/subject6.svg" alt="">
+                                </figure>
+                            </a>
+                        </div>
                         <div>
                             <a href="./AI.html">
                                 <figure>
@@ -60,123 +112,78 @@
                             </a>
                         </div>
                     </div>
-                    <div id="content">
-                        <div>
-                            <a href="./AI.html">
-                                <figure>
-                                    <img src="../imgs/member_img/subject2.svg" alt="">
-                                </figure>
-                            </a>
-                        </div>
                     </div>
-                    <div id="content">
-                        <div>
-                            <a href="./AI.html">
-                                <figure>
-                                    <img src="../imgs/member_img/subject3.svg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="content">
-                        <div>
-                            <a href="./AI.html">
-                                <figure>
-                                    <img src="../imgs/member_img/subject4.svg" alt="">
-                                </figure>
-                            </a>
-                        </div>
+                </div>
 
+                <!-- 紀錄收藏區 -->
+                <div class="my_content">
+                    <div class="record1">
+                        <h3>我的紀錄</h3>
+                        <ul class="record">
+                            <div class="first1">
+                                <li><a href="#">113年度國文國中教育會考　　　　　80分</a></li>
+                            </div>
+                            <div class="first1">
+                                <li><a href="#">113年度英文國中教育會考　　　　　60分</a></li>
+                            </div>
+                            <div class="first1">
+                                <li><a href="#">113年度數學國中教育會考　　　　　50分</a></li>
+                            </div>
+                            <div class="first1">
+                                <li><a href="#">113年度自然國中教育會考　　　　　80分</a></li>
+                            </div>
+                            <div class="first1">
+                                <li><a href="#">113年度社會國中教育會考　　　　　90分</a></li>
+                            </div>
+                            <div class="more_btn"><a href="./member_record.html"><button>more</button></a></div>
+                        </ul>
                     </div>
-                    <div>
-                        <a href="./AI.html">
-                            <figure>
-                                <img src="../imgs/member_img/subject5.svg" alt="">
-                            </figure>
-                        </a>
+                    <div class="collect1">
+                        <h3>我的收藏</h3>
+                        <ul class="collect">
+                            <div class="second">
+                                <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">113年度國文國中教育會考題講解</a></li>
+                            </div>
+                            <div class="second">
+                                <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">113年度英文國中教育會考題講解</a></li>
+                            </div>
+                            <div class="second">
+                                <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">數學--數與數線</a></li>
+                            </div>
+                            <div class="second">
+                                <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">數學--一元二次方程式</a></li>
+                            </div>
+                            <!-- <div class="second">
+                                <li><a href="#"><img src="../imgs/member_img/star.svg" alt="5">國文--論語選</a></li>
+                            </div> -->
+                            <div class="more_btn"><a href="./member_record.html"><button>more</button></a></div>
+                        </ul>
                     </div>
-                    <div>
-                        <a href="./AI.html">
-                            <figure>
-                                <img src="../imgs/member_img/subject6.svg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./AI.html">
-                            <figure>
-                                <img src="../imgs/member_img/subject1.svg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                    
                 </div>
             </div>
 
-            <!-- 紀錄收藏區 -->
-            <div class="my_content">
-                <div class="record1">
-                    <h3>我的紀錄</h3>
-                    <ul class="record">
-                        <div class="first1">
-                            <li><a href="#">113年度國文國中教育會考　　　　　80分</a></li>
-                        </div>
-                        <div class="first1">
-                            <li><a href="#">113年度英文國中教育會考　　　　　60分</a></li>
-                        </div>
-                        <div class="first1">
-                            <li><a href="#">113年度數學國中教育會考　　　　　50分</a></li>
-                        </div>
-                        <div class="first1">
-                            <li><a href="#">113年度自然國中教育會考　　　　　80分</a></li>
-                        </div>
-                        <div class="first1">
-                            <li><a href="#">113年度社會國中教育會考　　　　　90分</a></li>
-                        </div>
-                        <a href="./member_record.html"><button>more</button></a>
-                    </ul>
+            <!-- 頭像區 -->
+             <div id="test_head">
+                <div class="edit">
+                    <a href="./member_info.html"></a>
                 </div>
-                <div class="collect1">
-                    <h3>我的收藏</h3>
-                    <ul class="collect">
-                        <div class="second">
-                            <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">113年度國文國中教育會考題講解</a></li>
-                        </div>
-                        <div class="second">
-                            <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">113年度英文國中教育會考題講解</a></li>
-                        </div>
-                        <div class="second">
-                            <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">數學--數與數線</a></li>
-                        </div>
-                        <div class="second">
-                            <li><a href="#"><img src="../imgs/member_img/star.svg" alt="">數學--一元二次方程式</a></li>
-                        </div>
-                        <div class="second">
-                            <li><a href="#"><img src="../imgs/member_img/star.svg" alt="5">國文--論語選</a></li>
-                        </div>
-                        <a href="./member_collection.html"><button>more</button></a>
-                    </ul>
+                <div>
+                    <figure class="head"><img src="../imgs/member_img/head.svg" alt=""></figure>
                 </div>
+                <ul class="info">
+                    <h2>AI</h2>
+                    <li><a href="#">錯題分析</a></li>
+                    <li><a href="#">延伸考題</a></li>
+                    <li><a href="#">補給知識</a></li>
+                </ul>
             </div>
-        </main>
-
-        <!-- 頭像區 -->
-        <div id="test_head">
-            <div class="edit">
-                <a href="./member_info.html"></a>
             </div>
-            <div>
-                <figure class="head"><img src="../imgs/member_img/head.svg" alt=""></figure>
-            </div>
-            <ul class="info">
-                <h2>AI</h2>
-                <li><a href="#">錯題分析</a></li>
-                <li><a href="#">延伸考題</a></li>
-                <li><a href="#">補給知識</a></li>
-            </ul>
-        </div>
-        </div>
-    </section>
+            
+     <!--    <div id="bell">
+            <figure class="bell"></figure>
+        </div> -->
+        </section>
+    </main>
     <script src="../js/member.js"></script>
 </body>
 

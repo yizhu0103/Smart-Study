@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-
+function closeDialog() {
+    infoModal.close();
+    console.log('123');
+}
 
 function page1() {
     var page1 = document.getElementById("forgetpsw-page1");

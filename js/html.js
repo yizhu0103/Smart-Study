@@ -1,4 +1,11 @@
 $(function () {/* 一個js只要執行一次就可以了 */
+    //---漢堡按鈕---
+    $('.hamburger').click(function () {
+        $(this).toggleClass('is-active');
+        /* 交替並輸入class=is-active */
+        $('.navigation').toggleClass('show');
+    });
+
 
     // 滑動至指定位置
     $('.menu a').click(function () {/* 物件名稱要抓對不然找不到 */
@@ -14,16 +21,17 @@ $(function () {/* 一個js只要執行一次就可以了 */
 
 
 
-window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
 
- // 在頁面加載完成後，滾動到頂部
- window.onload = function() {
-    window.scrollTo(0, 0);
-};
+        // 在頁面加載完成後，滾動到頂部
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
 
-// 也可以在重新整理之前強制滾回頂部
-window.onbeforeunload = function() {
-    window.scrollTo(0, 0);}
+        // 也可以在重新整理之前強制滾回頂部
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
 
 
 
@@ -40,34 +48,36 @@ window.onbeforeunload = function() {
         const memh2 = document.getElementById('memberh2');
 
         if (0 <= scrollValue && scrollValue <= 700) {
-
             facia.style.filter = `blur(${scrollValue * 0.005}px)`;
-
             ai.style.top = 630 + scrollValue * .4 + 'px';
-            cloud_b_b.style.top = 550 + scrollValue * 1.2 + 'px';
-            cloud_b.style.top = 750 + scrollValue * 1.2 + 'px';
+            cloud_b_b.style.top = 550 + scrollValue *0.1+ 'px';
+            cloud_b.style.top = 750 + scrollValue * 0.1+ 'px';
+            cloud_b_b.style.position = 'fixed';
+            cloud_b.style.position = 'fixed';
+
             lineb1.style.top = 50 + scrollValue * 1 + 'px';
             lineb2.style.top = 50 + scrollValue * 1 + 'px';
-            facia.style.position =  'fixed';
-            // moomb.style.top = 100 + scrollValue * 1 + 'px';
-            // starb.style.top = 180 + scrollValue * 1 + 'px';
+            facia.style.position = 'fixed';
+            
 
+        }
+        else if (700 < scrollValue && scrollValue <= 1500) {
+            cloud_b_b.style.position = 'absolute';
+            cloud_b_b.style.top = 550+700+'px';
+            cloud_b.style.position = 'absolute';
+            cloud_b.style.top = 750+700+'px';
+            
         }
         else if (3000 <= scrollValue && scrollValue <= 4200) {
             wave.style.bottom = -800 + (scrollValue - 2950) * .8 + 'px';
-            memh2.style.top = -100 + (scrollValue - 3150) * .15 + 'px';
-            
+            // memh2.style.top = -100 + (scrollValue - 3150) * .15 + 'px';
+
+
         }
         else {
-            facia.style.filter = `blur(${700 * 0.005}px)`;
             ai.style.top = 910 + 'px';
-            cloud_b_b.style.top = 550 + 840 + 'px';
-            cloud_b.style.top = 750 + 840 + 'px';
-            lineb1.style.top = 50 + 700+ 'px';
-            lineb2.style.top = 50 + 700+ 'px';
-            
-            // moomb.style.top = 100 + 700+ 'px';
-            // starb.style.top = 180 + 700 + 'px';
+            lineb1.style.top = 50 + 700 + 'px';
+            lineb2.style.top = 50 + 700 + 'px';
             wave.style.bottom = -800 + 'px';
             memh2.style.bottom = -100 + 'px';
 

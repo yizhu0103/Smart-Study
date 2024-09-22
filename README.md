@@ -16,8 +16,9 @@
 ### 使用平台
 	* Windows:：Visual Studio Code
 ## 使用技術
+使用Figma、PhotoPie設計網站及互動效果，藉由html、css、js架設網站及RWD
 ### 網頁設計 :
-	figma
+	Figma、PhotoPie
 ### 網頁切版 :
 	html, css, javascript
 ### 第三方套件運用 :

@@ -50,7 +50,7 @@ $(function () {/* 一個js只要執行一次就可以了 */
         if (0 <= scrollValue && scrollValue <= 700) {
             facia.style.filter = `blur(${scrollValue * 0.005}px)`;
             ai.style.top = 630 + scrollValue * .4 + 'px';
-            cloud_b_b.style.top = 550 + scrollValue *0.1+ 'px';
+            cloud_b_b.style.top = 650 + scrollValue *0.1+ 'px';
             cloud_b.style.top = 750 + scrollValue * 0.1+ 'px';
             cloud_b_b.style.position = 'fixed';
             cloud_b.style.position = 'fixed';
@@ -63,7 +63,7 @@ $(function () {/* 一個js只要執行一次就可以了 */
         }
         else if (700 < scrollValue && scrollValue <= 1500) {
             cloud_b_b.style.position = 'absolute';
-            cloud_b_b.style.top = 550+700+'px';
+            cloud_b_b.style.top = 650+700+'px';
             cloud_b.style.position = 'absolute';
             cloud_b.style.top = 750+700+'px';
             

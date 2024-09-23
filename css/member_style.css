@@ -182,12 +182,11 @@ main {
 }
 
 
-.item-s:hover,
-.item :hover,
-.log_out:hover {
+.item-s:hover{
     color: var(--secondary-y-1);
     background-image: url(../imgs/member_img/sub-menu-hover.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 .nav li a,
@@ -202,10 +201,6 @@ main {
     text-align: center;
 }
 
-.nav li a:hover,
-.log_out a:hover {
-    color: var(--secondary-y-1);
-}
 
 .sub-menu {
     height: 60vh;
@@ -349,7 +344,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    width: 200px;
+    width: 90%;
 }
 
 
@@ -641,8 +636,14 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
+}
+.record{
+    list-style: none;
+    counter-reset: myCounter;
+}
+.record .first1 li:before {
+    counter-increment: myCounter;
+    content: counter(myCounter) ". ";
 }
 
 #record,

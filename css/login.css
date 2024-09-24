@@ -114,32 +114,49 @@ section#login {
   height: 100vh;
   background-color: var(--lesser-background-y-);
 }
-.logo{
+
+.topbar {
   display: flex;
-  justify-content: flex-start;
+  width: 90%;
+  justify-content: space-between;
+
+
+}
+
+.logo {
+  display: flex;
+
   width: 80%;
 }
+
 /* 按鈕區 */
 .register {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 80%;
 }
 
-#register_btn_signup,#register_btn_login {
+#register_btn_signup,
+#register_btn_login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  height: 10vh;
   clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 100%, 0 100%);
   background-color: var(--secondary-y-1);
-  padding: 60px 30px 30px;
+  padding: 10px 20px;
   font-size: 1.5rem;
   color: var(--font-b-1);
   font-family: "Noto Sans TC", sans-serif;
-  cursor: pointer; 
+  cursor: pointer;
   transition: .4s;
+
 }
 
-#register_btn_signup:hover,#register_btn_login:hover {
-color: var(--secondary-y-1);
+#register_btn_signup:hover,
+#register_btn_login:hover {
+  color: var(--secondary-y-1);
   background-color: var(--font-b-2);
 }
 
@@ -154,32 +171,24 @@ color: var(--secondary-y-1);
   height: 70vh;
   background-color: var(--lesser-background-b-);
   /* clip-path: polygon(0% 0%, 36% 0, 70% 30% ,100% 0% , 0% 100%, 0% 100% , 53% 14%, 54% 8%, 57% 3%, 67% 0, 67% 0%, 100% 0%, 100% 100%, 0% 100%); */
-position: relative;
+  position: relative;
 
 }
-#star_login{
+
+#star_login {
   position: absolute;
   z-index: 5;
-  top: -80px;
+  top: -50px;
   left: 150px;
   width: 120px;
   height: 120px;
   background-image: url(../imgs/index-img/moon.gif);
   background-size: 100% 100%;
 }
-/* #star_signup{
+
+.background_circle {
   position: absolute;
-  z-index: 0;
-  top: -100px;
-  left: 150px;
-  width: 150px;
-  height: 160px;
-  background-image: url(../imgs/login-img/star_login.svg);
-  background-size: 100% 100%;
-} */
-.background_circle{
-  position: absolute;
-  top:-27px;
+  top: -27px;
   width: 353px;
   height: 160px;
   background-image: url(../imgs/login-img/background-style.svg);
@@ -193,14 +202,14 @@ position: relative;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-   /*定位對齊*/
-   position:absolute;   
-   margin: auto;
+  /*定位對齊*/
+  position: absolute;
+  margin: auto;
 
 }
 
 .or_login,
-.login_box{
+.login_box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -210,7 +219,8 @@ position: relative;
   position: relative;
 
 }
-.or_login{
+
+.or_login {
   height: 50%;
 }
 
@@ -228,18 +238,29 @@ position: relative;
   font-size: 1.5rem;
   color: var(--font-b-1);
   font-family: "Noto Sans TC", sans-serif;
-  margin: 20px;
+  margin: 20px 0;
+
 }
 
-.login,.signup{
+.login,
+.signup {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 45%;
-  height: 15vh;
+  height: 42vh;
+  
 }
 
+.login_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 
 input#username,
@@ -250,19 +271,21 @@ input#password,
 #comfirm_password {
   background-color: var(--input-b-1);
   margin: 10px 0;
-  width:  100%;
+  width: 100%;
   font-size: 0.75rem;
   color: var(--lesser-background-y-);
   border-radius: 99px;
   padding: 10px 20px 10px 20px;
 }
-.signup_name{
+
+.signup_name {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
 }
-.lastName{
+
+.lastName {
   width: 45%;
   margin-right: 5%;
 }
@@ -286,7 +309,7 @@ input::placeholder {
 
 
 
-.login_btn{
+.login_btn {
   background-color: var(--secondary-y-1);
   color: var(--font-b-1);
   font-weight: 500;
@@ -294,44 +317,50 @@ input::placeholder {
   border-radius: 99px;
   padding: 5px 25px;
   margin-top: 40px;
-  cursor: pointer; 
+  cursor: pointer;
   transition: .4s;
+
 }
-.login_btn:hover{
-  background-color:var(--font-b-2);
+
+.login_btn:hover {
+  background-color: var(--font-b-2);
   color: var(--secondary-y-1);
 }
 
 .btn_list {
   display: flex;
   flex-direction: column;
-  justify-content:  space-between;
+  justify-content: space-between;
   align-items: center;
   width: 45%;
 }
-._xvm ._5h0c._5h0d ._5h0i{
+
+._xvm ._5h0c._5h0d ._5h0i {
   border-radius: 99px;
 }
 
 
-.fb-login-button,.google-login-button {
+.fb-login-button,
+.google-login-button {
   width: 80%;
   height: 6vh;
 
 }
-.fb-login-button{
+
+.fb-login-button {
   background-image: url(../imgs/login-img/FB_login.svg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-width: 189px;
-  cursor: pointer; 
+  width: 189px;
+  cursor: pointer;
 }
-.google-login-button{
+
+.google-login-button {
   background-image: url(../imgs/login-img/google_login.svg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-width: 189px;
-  cursor: pointer; 
+  width: 189px;
+  cursor: pointer;
 }
 
 .tourists_login_btn {
@@ -342,20 +371,78 @@ width: 189px;
   border-radius: 99px;
   width: 189px;
   padding: 5px 0;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 
 
 
-#container2 ,#register_btn_login{
+#container2,
+#register_btn_login {
   visibility: hidden;
+
   /*剛開始消失*/
- 
+
 }
 
 dialog {
   border: none;
- margin: auto;
- background-color: transparent;
+  margin: auto;
+  background-color: transparent;
+}
+
+@media (max-width:1200px) {
+
+  #register_btn_signup,
+  #register_btn_login {
+    padding: 60px 20px 20px;
+
+  }
+
+  #star_login {
+    width: 90px;
+    height: 90px;
+  }
+
+
+}
+
+
+@media ((max-width:929px)) {
+
+  #register_btn_signup,
+  #register_btn_login {
+    height: 8vh;
+    padding: 20px 10px 10px;
+    font-size: 1.25rem;
+  }
+
+  #star_login {
+    display: none;
+  }
+
+  .background_circle {
+    display: none;
+  }
+
+  .login-page {
+
+    flex-direction: column;
+
+  }
+
+
+  .login,
+  .signup {
+    width: 100%;
+
+  }
+
+
+
+  .or_login {
+
+    justify-content: center;
+  }
+
 }

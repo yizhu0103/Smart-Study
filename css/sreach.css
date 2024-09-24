@@ -298,18 +298,6 @@ input:focus,
 }
 
 
-/* .sub-menu ul::before {
-  content: "";
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-  z-index: 6;
-	border: transparent 10px solid;
-	border-bottom: var(--primary-b-2) 10px solid;
-
-} */
 
 .main-menu:hover {
   border: var(--primary-b-1) solid 3px;
@@ -376,7 +364,7 @@ input:focus,
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  width: 75%;
   max-width: 1440px;
   padding-right: 2.8vh;
   margin-top: 1vh;
@@ -420,8 +408,11 @@ input:focus,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 75%;
   background-color: var(--lesser-background-b-);
+  box-shadow:0 0 15px rgba(39, 108, 198, 0.4);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .checklist_menu {

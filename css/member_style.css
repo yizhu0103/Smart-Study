@@ -118,10 +118,14 @@ h3 {
 
 
 body {
-    background-image: url(../imgs/member_img/background.svg);
+    /* background-image: url(../imgs/member_img/background.svg); */
     background-color: var(--lesser-background-y-);
     background-size: cover;
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+#member-bg {
+    background-image: url(../imgs/member_img/background.svg);
 }
 
 section {
@@ -155,7 +159,7 @@ main {
 
 #c_topbar .nav {
     width: 100%;
-    height: 55%;
+    height: 45%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -181,12 +185,17 @@ main {
     text-align: center;
 }
 
+.item-s{
+    padding:10px 0;
+    box-sizing: unset;
+}
 
-.item-s:hover{
+.item-s:hover {
     color: var(--secondary-y-1);
     background-image: url(../imgs/member_img/sub-menu-hover.svg);
     background-size: cover;
     cursor: pointer;
+
 }
 
 .nav li a,
@@ -337,8 +346,9 @@ main {
     background-color: var(--lesser-background-y-);
     box-shadow: 5px 5px 15px rgba(39, 108, 198, 0.25);
 }
+
 .info h2 {
- width: 80%;
+    width: 80%;
 }
 
 .info li {
@@ -415,10 +425,15 @@ main {
     color: var(--secondary-b-1);
     background-color: var(--lesser-background-b-);
     border: transparent;
+    align-items: center;
 }
 
 #member_edit select {
-    justify-content: center;
+    width: 10%;
+    /* 或者根據需要調整 */
+    height: auto;
+    /* 確保高度適應選項 */
+    text-align: center;
 }
 
 #member_edit input:focus,
@@ -639,10 +654,12 @@ main {
     align-items: center;
     justify-content: center;
 }
-.record{
+
+.record {
     list-style: none;
     counter-reset: myCounter;
 }
+
 .record .first1 li:before {
     counter-increment: myCounter;
     content: counter(myCounter) ". ";
@@ -802,27 +819,29 @@ main {
     align-items: center;
     justify-content: flex-end;
     padding-right: 2%;
-    
+
 }
-.text_item{
+
+.text_item {
     width: 100%;
 }
-.test_content{
+
+.test_content {
     width: 70%;
     height: 95vh;
-    padding:0 5% 0 1%;
+    padding: 0 5% 0 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    
+
 }
 
 
 .user {
     width: 100%;
     font-size: 36px;
-    
+
 }
 
 /* 搜尋區 */
@@ -831,7 +850,7 @@ main {
     width: 100%;
     position: relative;
     align-items: center;
-    
+
 }
 
 .search {
@@ -891,7 +910,7 @@ input:focus {
 
 .test_title {
     width: 100%;
-    
+
 }
 
 #my_test {
@@ -899,7 +918,7 @@ input:focus {
     width: 100%;
     overflow: auto;
     gap: 50px;
-    
+
 }
 
 .test_control {
@@ -927,7 +946,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    
+
 }
 
 .my_content ul {
@@ -940,16 +959,18 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+
 }
 
-.record1,.collect1 {
+.record1,
+.collect1 {
     width: 40%;
     height: 100%;
-    
+
 }
 
-.record1 .record,.collect1 .collect{
+.record1 .record,
+.collect1 .collect {
     margin-top: 20px;
     padding: 50px 20px;
     display: flex;
@@ -957,7 +978,8 @@ input:focus {
     justify-content: space-between;
     align-items: center;
 }
-.more_btn{
+
+.more_btn {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -994,7 +1016,8 @@ input:focus {
 }
 
 /* 第一欄 */
-.first1,.second {
+.first1,
+.second {
     width: 100%;
     height: 10%;
     display: flex;
@@ -1132,7 +1155,7 @@ input:focus {
     flex-direction: column;
     width: 60%;
     height: 200vh;
-    margin-top: 5vh;
+    margin-top: 7%;
     margin-left: 20%;
     background-image: url(../imgs/member_img/aibg.svg);
     background-size: 100% auto;
@@ -1191,16 +1214,50 @@ p {
 }
 
 .icon-bar {
+    width: 100%;
     display: flex;
+    align-items: center;
+}
+
+.face {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face img {
+    width: 100%;
 }
 
 #test-bar {
+    width: 9%;
+    height: 1000px;
     position: absolute;
-    top: 5%;
+    top: 0;
     right: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.test-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 .test-guide {
+    width: 80%;
+    background-color: var(--lesser-background-b-);
+    border-radius: 20px;
+    position: relative;
+}
+.test-guide-s {
+    width: 60%;
     background-color: var(--lesser-background-b-);
     border-radius: 20px;
     position: relative;
@@ -1208,8 +1265,8 @@ p {
 
 #test-bar button {
     position: absolute;
-    bottom: 30px;
-    left: 20px;
+    bottom: 3%;
+    left: 20%;
     width: 60%;
     height: 5%;
     border-radius: 41px;
@@ -1224,9 +1281,7 @@ p {
     color: var(--secondary-y-1);
 }
 
-#test-bar figure {
-    margin: 15% 0 90% 0;
-}
+
 
 /* AI詳解頁 */
 

@@ -149,7 +149,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--lesser-background-b-);
     color: var(--primary-b-2);
@@ -280,8 +280,11 @@ main {
 #c_topbar h1 {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     width: 100%;
     height: 10%;
+    margin-top: 10%;
+    
 
 }
 

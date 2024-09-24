@@ -90,6 +90,7 @@ a {
 main {
   background: url(../imgs/sraech-img/background-se.svg);
   background-color: var(--lesser-background-y-);
+
 }
 
 /* sreach區 */
@@ -100,10 +101,21 @@ main {
   align-items: center;
   width: 100%;
   height: 64.5vh;
-  background-image: url(../imgs/sraech-img/line-bkg.svg);
-  background-position: 0;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  position: relative;
+}
+
+.line-bkg {
+  width: 100%;
+  height: 50vh;
+  top:0;
+  position: absolute;
+  
+
+}
+
+.line-bkg img {
+  object-fit: cover;
+
 }
 
 .topbar {
@@ -114,6 +126,7 @@ main {
   flex-basis: 100px;
   margin-top: 8vh;
   width: 90%;
+  z-index: 2;
 }
 
 .topbar .logo {
@@ -359,6 +372,7 @@ input:focus,
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 3;
 }
 
 .btns {
@@ -370,6 +384,7 @@ input:focus,
   padding-right: 2.8vh;
   margin-top: 1vh;
   cursor: pointer;
+  z-index: 3;
 
 }
 

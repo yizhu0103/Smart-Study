@@ -1,5 +1,7 @@
 # Smart Study教學平台
 
+[![pages-build-deployment](https://github.com/yizhu0103/project/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yizhu0103/project/actions/workflows/pages/pages-build-deployment)
+
 ## 基本說明
 專題由**郭懿嫻**、**侯譯筑**、**連韋傑**共同製作
 ### 動機與目的

@@ -1083,12 +1083,14 @@ section#marquee {
   overflow: hidden;
   margin-bottom: 10px;
   transition: 0.3.5s ease-in-out;
+
 }
 
 .test_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.35s ;
 }
 
 .news__test__item h3 {
@@ -1099,14 +1101,14 @@ section#marquee {
   background: linear-gradient(0.25turn, #FFDE67 40%, transparent 0%);
   margin: 0rem 0.25rem;
   padding: 0rem 0.25rem;
-  transition: 0.3.5s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 .news__test__item p {
   color: var(--font-b-1);
   font-size: 18px;
   font-weight: bold;
-  transition: 0.3.5s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 .news__test__item:hover {
@@ -1119,9 +1121,10 @@ section#marquee {
   border-radius: 60px;
 }
 
-.news__test__item:hover .test_image {
-  width: 140px;
-  height: 140px;
+.news__test__item:hover img {
+  width: 120%;
+  height: 120%;
+ 
 }
 
 
@@ -1184,9 +1187,10 @@ section#marquee {
 }
 
 
-.news__item:hover .test_image-2 {
-  width: 110px;
-  height: 180px;
+.news__item:hover img {
+  width: 120%;
+  height: 120%;
+  
 }
 
 .news__item img {
@@ -1497,6 +1501,12 @@ section#marquee {
     height: 15vh;
     bottom: -30px;
   }
+  #member .member_box__list a {
+    width: 90%;
+    height: 90%;
+    margin: 0 -10px;
+  }
+  
 
 }
 
@@ -1507,10 +1517,14 @@ section#marquee {
 @media (max-width:576px) {
   #member h2 {
     font-size: 1.75rem;
-
   }
   .circle-line {
     display: none;
+  }
+  #member .member_box__list a {
+    width: 80%;
+    height: 80%;
+    margin: 0 -10px;
   }
 
 

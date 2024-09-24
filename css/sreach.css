@@ -96,13 +96,14 @@ main {
 #sreach {
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 64.5vh;
   background-image: url(../imgs/sraech-img/line-bkg.svg);
-  background-position: 0 -20px;
-  background-position: 100% auto;
+  background-position: 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .topbar {
@@ -250,7 +251,7 @@ input:focus,
 }
 
 .marquee-item:nth-child(5) {
-  top: 90%;
+  top: 80%;
   animation-delay: -3s;
 }
 
@@ -396,7 +397,7 @@ input:focus,
 }
 
 /* 按下按鈕時改變樣式 */
-.btns h5.selected  {
+.btns h5.selected {
   background-color: var(--secondary-y-1);
   color: var(--secondary-b-1);
 
@@ -410,7 +411,7 @@ input:focus,
   align-items: flex-start;
   width: 75%;
   background-color: var(--lesser-background-b-);
-  box-shadow:0 0 15px rgba(39, 108, 198, 0.4);
+  box-shadow: 0 0 15px rgba(39, 108, 198, 0.4);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -492,7 +493,8 @@ input:focus,
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 95%;
+
   background-color: var(--lesser-background-b-);
   height: 68vh;
   overflow-y: auto;
@@ -505,7 +507,9 @@ input:focus,
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 58px 0;
+
+  margin: 20px 0;
+
 
 }
 

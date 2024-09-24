@@ -1664,4 +1664,9 @@ footer small {
   }
 
 
+  .smoove{
+    opacity: none;
+    transition: none;
+  }
+
 }

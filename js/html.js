@@ -54,7 +54,7 @@ $(function () {/* 一個js只要執行一次就可以了 */
             cloud_b.style.top = 750 + scrollValue * 0.1+ 'px';
             cloud_b_b.style.position = 'fixed';
             cloud_b.style.position = 'fixed';
-
+            facia.style.display = 'flex';
             lineb1.style.top = 50 + scrollValue * 1 + 'px';
             lineb2.style.top = 50 + scrollValue * 1 + 'px';
             facia.style.position = 'fixed';
@@ -65,13 +65,14 @@ $(function () {/* 一個js只要執行一次就可以了 */
             cloud_b_b.style.position = 'absolute';
             cloud_b_b.style.top = 650+700+'px';
             cloud_b.style.position = 'absolute';
-            cloud_b.style.top = 750+700+'px';
+            cloud_b.style.top = 750+720+'px';
+            facia.style.display = 'flex';
             
         }
         else if (3000 <= scrollValue && scrollValue <= 4200) {
             wave.style.bottom = -800 + (scrollValue - 2950) * .8 + 'px';
             // memh2.style.top = -100 + (scrollValue - 3150) * .15 + 'px';
-
+            facia.style.display = 'none';
 
         }
         else {
@@ -80,6 +81,7 @@ $(function () {/* 一個js只要執行一次就可以了 */
             lineb2.style.top = 50 + 700 + 'px';
             wave.style.bottom = -800 + 'px';
             memh2.style.bottom = -100 + 'px';
+            facia.style.display = 'none';
 
         }
         // if (scrollValue < 1500) {
